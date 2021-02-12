@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../SFML/include/SFML/Config.hpp
+TargetConditionals.h
+../SFML/include/SFML/TargetConditionals.h
+
+C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/SFML/src/SFML/Main/MainWin32.cpp
+SFML/Config.hpp
+-
+windows.h
+-
+
