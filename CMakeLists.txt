@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.12)
 
 set(BUILD_SHARED_LIBS OFF CACHE BOOL "ON if dll. OFF if static" FORCE)
 set(SFML_USE_STATIC_STD_LIBS ON CACHE BOOL "ON if static. OFF if dll" FORCE)
+set(RES_DIR ${CMAKE_CURRENT_SOURCE_DIR}/resources)
 
 project(Tetris)
 

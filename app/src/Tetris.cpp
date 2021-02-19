@@ -1,8 +1,14 @@
-#include <SFML/Window.hpp>
-#include <SFML/Graphics.hpp>
+#include "Tetris.h"
 int main()
 {
     sf::RenderWindow window(sf::VideoMode(800, 600), "My window");
+    
+    sf::Texture mariotexture;
+    if(!mariotexture.loadFromFile(IMG_PATH+"/mario.png")){
+        return EXIT_FAILURE;
+	}
+
+    Object mario(0,0,0,mariotexture);
 
     // run the program as long as the window is open
     while (window.isOpen())
@@ -17,7 +23,7 @@ int main()
         }
         
         window.clear();
-        
+        mario.Draw(window);
         window.display();
         
     }

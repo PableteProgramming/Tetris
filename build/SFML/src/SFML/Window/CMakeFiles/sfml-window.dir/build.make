@@ -381,34 +381,34 @@ sfml__window_OBJECTS = \
 # External object files for target sfml-window
 sfml__window_EXTERNAL_OBJECTS =
 
-SFML/lib/libsfml-window-s-d.a: SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Context.cpp.obj
-SFML/lib/libsfml-window-s-d.a: SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/GlContext.cpp.obj
-SFML/lib/libsfml-window-s-d.a: SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/GlResource.cpp.obj
-SFML/lib/libsfml-window-s-d.a: SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Joystick.cpp.obj
-SFML/lib/libsfml-window-s-d.a: SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/JoystickManager.cpp.obj
-SFML/lib/libsfml-window-s-d.a: SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Keyboard.cpp.obj
-SFML/lib/libsfml-window-s-d.a: SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Mouse.cpp.obj
-SFML/lib/libsfml-window-s-d.a: SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Touch.cpp.obj
-SFML/lib/libsfml-window-s-d.a: SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Sensor.cpp.obj
-SFML/lib/libsfml-window-s-d.a: SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/SensorManager.cpp.obj
-SFML/lib/libsfml-window-s-d.a: SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/VideoMode.cpp.obj
-SFML/lib/libsfml-window-s-d.a: SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Window.cpp.obj
-SFML/lib/libsfml-window-s-d.a: SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/WindowImpl.cpp.obj
-SFML/lib/libsfml-window-s-d.a: SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/WglContext.cpp.obj
-SFML/lib/libsfml-window-s-d.a: SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/WglExtensions.cpp.obj
-SFML/lib/libsfml-window-s-d.a: SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/InputImpl.cpp.obj
-SFML/lib/libsfml-window-s-d.a: SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/JoystickImpl.cpp.obj
-SFML/lib/libsfml-window-s-d.a: SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/SensorImpl.cpp.obj
-SFML/lib/libsfml-window-s-d.a: SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/VideoModeImpl.cpp.obj
-SFML/lib/libsfml-window-s-d.a: SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/WindowImplWin32.cpp.obj
-SFML/lib/libsfml-window-s-d.a: SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make
-SFML/lib/libsfml-window-s-d.a: SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Linking CXX static library ..\..\..\lib\libsfml-window-s-d.a"
+SFML/lib/libsfml-window.a: SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Context.cpp.obj
+SFML/lib/libsfml-window.a: SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/GlContext.cpp.obj
+SFML/lib/libsfml-window.a: SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/GlResource.cpp.obj
+SFML/lib/libsfml-window.a: SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Joystick.cpp.obj
+SFML/lib/libsfml-window.a: SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/JoystickManager.cpp.obj
+SFML/lib/libsfml-window.a: SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Keyboard.cpp.obj
+SFML/lib/libsfml-window.a: SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Mouse.cpp.obj
+SFML/lib/libsfml-window.a: SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Touch.cpp.obj
+SFML/lib/libsfml-window.a: SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Sensor.cpp.obj
+SFML/lib/libsfml-window.a: SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/SensorManager.cpp.obj
+SFML/lib/libsfml-window.a: SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/VideoMode.cpp.obj
+SFML/lib/libsfml-window.a: SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Window.cpp.obj
+SFML/lib/libsfml-window.a: SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/WindowImpl.cpp.obj
+SFML/lib/libsfml-window.a: SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/WglContext.cpp.obj
+SFML/lib/libsfml-window.a: SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/WglExtensions.cpp.obj
+SFML/lib/libsfml-window.a: SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/InputImpl.cpp.obj
+SFML/lib/libsfml-window.a: SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/JoystickImpl.cpp.obj
+SFML/lib/libsfml-window.a: SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/SensorImpl.cpp.obj
+SFML/lib/libsfml-window.a: SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/VideoModeImpl.cpp.obj
+SFML/lib/libsfml-window.a: SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/WindowImplWin32.cpp.obj
+SFML/lib/libsfml-window.a: SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/build.make
+SFML/lib/libsfml-window.a: SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Linking CXX static library ..\..\..\lib\libsfml-window.a"
 	cd /d C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\build\SFML\src\SFML\Window && $(CMAKE_COMMAND) -P CMakeFiles\sfml-window.dir\cmake_clean_target.cmake
 	cd /d C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\build\SFML\src\SFML\Window && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\sfml-window.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/build: SFML/lib/libsfml-window-s-d.a
+SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/build: SFML/lib/libsfml-window.a
 
 .PHONY : SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/build
 
