@@ -208,7 +208,7 @@
 				{
 					"directoryIndex" : 9,
 					"id" : "Tetris::@5f5a17c01335469806cb",
-					"jsonFile" : "target-Tetris-Debug-c8023fa44ddcfff4c33e.json",
+					"jsonFile" : "target-Tetris-Debug-f89b3ea6d4471b1bcf4e.json",
 					"name" : "Tetris",
 					"projectIndex" : 0
 				},
@@ -222,7 +222,7 @@
 				{
 					"directoryIndex" : 7,
 					"id" : "sfml-graphics::@b5d161fc85c1c0dd9373",
-					"jsonFile" : "target-sfml-graphics-Debug-691f0724b07a9cf1f77d.json",
+					"jsonFile" : "target-sfml-graphics-Debug-7c55e6fb952fcc7b982c.json",
 					"name" : "sfml-graphics",
 					"projectIndex" : 1
 				},

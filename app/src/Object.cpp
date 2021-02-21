@@ -8,8 +8,8 @@ Object::Object(int _x, int _y, float _rotation,Manager _manager,std::vector<std:
     manager.SetSets(_manager.GetSets());
     //map
     map=_map;
-    rects.clear();
-    FillRects(map);
+    Rotate();
+    Configure(_map);
 }
 
 void Object::Draw(sf::RenderWindow &window){
@@ -26,6 +26,7 @@ void Object::Draw(sf::RenderWindow &window){
 void Object::FillRects(std::vector<std::vector<int>> _map){
     int _width= _map[0].size();
     int _height= _map.size();
+    //std::cout<<"Width: "<<_width<<"; Height: "<<_height<<std::endl;
     for(int y=0; y<_height;y++){
         for(int x=0; x<_width;x++){
             if(_map[y][x]>0){
@@ -35,4 +36,22 @@ void Object::FillRects(std::vector<std::vector<int>> _map){
             }
         }
     }
+}
+
+void Object::Rotate(){
+    /*std::cout<<"Before rotatemap"<<std::endl;
+    std::cout<<"map.size() before func call: "<<map.size()<<std::endl;*/
+    std::vector<std::vector<int>> tempmap= RotateMap(rotation,map);
+    //std::cout<<"After rotatemap and before configure"<<std::endl;
+    Configure(tempmap);
+    //std::cout<<"after configure"<<std::endl;
+}
+
+void Object::Configure(std::vector<std::vector<int>> _map){
+    map=_map;
+    rects.clear();
+    //std::cout<<"Before Fillrects"<<std::endl;
+    //error here
+    FillRects(map);
+    //std::cout<<"after Fillrects"<<std::endl;
 }
