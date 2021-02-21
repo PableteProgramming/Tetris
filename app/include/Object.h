@@ -8,12 +8,11 @@ private:
     int x;
     int y;
     std::pair<int,int> pos;
-    //sf::Sprite img;
     Manager manager;
     std::vector<std::vector<int>> map;
     std::vector<Rect> rects;
     void FillRects(std::vector<std::vector<int>>);
 public:
-    Object(int,int,float/*,sf::Texture&*/,Manager,std::vector<std::vector<int>>);
+    Object(int,int,float,Manager,std::vector<std::vector<int>>);
     void Draw(sf::RenderWindow&);
 };

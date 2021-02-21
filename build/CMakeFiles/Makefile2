@@ -377,8 +377,8 @@ SFML/src/SFML/Network/CMakeFiles/sfml-network.dir/clean:
 # Target rules for target SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir
 
 # All Build rule for target.
-SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/all: SFML/src/SFML/System/CMakeFiles/sfml-system.dir/all
 SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/all: SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/all
+SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/all: SFML/src/SFML/System/CMakeFiles/sfml-system.dir/all
 	$(MAKE) $(MAKESILENT) -f SFML\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\build.make SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/depend
 	$(MAKE) $(MAKESILENT) -f SFML\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\build.make SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\build\CMakeFiles --progress-num=25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52 "Built target sfml-graphics"
@@ -432,8 +432,8 @@ SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/clean:
 # Target rules for target app/CMakeFiles/Tetris.dir
 
 # All Build rule for target.
-app/CMakeFiles/Tetris.dir/all: SFML/src/SFML/System/CMakeFiles/sfml-system.dir/all
 app/CMakeFiles/Tetris.dir/all: SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/all
+app/CMakeFiles/Tetris.dir/all: SFML/src/SFML/System/CMakeFiles/sfml-system.dir/all
 app/CMakeFiles/Tetris.dir/all: SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/all
 	$(MAKE) $(MAKESILENT) -f app\CMakeFiles\Tetris.dir\build.make app/CMakeFiles/Tetris.dir/depend
 	$(MAKE) $(MAKESILENT) -f app\CMakeFiles\Tetris.dir\build.make app/CMakeFiles/Tetris.dir/build
