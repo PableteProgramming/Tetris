@@ -150,7 +150,11 @@ app/CMakeFiles/Tetris.dir/src/Object.cpp.obj: ../SFML/include/SFML/Window/Window
 app/CMakeFiles/Tetris.dir/src/Object.cpp.obj: ../app/include/Color.h
 app/CMakeFiles/Tetris.dir/src/Object.cpp.obj: ../app/include/Manager.h
 app/CMakeFiles/Tetris.dir/src/Object.cpp.obj: ../app/include/Object.h
+app/CMakeFiles/Tetris.dir/src/Object.cpp.obj: ../app/include/Rect.h
 app/CMakeFiles/Tetris.dir/src/Object.cpp.obj: ../app/src/Object.cpp
+
+app/CMakeFiles/Tetris.dir/src/Rect.cpp.obj: ../app/include/Rect.h
+app/CMakeFiles/Tetris.dir/src/Rect.cpp.obj: ../app/src/Rect.cpp
 
 app/CMakeFiles/Tetris.dir/src/Tetris.cpp.obj: ../SFML/include/SFML/Config.hpp
 app/CMakeFiles/Tetris.dir/src/Tetris.cpp.obj: ../SFML/include/SFML/Graphics.hpp
@@ -226,6 +230,7 @@ app/CMakeFiles/Tetris.dir/src/Tetris.cpp.obj: ../SFML/include/SFML/Window/Window
 app/CMakeFiles/Tetris.dir/src/Tetris.cpp.obj: ../app/include/Color.h
 app/CMakeFiles/Tetris.dir/src/Tetris.cpp.obj: ../app/include/Manager.h
 app/CMakeFiles/Tetris.dir/src/Tetris.cpp.obj: ../app/include/Object.h
+app/CMakeFiles/Tetris.dir/src/Tetris.cpp.obj: ../app/include/Rect.h
 app/CMakeFiles/Tetris.dir/src/Tetris.cpp.obj: ../app/include/Tetris.h
 app/CMakeFiles/Tetris.dir/src/Tetris.cpp.obj: ../app/src/Tetris.cpp
 

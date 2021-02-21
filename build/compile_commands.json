@@ -496,6 +496,11 @@
 },
 {
   "directory": "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/build/app",
+  "command": "C:\\MinGW\\bin\\g++.exe -DSFML_STATIC @CMakeFiles/Tetris.dir/includes_CXX.rsp -g -o CMakeFiles\\Tetris.dir\\src\\Rect.cpp.obj -c C:\\Users\\curro.LAPTOP-DUBBS74R\\OneDrive\\Documentos\\Programming\\C++\\Tetris\\app\\src\\Rect.cpp",
+  "file": "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/app/src/Rect.cpp"
+},
+{
+  "directory": "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/build/app",
   "command": "C:\\MinGW\\bin\\g++.exe -DSFML_STATIC @CMakeFiles/Tetris.dir/includes_CXX.rsp -g -o CMakeFiles\\Tetris.dir\\src\\Object.cpp.obj -c C:\\Users\\curro.LAPTOP-DUBBS74R\\OneDrive\\Documentos\\Programming\\C++\\Tetris\\app\\src\\Object.cpp",
   "file": "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/app/src/Object.cpp"
 }

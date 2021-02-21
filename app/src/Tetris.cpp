@@ -3,10 +3,11 @@ int main()
 {
     sf::RenderWindow window(sf::VideoMode(800, 600), "My window");
     
-    sf::Texture mariotexture;
+    /*sf::Texture mariotexture;
     if(!mariotexture.loadFromFile(IMG_PATH+"/mario.png")){
         return EXIT_FAILURE;
-	}
+	}*/
+
     Color color;
 
     std::vector<std::pair<int,sf::Color>> sets;
@@ -19,14 +20,16 @@ int main()
     sets.push_back(std::make_pair(6,color.white));
     sets.push_back(std::make_pair(7,color.black));
 
-    int lmap[4][2]= {{1,0},
-                    {1,0},
-                    {1,0},
-                    {1,1}};
+    std::vector<std::vector<int>> lmap= {
+        {1,0},
+        {1,0},
+        {1,0},
+        {1,1},
+    };
 
     Manager manager(25,sets);
 
-    Object mario(0,0,0,mariotexture,manager,(int**)lmap,2,4);
+    Object mario(0,0,0/*,mariotexture*/,manager,lmap);
 
     // run the program as long as the window is open
     while (window.isOpen())
@@ -43,7 +46,6 @@ int main()
         window.clear();
         mario.Draw(window);
         window.display();
-        
     }
 
     return 0;

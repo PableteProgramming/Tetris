@@ -243,6 +243,33 @@ src/Object.cpp.s:
 	cd /d C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\build && $(MAKE) $(MAKESILENT) -f app\CMakeFiles\Tetris.dir\build.make app/CMakeFiles/Tetris.dir/src/Object.cpp.s
 .PHONY : src/Object.cpp.s
 
+src/Rect.obj: src/Rect.cpp.obj
+
+.PHONY : src/Rect.obj
+
+# target to build an object file
+src/Rect.cpp.obj:
+	cd /d C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\build && $(MAKE) $(MAKESILENT) -f app\CMakeFiles\Tetris.dir\build.make app/CMakeFiles/Tetris.dir/src/Rect.cpp.obj
+.PHONY : src/Rect.cpp.obj
+
+src/Rect.i: src/Rect.cpp.i
+
+.PHONY : src/Rect.i
+
+# target to preprocess a source file
+src/Rect.cpp.i:
+	cd /d C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\build && $(MAKE) $(MAKESILENT) -f app\CMakeFiles\Tetris.dir\build.make app/CMakeFiles/Tetris.dir/src/Rect.cpp.i
+.PHONY : src/Rect.cpp.i
+
+src/Rect.s: src/Rect.cpp.s
+
+.PHONY : src/Rect.s
+
+# target to generate assembly for a file
+src/Rect.cpp.s:
+	cd /d C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\build && $(MAKE) $(MAKESILENT) -f app\CMakeFiles\Tetris.dir\build.make app/CMakeFiles/Tetris.dir/src/Rect.cpp.s
+.PHONY : src/Rect.cpp.s
+
 src/Tetris.obj: src/Tetris.cpp.obj
 
 .PHONY : src/Tetris.obj
@@ -289,6 +316,9 @@ help:
 	@echo ... src/Object.obj
 	@echo ... src/Object.i
 	@echo ... src/Object.s
+	@echo ... src/Rect.obj
+	@echo ... src/Rect.i
+	@echo ... src/Rect.s
 	@echo ... src/Tetris.obj
 	@echo ... src/Tetris.i
 	@echo ... src/Tetris.s

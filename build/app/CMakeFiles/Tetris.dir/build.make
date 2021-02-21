@@ -103,10 +103,24 @@ app/CMakeFiles/Tetris.dir/src/Manager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Tetris.dir/src/Manager.cpp.s"
 	cd /d C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\build\app && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\app\src\Manager.cpp -o CMakeFiles\Tetris.dir\src\Manager.cpp.s
 
+app/CMakeFiles/Tetris.dir/src/Rect.cpp.obj: app/CMakeFiles/Tetris.dir/flags.make
+app/CMakeFiles/Tetris.dir/src/Rect.cpp.obj: app/CMakeFiles/Tetris.dir/includes_CXX.rsp
+app/CMakeFiles/Tetris.dir/src/Rect.cpp.obj: ../app/src/Rect.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object app/CMakeFiles/Tetris.dir/src/Rect.cpp.obj"
+	cd /d C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\build\app && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Tetris.dir\src\Rect.cpp.obj -c C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\app\src\Rect.cpp
+
+app/CMakeFiles/Tetris.dir/src/Rect.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Tetris.dir/src/Rect.cpp.i"
+	cd /d C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\build\app && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\app\src\Rect.cpp > CMakeFiles\Tetris.dir\src\Rect.cpp.i
+
+app/CMakeFiles/Tetris.dir/src/Rect.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Tetris.dir/src/Rect.cpp.s"
+	cd /d C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\build\app && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\app\src\Rect.cpp -o CMakeFiles\Tetris.dir\src\Rect.cpp.s
+
 app/CMakeFiles/Tetris.dir/src/Object.cpp.obj: app/CMakeFiles/Tetris.dir/flags.make
 app/CMakeFiles/Tetris.dir/src/Object.cpp.obj: app/CMakeFiles/Tetris.dir/includes_CXX.rsp
 app/CMakeFiles/Tetris.dir/src/Object.cpp.obj: ../app/src/Object.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object app/CMakeFiles/Tetris.dir/src/Object.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object app/CMakeFiles/Tetris.dir/src/Object.cpp.obj"
 	cd /d C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\build\app && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Tetris.dir\src\Object.cpp.obj -c C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\app\src\Object.cpp
 
 app/CMakeFiles/Tetris.dir/src/Object.cpp.i: cmake_force
@@ -121,6 +135,7 @@ app/CMakeFiles/Tetris.dir/src/Object.cpp.s: cmake_force
 Tetris_OBJECTS = \
 "CMakeFiles/Tetris.dir/src/Tetris.cpp.obj" \
 "CMakeFiles/Tetris.dir/src/Manager.cpp.obj" \
+"CMakeFiles/Tetris.dir/src/Rect.cpp.obj" \
 "CMakeFiles/Tetris.dir/src/Object.cpp.obj"
 
 # External object files for target Tetris
@@ -128,6 +143,7 @@ Tetris_EXTERNAL_OBJECTS =
 
 app/Tetris.exe: app/CMakeFiles/Tetris.dir/src/Tetris.cpp.obj
 app/Tetris.exe: app/CMakeFiles/Tetris.dir/src/Manager.cpp.obj
+app/Tetris.exe: app/CMakeFiles/Tetris.dir/src/Rect.cpp.obj
 app/Tetris.exe: app/CMakeFiles/Tetris.dir/src/Object.cpp.obj
 app/Tetris.exe: app/CMakeFiles/Tetris.dir/build.make
 app/Tetris.exe: SFML/lib/libsfml-graphics-s-d.a
@@ -138,7 +154,7 @@ app/Tetris.exe: ../SFML/extlibs/libs-mingw/x86/libjpeg.a
 app/Tetris.exe: app/CMakeFiles/Tetris.dir/linklibs.rsp
 app/Tetris.exe: app/CMakeFiles/Tetris.dir/objects1.rsp
 app/Tetris.exe: app/CMakeFiles/Tetris.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable Tetris.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable Tetris.exe"
 	cd /d C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\build\app && "C:\Program Files\CMake\bin\cmake.exe" -E copy_directory C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/resources C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/build/app/resources
 	cd /d C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\build\app && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Tetris.dir\link.txt --verbose=$(VERBOSE)
 

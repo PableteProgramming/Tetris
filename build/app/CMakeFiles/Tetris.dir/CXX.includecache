@@ -657,11 +657,17 @@ SFML/Graphics.hpp
 -
 Manager.h
 ../app/include/Manager.h
+Rect.h
+../app/include/Rect.h
+
+../app/include/Rect.h
 
 ../app/include/Tetris.h
 SFML/Graphics.hpp
 -
 stdlib.h
+-
+iostream
 -
 Object.h
 ../app/include/Object.h

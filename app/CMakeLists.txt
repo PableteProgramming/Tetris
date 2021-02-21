@@ -7,6 +7,7 @@ add_compile_definitions(SFML_STATIC)
 target_sources(
     ${PROJECT_NAME} PUBLIC
     ${SRC_DIR}/Manager.cpp
+    ${SRC_DIR}/Rect.cpp
     ${SRC_DIR}/Object.cpp
 )
 
@@ -21,10 +22,10 @@ target_link_libraries(
     ${LIBS}
 )
 
-target_link_options(
-    ${PROJECT_NAME} PUBLIC
-    -mwindows
-)
+#target_link_options(
+#    ${PROJECT_NAME} PUBLIC
+#    -mwindows
+#)
 
 add_custom_command(TARGET ${PROJECT_NAME} PRE_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy_directory
