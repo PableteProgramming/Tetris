@@ -8,23 +8,21 @@ int main()
         return EXIT_FAILURE;
 	}*/
 
-    Color color;
-
     std::vector<std::pair<int,sf::Color>> sets;
     sets.clear();
-    sets.push_back(std::make_pair(1,color.blue));
-    sets.push_back(std::make_pair(2,color.green));
-    sets.push_back(std::make_pair(3,color.orange));
-    sets.push_back(std::make_pair(4,color.purple));
-    sets.push_back(std::make_pair(5,color.red));
-    sets.push_back(std::make_pair(6,color.white));
-    sets.push_back(std::make_pair(7,color.black));
+    sets.push_back(std::make_pair(1,sf::Color{0,0,255}/*blue*/));
+    sets.push_back(std::make_pair(2,sf::Color{0,255,0}/*green*/));
+    sets.push_back(std::make_pair(3,sf::Color{255,102,0}/*orange*/));
+    sets.push_back(std::make_pair(4,sf::Color{204,0,204}/*purple*/));
+    sets.push_back(std::make_pair(5,sf::Color{255,0,0}/*red*/));
+    sets.push_back(std::make_pair(6,sf::Color{255,255,255}/*white*/));
+    sets.push_back(std::make_pair(7,sf::Color{0,0,0}/*black*/));
 
     std::vector<std::vector<int>> lmap= {
         {1,0},
         {1,0},
-        {1,0},
-        {1,1},
+        {5,0},
+        {1,3},
     };
 
     Manager manager(25,sets);

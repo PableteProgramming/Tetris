@@ -25,7 +25,7 @@ void Object::Draw(sf::RenderWindow &window){
         sf::RectangleShape recttodraw;
         recttodraw.setPosition(act.GetX()*manager.GetScale()+x,act.GetY()*manager.GetScale()+y);
         recttodraw.setSize(sf::Vector2f(act.GetWidth()*manager.GetScale(),act.GetHeight()*manager.GetScale()));
-        recttodraw.setFillColor(sf::Color::Blue);
+        recttodraw.setFillColor(act.GetColor());
         window.draw(recttodraw);
     }
 }
@@ -39,7 +39,8 @@ void Object::FillRects(std::vector<std::vector<int>> _map){
         for(int x=0; x<_width;x++){
             if(_map[y][x]>0){
                 //std::cout<<"_map["<<y<<"]["<<x<<"]="<<_map[y][x]<<std::endl;
-                Rect recttopushback(x,y,1,1);
+                sf::Color c= manager.FindColorOfValue(map[y][x]);
+                Rect recttopushback(x,y,1,1,c);
                 rects.push_back(recttopushback);
                 //std::cout<<"rect added: x="<<recttopushback.GetX()<<"; y="<<recttopushback.GetY()<<std::endl;
             }

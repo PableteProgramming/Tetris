@@ -19,3 +19,12 @@ void Manager::SetScale(int _scale){
 void Manager::SetSets(std::vector<std::pair<int,sf::Color>> _sets){
     sets=_sets;
 }
+
+sf::Color Manager::FindColorOfValue(int value){
+    for(int i=0; i<sets.size();i++){
+        if(sets[i].first==value){
+            return sets[i].second;
+        }
+    }
+    return sf::Color::Transparent;
+}

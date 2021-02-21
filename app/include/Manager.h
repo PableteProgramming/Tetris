@@ -1,5 +1,5 @@
 #include <vector>
-#include "Color.h"
+#include <SFML/Graphics.hpp>
 class Manager{
 private:
     int scale;
@@ -11,4 +11,5 @@ public:
     void SetSets(std::vector<std::pair<int,sf::Color>>);
     int GetScale(){return scale;};
     std::vector<std::pair<int,sf::Color>> GetSets(){return sets;};
+    sf::Color FindColorOfValue(int);
 };
