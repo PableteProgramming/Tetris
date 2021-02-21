@@ -6,6 +6,7 @@ add_compile_definitions(SFML_STATIC)
 
 target_sources(
     ${PROJECT_NAME} PUBLIC
+    ${SRC_DIR}/Manager.cpp
     ${SRC_DIR}/Object.cpp
 )
 

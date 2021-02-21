@@ -640,15 +640,25 @@ SFML/Config.hpp
 
 ../SFML/include/SFML/Window/WindowStyle.hpp
 
+../app/include/Color.h
+SFML/Graphics.hpp
+-
+
+../app/include/Manager.h
+vector
+-
+Color.h
+../app/include/Color.h
+
 ../app/include/Object.h
 utility
 -
 SFML/Graphics.hpp
 -
+Manager.h
+../app/include/Manager.h
 
 ../app/include/Tetris.h
-SFML/Window.hpp
--
 SFML/Graphics.hpp
 -
 stdlib.h

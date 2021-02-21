@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Tetris.dir/src/Manager.cpp.obj"
   "CMakeFiles/Tetris.dir/src/Object.cpp.obj"
   "CMakeFiles/Tetris.dir/src/Tetris.cpp.obj"
   "Tetris.exe"
