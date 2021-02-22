@@ -9,7 +9,7 @@ Object::Object(int _x, int _y, float _rotation,Manager _manager,std::vector<std:
     //map
     map=_map;
     Rotate();
-    Configure(_map);
+    Configure();
 }
 
 void Object::Draw(sf::RenderWindow &window){
@@ -39,19 +39,22 @@ void Object::FillRects(std::vector<std::vector<int>> _map){
 }
 
 void Object::Rotate(){
+    //PrintMap(map);
+    //std::cout<<"----------"<<std::endl;
     /*std::cout<<"Before rotatemap"<<std::endl;
     std::cout<<"map.size() before func call: "<<map.size()<<std::endl;*/
-    std::vector<std::vector<int>> tempmap= RotateMap(rotation,map);
+    map= RotateMap(rotation,map);
+    //PrintMap(map);
     //std::cout<<"After rotatemap and before configure"<<std::endl;
-    Configure(tempmap);
+    Configure();
     //std::cout<<"after configure"<<std::endl;
 }
 
-void Object::Configure(std::vector<std::vector<int>> _map){
-    map=_map;
+void Object::Configure(){
     rects.clear();
     //std::cout<<"Before Fillrects"<<std::endl;
     //error here
     FillRects(map);
     //std::cout<<"after Fillrects"<<std::endl;
 }
+
