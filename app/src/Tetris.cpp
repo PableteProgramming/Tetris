@@ -2,7 +2,7 @@
 #include <cmath>
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(800, 600), "My window");
+    sf::RenderWindow window(sf::VideoMode(W_WIDTH, W_HEIGHT), "My window");
 
     std::vector<std::pair<int,sf::Color>> sets;
     sets.clear();
@@ -21,10 +21,26 @@ int main()
         {1,1}
     };
 
+
+    int x=scale;
+    int y=scale;
     Manager manager(scale,sets);
 
-    Object piece(scale,scale,370,manager,lmap);
+    Object piece(x,y,0,manager,lmap);
 
+    window.clear();
+    piece.Draw(window);
+    window.display();
+    //window.setFramerateLimit(fps);
+
+    sf::Clock clock;
+    double timepassed;
+    double totaltimetopass= 1/fps;
+    double clicstimepassed;
+    double clicstotaltimetopass= 1/clicsfps;
+    bool rightpressed=false;
+    bool leftpressed=false;
+    //std::cout<<"time to be passed for each frame: "<<frametime<<std::endl;
     // run the program as long as the window is open
     while (window.isOpen())
     {
@@ -37,6 +53,40 @@ int main()
                 window.close();
         }
         
+        if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left)){
+            if(!leftpressed){
+                if(x>=(0+scale)){
+                    leftpressed=true;
+                    x-= scale;
+                }
+            }
+        }
+        if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right)){
+            if(!rightpressed){
+                if((x+scale)<=W_WIDTH-piece.GetWidth()){
+                    rightpressed=true;
+                    x+= scale;
+                }
+            }
+        }
+
+        double toadd= clock.restart().asSeconds();
+        timepassed+= toadd;
+        clicstimepassed+=toadd;
+        
+
+        if(timepassed>= totaltimetopass) {
+			//Update the last_render variable
+            timepassed=0;			
+            piece.Move(x,W_HEIGHT);	
+        }
+
+        if(clicstimepassed >= clicstotaltimetopass){
+            clicstimepassed=0;
+            rightpressed=false;
+            leftpressed=false;
+        }
+
         window.clear();
         piece.Draw(window);
         window.display();
