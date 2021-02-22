@@ -18,12 +18,12 @@ int main()
         {1,0},
         {1,0},
         {1,0},
-        {1,1},
+        {1,1}
     };
 
     Manager manager(scale,sets);
 
-    Object piece(scale,scale,90,manager,lmap);
+    Object piece(scale,scale,370,manager,lmap);
 
     // run the program as long as the window is open
     while (window.isOpen())
@@ -73,15 +73,27 @@ std::vector<std::vector<int>> RotateMap(int angle,std::vector<std::vector<int>> 
         //180º
         int height= map.size();
         int width= map[0].size();
-        //
-        r=map;
+        std::vector<int> r1;
+        for(int y=height-1;y>=0;y--){
+            r1.clear();
+            for(int x=width-1;x>=0;x--){
+                r1.push_back(map[y][x]);
+            }
+            r.push_back(r1);
+        }
     }
     else if(angle==270 || (angle>=225 && angle<=270) || (angle>=270 && angle<315)){
         //270º = -90º
         int height= map.size();
         int width= map[0].size();
-        //
-        r=map;
+        std::vector<int> r1;
+        for(int x=width-1;x>=0;x--){
+            r1.clear();
+            for(int y=0;y<height;y++){
+                r1.push_back(map[y][x]);
+            }
+            r.push_back(r1);
+        }
     }
     else{
         //0º

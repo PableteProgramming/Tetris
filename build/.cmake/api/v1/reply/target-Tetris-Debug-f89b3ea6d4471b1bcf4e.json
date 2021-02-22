@@ -123,11 +123,11 @@
 		},
 		{
 			"backtrace" : 2,
-			"id" : "sfml-window::@0daf25d7b5dd386fd904"
+			"id" : "sfml-graphics::@b5d161fc85c1c0dd9373"
 		},
 		{
 			"backtrace" : 2,
-			"id" : "sfml-graphics::@b5d161fc85c1c0dd9373"
+			"id" : "sfml-window::@0daf25d7b5dd386fd904"
 		}
 	],
 	"id" : "Tetris::@5f5a17c01335469806cb",
