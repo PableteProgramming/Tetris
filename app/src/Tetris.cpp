@@ -79,6 +79,14 @@ int main()
             }
         }
 
+        
+        if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down)){
+            piece.SetSpeed(2);
+        }
+        else{
+            piece.SetSpeed(1);
+        }
+
         double toadd= clock.restart().asSeconds();
         timepassed+= toadd;
         moveclicstimepassed+=toadd;

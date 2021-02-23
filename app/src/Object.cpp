@@ -1,11 +1,12 @@
 #include "Object.h"
 #include <iostream>
-Object::Object(int _x, int _y, int rotation,Manager _manager,std::vector<std::vector<int>> _map){
+Object::Object(int _x, int _y, int rotation,Manager _manager,std::vector<std::vector<int>> _map,int _speed){
     x=_x;
     y=_y;
     manager.SetScale(_manager.GetScale());
     manager.SetSets(_manager.GetSets());
     //map
+    speed=_speed;
     map=_map;
     Rotate(rotation);
     Configure();
@@ -52,9 +53,13 @@ void Object::Configure(){
 
 void Object::Move(int _x, int _height){
     x=_x;
-    if(y+manager.GetScale()<= _height-height){
-        y+=manager.GetScale();
+    if(y+(speed*manager.GetScale())<= _height-height){
+        y+=speed*manager.GetScale();
     }
     pos.first=x;
     pos.second=y;
+}
+
+void Object::SetSpeed(int _speed){
+    speed=_speed;
 }
