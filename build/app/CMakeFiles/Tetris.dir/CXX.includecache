@@ -661,18 +661,24 @@ SFML/Graphics.hpp
 -
 
 ../app/include/Tetris.h
+string
+-
 SFML/Graphics.hpp
 -
-stdlib.h
+vector
 -
 iostream
+-
+
+../app/include/main.h
+Tetris.h
+../app/include/Tetris.h
+SFML/Graphics.hpp
 -
 Object.h
 ../app/include/Object.h
 
-C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/app/src/Tetris.cpp
-Tetris.h
-C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/app/src/Tetris.h
-cmath
+C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/app/src/main.cpp
+main.h
 -
 

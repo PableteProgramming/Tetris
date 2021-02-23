@@ -48,8 +48,8 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../SFML/include"
   "../SFML/src"
   "../SFML/extlibs/headers/stb_image"
-  "../SFML/extlibs/headers/jpeg"
   "../SFML/extlibs/headers/freetype2"
+  "../SFML/extlibs/headers/jpeg"
   )
 
 # Targets to which this target links.

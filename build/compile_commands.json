@@ -486,11 +486,6 @@
 },
 {
   "directory": "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/build/app",
-  "command": "C:\\MinGW\\bin\\g++.exe -DSFML_STATIC @CMakeFiles/Tetris.dir/includes_CXX.rsp -g -o CMakeFiles\\Tetris.dir\\src\\Tetris.cpp.obj -c C:\\Users\\curro.LAPTOP-DUBBS74R\\OneDrive\\Documentos\\Programming\\C++\\Tetris\\app\\src\\Tetris.cpp",
-  "file": "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/app/src/Tetris.cpp"
-},
-{
-  "directory": "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/build/app",
   "command": "C:\\MinGW\\bin\\g++.exe -DSFML_STATIC @CMakeFiles/Tetris.dir/includes_CXX.rsp -g -o CMakeFiles\\Tetris.dir\\src\\Manager.cpp.obj -c C:\\Users\\curro.LAPTOP-DUBBS74R\\OneDrive\\Documentos\\Programming\\C++\\Tetris\\app\\src\\Manager.cpp",
   "file": "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/app/src/Manager.cpp"
 },
@@ -503,5 +498,15 @@
   "directory": "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/build/app",
   "command": "C:\\MinGW\\bin\\g++.exe -DSFML_STATIC @CMakeFiles/Tetris.dir/includes_CXX.rsp -g -o CMakeFiles\\Tetris.dir\\src\\Object.cpp.obj -c C:\\Users\\curro.LAPTOP-DUBBS74R\\OneDrive\\Documentos\\Programming\\C++\\Tetris\\app\\src\\Object.cpp",
   "file": "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/app/src/Object.cpp"
+},
+{
+  "directory": "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/build/app",
+  "command": "C:\\MinGW\\bin\\g++.exe -DSFML_STATIC @CMakeFiles/Tetris.dir/includes_CXX.rsp -g -o CMakeFiles\\Tetris.dir\\src\\Tetris.cpp.obj -c C:\\Users\\curro.LAPTOP-DUBBS74R\\OneDrive\\Documentos\\Programming\\C++\\Tetris\\app\\src\\Tetris.cpp",
+  "file": "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/app/src/Tetris.cpp"
+},
+{
+  "directory": "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/build/app",
+  "command": "C:\\MinGW\\bin\\g++.exe -DSFML_STATIC @CMakeFiles/Tetris.dir/includes_CXX.rsp -g -o CMakeFiles\\Tetris.dir\\src\\main.cpp.obj -c C:\\Users\\curro.LAPTOP-DUBBS74R\\OneDrive\\Documentos\\Programming\\C++\\Tetris\\app\\src\\main.cpp",
+  "file": "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/app/src/main.cpp"
 }
 ]

@@ -1,6 +1,6 @@
-#include "Object.h"
+#include <Object.h>
 #include <iostream>
-Object::Object(int _x, int _y, int rotation,Manager _manager,std::vector<std::vector<int>> _map,int _speed){
+Object::Object(int _x, int _y, int rotation,Manager _manager,std::vector<std::vector<int>> _map,int _W_width, int _W_height,int _speed){
     x=_x;
     y=_y;
     manager.SetScale(_manager.GetScale());
@@ -8,6 +8,8 @@ Object::Object(int _x, int _y, int rotation,Manager _manager,std::vector<std::ve
     //map
     speed=_speed;
     map=_map;
+    W_width=_W_width;
+    W_height= _W_height;
     Rotate(rotation);
     Configure();
 }
@@ -40,11 +42,25 @@ void Object::FillRects(std::vector<std::vector<int>> _map){
 void Object::Rotate(int rotation){
     map= RotateMap(rotation,map);
     Configure();
+    //check if rotation is not out of the screen or something similar
+    //x
+    if(x<0){
+        x=0;
+    }
+    else if(x>(W_width-width)){
+        x= W_width-width;
+    }
+
+    //y
+    if(y<0){
+        y=0;
+    }
+    else if(y>(W_height-height)){
+        y= W_height-height;
+    }
 }
 
 void Object::Configure(){
-    pos.first=x;
-    pos.second=y;
     height= map.size()*manager.GetScale();
     width= map[0].size()*manager.GetScale();
     rects.clear();
@@ -56,8 +72,6 @@ void Object::Move(int _x, int _height){
     if(y+(speed*manager.GetScale())<= _height-height){
         y+=speed*manager.GetScale();
     }
-    pos.first=x;
-    pos.second=y;
 }
 
 void Object::SetSpeed(int _speed){
