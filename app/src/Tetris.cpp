@@ -36,10 +36,13 @@ int main()
     sf::Clock clock;
     double timepassed;
     double totaltimetopass= 1/fps;
-    double clicstimepassed;
-    double clicstotaltimetopass= 1/clicsfps;
+    double moveclicstimepassed;
+    double moveclicstotaltimetopass= 1/moveclicsfps;
+    double rotateclicstimepassed;
+    double rotateclicstotaltimetopass= 1/rotateclicsfps;
     bool rightpressed=false;
     bool leftpressed=false;
+    bool upkeypressed=false;
     //std::cout<<"time to be passed for each frame: "<<frametime<<std::endl;
     // run the program as long as the window is open
     while (window.isOpen())
@@ -69,10 +72,17 @@ int main()
                 }
             }
         }
+        if(sf::Keyboard::isKeyPressed(sf::Keyboard::Up)){
+            if(!upkeypressed){
+                upkeypressed=true;
+                piece.Rotate(90);
+            }
+        }
 
         double toadd= clock.restart().asSeconds();
         timepassed+= toadd;
-        clicstimepassed+=toadd;
+        moveclicstimepassed+=toadd;
+        rotateclicstimepassed+=toadd;
         
 
         if(timepassed>= totaltimetopass) {
@@ -81,10 +91,15 @@ int main()
             piece.Move(x,W_HEIGHT);	
         }
 
-        if(clicstimepassed >= clicstotaltimetopass){
-            clicstimepassed=0;
+        if(moveclicstimepassed >= moveclicstotaltimetopass){
+            moveclicstimepassed=0;
             rightpressed=false;
             leftpressed=false;
+        }
+
+        if(rotateclicstimepassed>= rotateclicstotaltimetopass){
+            rotateclicstimepassed=0;
+            upkeypressed=false;
         }
 
         window.clear();

@@ -1,14 +1,13 @@
 #include "Object.h"
 #include <iostream>
-Object::Object(int _x, int _y, float _rotation,Manager _manager,std::vector<std::vector<int>> _map){
+Object::Object(int _x, int _y, int rotation,Manager _manager,std::vector<std::vector<int>> _map){
     x=_x;
     y=_y;
-    rotation=_rotation;
     manager.SetScale(_manager.GetScale());
     manager.SetSets(_manager.GetSets());
     //map
     map=_map;
-    Rotate();
+    Rotate(rotation);
     Configure();
 }
 
@@ -37,7 +36,7 @@ void Object::FillRects(std::vector<std::vector<int>> _map){
     }
 }
 
-void Object::Rotate(){
+void Object::Rotate(int rotation){
     map= RotateMap(rotation,map);
     Configure();
 }
