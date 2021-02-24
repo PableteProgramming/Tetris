@@ -4,7 +4,7 @@ int main()
 {
     sf::RenderWindow window(sf::VideoMode(W_WIDTH, W_HEIGHT), "My window");
 
-    std::vector<std::vector<int>> actmap= Map::z;
+    std::vector<std::vector<int>> actmap= Map::line;
 
     int x=scale;
     int y=scale;
@@ -27,7 +27,10 @@ int main()
     bool rightpressed=false;
     bool leftpressed=false;
     bool upkeypressed=false;
-    //std::cout<<"time to be passed for each frame: "<<frametime<<std::endl;
+
+
+    fillMap(map,0);
+
     // run the program as long as the window is open
     while (window.isOpen())
     {
@@ -60,6 +63,7 @@ int main()
             if(!upkeypressed){
                 upkeypressed=true;
                 piece.Rotate(90);
+                x= piece.GetX();
             }
         }
 

@@ -124,3 +124,11 @@ std::vector<std::pair<int,sf::Color>> Map::ColorSet={
     {6,sf::Color{255,255,255}/*white*/},
     {7,sf::Color{0,0,0}/*black*/}
 };
+
+void fillMap(int _map[W_HEIGHT/scale][W_WIDTH/scale], int v){
+    for(int y=0; y<(W_HEIGHT/scale);y++){
+        for(int x=0; x<(W_WIDTH/scale); x++){
+            _map[y][x]=v;
+        }
+    }
+}

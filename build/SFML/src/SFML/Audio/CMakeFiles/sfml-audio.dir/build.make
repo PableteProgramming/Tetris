@@ -381,34 +381,34 @@ sfml__audio_OBJECTS = \
 # External object files for target sfml-audio
 sfml__audio_EXTERNAL_OBJECTS =
 
-SFML/lib/libsfml-audio.a: SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/ALCheck.cpp.obj
-SFML/lib/libsfml-audio.a: SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AlResource.cpp.obj
-SFML/lib/libsfml-audio.a: SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AudioDevice.cpp.obj
-SFML/lib/libsfml-audio.a: SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Listener.cpp.obj
-SFML/lib/libsfml-audio.a: SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Music.cpp.obj
-SFML/lib/libsfml-audio.a: SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Sound.cpp.obj
-SFML/lib/libsfml-audio.a: SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBuffer.cpp.obj
-SFML/lib/libsfml-audio.a: SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBufferRecorder.cpp.obj
-SFML/lib/libsfml-audio.a: SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/InputSoundFile.cpp.obj
-SFML/lib/libsfml-audio.a: SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/OutputSoundFile.cpp.obj
-SFML/lib/libsfml-audio.a: SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundRecorder.cpp.obj
-SFML/lib/libsfml-audio.a: SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundSource.cpp.obj
-SFML/lib/libsfml-audio.a: SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundStream.cpp.obj
-SFML/lib/libsfml-audio.a: SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileFactory.cpp.obj
-SFML/lib/libsfml-audio.a: SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderFlac.cpp.obj
-SFML/lib/libsfml-audio.a: SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderOgg.cpp.obj
-SFML/lib/libsfml-audio.a: SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderWav.cpp.obj
-SFML/lib/libsfml-audio.a: SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterFlac.cpp.obj
-SFML/lib/libsfml-audio.a: SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterOgg.cpp.obj
-SFML/lib/libsfml-audio.a: SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterWav.cpp.obj
-SFML/lib/libsfml-audio.a: SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/build.make
-SFML/lib/libsfml-audio.a: SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Linking CXX static library ..\..\..\lib\libsfml-audio.a"
+SFML/lib/libsfml-audio-s-d.a: SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/ALCheck.cpp.obj
+SFML/lib/libsfml-audio-s-d.a: SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AlResource.cpp.obj
+SFML/lib/libsfml-audio-s-d.a: SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AudioDevice.cpp.obj
+SFML/lib/libsfml-audio-s-d.a: SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Listener.cpp.obj
+SFML/lib/libsfml-audio-s-d.a: SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Music.cpp.obj
+SFML/lib/libsfml-audio-s-d.a: SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Sound.cpp.obj
+SFML/lib/libsfml-audio-s-d.a: SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBuffer.cpp.obj
+SFML/lib/libsfml-audio-s-d.a: SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBufferRecorder.cpp.obj
+SFML/lib/libsfml-audio-s-d.a: SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/InputSoundFile.cpp.obj
+SFML/lib/libsfml-audio-s-d.a: SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/OutputSoundFile.cpp.obj
+SFML/lib/libsfml-audio-s-d.a: SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundRecorder.cpp.obj
+SFML/lib/libsfml-audio-s-d.a: SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundSource.cpp.obj
+SFML/lib/libsfml-audio-s-d.a: SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundStream.cpp.obj
+SFML/lib/libsfml-audio-s-d.a: SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileFactory.cpp.obj
+SFML/lib/libsfml-audio-s-d.a: SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderFlac.cpp.obj
+SFML/lib/libsfml-audio-s-d.a: SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderOgg.cpp.obj
+SFML/lib/libsfml-audio-s-d.a: SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderWav.cpp.obj
+SFML/lib/libsfml-audio-s-d.a: SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterFlac.cpp.obj
+SFML/lib/libsfml-audio-s-d.a: SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterOgg.cpp.obj
+SFML/lib/libsfml-audio-s-d.a: SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterWav.cpp.obj
+SFML/lib/libsfml-audio-s-d.a: SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/build.make
+SFML/lib/libsfml-audio-s-d.a: SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Linking CXX static library ..\..\..\lib\libsfml-audio-s-d.a"
 	cd /d C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\build\SFML\src\SFML\Audio && $(CMAKE_COMMAND) -P CMakeFiles\sfml-audio.dir\cmake_clean_target.cmake
 	cd /d C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\build\SFML\src\SFML\Audio && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\sfml-audio.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/build: SFML/lib/libsfml-audio.a
+SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/build: SFML/lib/libsfml-audio-s-d.a
 
 .PHONY : SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/build
 

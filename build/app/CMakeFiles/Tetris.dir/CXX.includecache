@@ -714,22 +714,10 @@ SFML/Graphics.hpp
 Object.h
 ../app/include/Object.h
 
-C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/app/src/Manager.cpp
-Manager.h
--
-
 C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/app/src/Object.cpp
 Object.h
 -
 iostream
--
-
-C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/app/src/Rect.cpp
-Rect.h
--
-
-C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/app/src/Tetris.cpp
-Tetris.h
 -
 
 C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/app/src/main.cpp

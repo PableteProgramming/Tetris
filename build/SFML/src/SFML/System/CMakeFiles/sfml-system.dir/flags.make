@@ -6,5 +6,5 @@ CXX_DEFINES = -DSFML_STATIC
 
 CXX_INCLUDES = @CMakeFiles/sfml-system.dir/includes_CXX.rsp
 
-CXX_FLAGS = 
+CXX_FLAGS = -g
 

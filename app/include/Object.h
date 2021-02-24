@@ -27,4 +27,5 @@ public:
     void Rotate(int);
     void SetSpeed(int);
     int GetSpeed(){return speed;};
+    int GetX(){return x;};
 };

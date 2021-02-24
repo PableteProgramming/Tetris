@@ -26,3 +26,5 @@ public:
     static std::vector<std::pair<int,sf::Color>> ColorSet;
 };
 
+void fillMap(int[W_HEIGHT/scale][W_WIDTH/scale],int);
+

@@ -46,18 +46,23 @@ void Object::Rotate(int rotation){
     //x
     if(x<0){
         x=0;
+        //Configure();
     }
     else if(x>(W_width-width)){
         x= W_width-width;
+        //Configure();
     }
 
     //y
     if(y<0){
         y=0;
+        //Configure();
     }
     else if(y>(W_height-height)){
         y= W_height-height;
+        //Configure();
     }
+
 }
 
 void Object::Configure(){

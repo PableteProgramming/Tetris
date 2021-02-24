@@ -140,46 +140,46 @@ set_target_properties(sfml-audio PROPERTIES
   INTERFACE_LINK_LIBRARIES "\$<LINK_ONLY:-static-libgcc>;\$<LINK_ONLY:-static-libstdc++>;\$<LINK_ONLY:OpenAL>;sfml-system;\$<LINK_ONLY:Vorbis>;\$<LINK_ONLY:FLAC>"
 )
 
-# Import target "sfml-system" for configuration ""
-set_property(TARGET sfml-system APPEND PROPERTY IMPORTED_CONFIGURATIONS NOCONFIG)
+# Import target "sfml-system" for configuration "Debug"
+set_property(TARGET sfml-system APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(sfml-system PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_NOCONFIG "CXX"
-  IMPORTED_LOCATION_NOCONFIG "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/build/SFML/lib/libsfml-system.a"
+  IMPORTED_LINK_INTERFACE_LANGUAGES_DEBUG "CXX"
+  IMPORTED_LOCATION_DEBUG "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/build/SFML/lib/libsfml-system-s-d.a"
   )
 
-# Import target "sfml-main" for configuration ""
-set_property(TARGET sfml-main APPEND PROPERTY IMPORTED_CONFIGURATIONS NOCONFIG)
+# Import target "sfml-main" for configuration "Debug"
+set_property(TARGET sfml-main APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(sfml-main PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_NOCONFIG "CXX"
-  IMPORTED_LOCATION_NOCONFIG "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/build/SFML/lib/libsfml-main.a"
+  IMPORTED_LINK_INTERFACE_LANGUAGES_DEBUG "CXX"
+  IMPORTED_LOCATION_DEBUG "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/build/SFML/lib/libsfml-main-d.a"
   )
 
-# Import target "sfml-window" for configuration ""
-set_property(TARGET sfml-window APPEND PROPERTY IMPORTED_CONFIGURATIONS NOCONFIG)
+# Import target "sfml-window" for configuration "Debug"
+set_property(TARGET sfml-window APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(sfml-window PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_NOCONFIG "CXX"
-  IMPORTED_LOCATION_NOCONFIG "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/build/SFML/lib/libsfml-window.a"
+  IMPORTED_LINK_INTERFACE_LANGUAGES_DEBUG "CXX"
+  IMPORTED_LOCATION_DEBUG "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/build/SFML/lib/libsfml-window-s-d.a"
   )
 
-# Import target "sfml-network" for configuration ""
-set_property(TARGET sfml-network APPEND PROPERTY IMPORTED_CONFIGURATIONS NOCONFIG)
+# Import target "sfml-network" for configuration "Debug"
+set_property(TARGET sfml-network APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(sfml-network PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_NOCONFIG "CXX"
-  IMPORTED_LOCATION_NOCONFIG "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/build/SFML/lib/libsfml-network.a"
+  IMPORTED_LINK_INTERFACE_LANGUAGES_DEBUG "CXX"
+  IMPORTED_LOCATION_DEBUG "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/build/SFML/lib/libsfml-network-s-d.a"
   )
 
-# Import target "sfml-graphics" for configuration ""
-set_property(TARGET sfml-graphics APPEND PROPERTY IMPORTED_CONFIGURATIONS NOCONFIG)
+# Import target "sfml-graphics" for configuration "Debug"
+set_property(TARGET sfml-graphics APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(sfml-graphics PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_NOCONFIG "CXX"
-  IMPORTED_LOCATION_NOCONFIG "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/build/SFML/lib/libsfml-graphics.a"
+  IMPORTED_LINK_INTERFACE_LANGUAGES_DEBUG "CXX"
+  IMPORTED_LOCATION_DEBUG "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/build/SFML/lib/libsfml-graphics-s-d.a"
   )
 
-# Import target "sfml-audio" for configuration ""
-set_property(TARGET sfml-audio APPEND PROPERTY IMPORTED_CONFIGURATIONS NOCONFIG)
+# Import target "sfml-audio" for configuration "Debug"
+set_property(TARGET sfml-audio APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(sfml-audio PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_NOCONFIG "CXX"
-  IMPORTED_LOCATION_NOCONFIG "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/build/SFML/lib/libsfml-audio.a"
+  IMPORTED_LINK_INTERFACE_LANGUAGES_DEBUG "CXX"
+  IMPORTED_LOCATION_DEBUG "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/build/SFML/lib/libsfml-audio-s-d.a"
   )
 
 # This file does not depend on other imported targets which have
