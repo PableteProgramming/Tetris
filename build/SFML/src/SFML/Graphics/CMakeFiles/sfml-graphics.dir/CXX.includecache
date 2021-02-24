@@ -12,22 +12,6 @@
 config/ftheader.h
 -
 
-../SFML/extlibs/headers/jpeg/jconfig.h
-
-../SFML/extlibs/headers/jpeg/jerror.h
-
-../SFML/extlibs/headers/jpeg/jmorecfg.h
-
-../SFML/extlibs/headers/jpeg/jpeglib.h
-jconfig.h
-../SFML/extlibs/headers/jpeg/jconfig.h
-jmorecfg.h
-../SFML/extlibs/headers/jpeg/jmorecfg.h
-jpegint.h
-../SFML/extlibs/headers/jpeg/jpegint.h
-jerror.h
-../SFML/extlibs/headers/jpeg/jerror.h
-
 ../SFML/extlibs/headers/stb_image/stb_image.h
 stb_image.h
 ../SFML/extlibs/headers/stb_image/stb_image.h
@@ -40,6 +24,8 @@ stddef.h
 stdlib.h
 -
 string.h
+-
+limits.h
 -
 math.h
 -
@@ -57,17 +43,17 @@ arm_neon.h
 -
 
 ../SFML/extlibs/headers/stb_image/stb_image_write.h
+stdio.h
+-
 stdarg.h
 -
 stdlib.h
 -
-stdio.h
--
 string.h
 -
-assert.h
--
 math.h
+-
+assert.h
 -
 
 ../SFML/include/SFML/Config.hpp
@@ -213,6 +199,8 @@ SFML/Graphics/Texture.hpp
 -
 SFML/Graphics/RenderTarget.hpp
 -
+SFML/Window/ContextSettings.hpp
+-
 
 ../SFML/include/SFML/Graphics/RenderWindow.hpp
 SFML/Graphics/Export.hpp
@@ -332,6 +320,16 @@ SFML/Graphics/Drawable.hpp
 vector
 -
 
+../SFML/include/SFML/Graphics/VertexBuffer.hpp
+SFML/Graphics/Export.hpp
+-
+SFML/Graphics/PrimitiveType.hpp
+-
+SFML/Graphics/Drawable.hpp
+-
+SFML/Window/GlResource.hpp
+-
+
 ../SFML/include/SFML/Graphics/View.hpp
 SFML/Graphics/Export.hpp
 -
@@ -364,6 +362,8 @@ OpenGLES/ES1/glext.h
 GLES/gl.h
 -
 GLES/glext.h
+-
+GLES2/gl2platform.h
 -
 GLES2/gl2ext.h
 -
@@ -465,6 +465,16 @@ SFML/System/NonCopyable.hpp
 -
 
 ../SFML/include/SFML/Window/ContextSettings.hpp
+SFML/Config.hpp
+-
+
+../SFML/include/SFML/Window/Cursor.hpp
+SFML/Window/Export.hpp
+-
+SFML/System/NonCopyable.hpp
+-
+SFML/System/Vector2.hpp
+-
 
 ../SFML/include/SFML/Window/Export.hpp
 SFML/Config.hpp
@@ -483,9 +493,13 @@ vector
 -
 
 ../SFML/include/SFML/Window/Window.hpp
+SFML/Window/ContextSettings.hpp
+-
+SFML/Window/Cursor.hpp
+-
 SFML/Window/Export.hpp
 -
-SFML/Window/ContextSettings.hpp
+SFML/Window/GlResource.hpp
 -
 SFML/Window/VideoMode.hpp
 -
@@ -493,15 +507,13 @@ SFML/Window/WindowHandle.hpp
 -
 SFML/Window/WindowStyle.hpp
 -
-SFML/Window/GlResource.hpp
--
 SFML/System/Clock.hpp
--
-SFML/System/Vector2.hpp
 -
 SFML/System/NonCopyable.hpp
 -
 SFML/System/String.hpp
+-
+SFML/System/Vector2.hpp
 -
 
 ../SFML/include/SFML/Window/WindowHandle.hpp
@@ -572,6 +584,8 @@ SFML/Graphics/RenderTextureImpl.hpp
 SFML/Window/Context.hpp
 -
 SFML/Window/GlResource.hpp
+-
+map
 -
 
 ../SFML/src/SFML/Graphics/TextureSaver.hpp
@@ -679,10 +693,6 @@ stb_image.h
 -
 stb_image_write.h
 -
-jpeglib.h
--
-jerror.h
--
 cctype
 -
 
@@ -709,13 +719,25 @@ SFML/Graphics/Texture.hpp
 -
 SFML/Graphics/VertexArray.hpp
 -
+SFML/Graphics/VertexBuffer.hpp
+-
 SFML/Graphics/GLCheck.hpp
+-
+SFML/Window/Context.hpp
+-
+SFML/System/Mutex.hpp
+-
+SFML/System/Lock.hpp
 -
 SFML/System/Err.hpp
 -
 cassert
 -
 iostream
+-
+algorithm
+-
+map
 -
 
 C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/SFML/src/SFML/Graphics/RenderTexture.cpp
@@ -751,13 +773,25 @@ SFML/Graphics/Texture.hpp
 -
 SFML/Graphics/GLCheck.hpp
 -
+SFML/System/Mutex.hpp
+-
+SFML/System/Lock.hpp
+-
 SFML/System/Err.hpp
+-
+utility
+-
+set
 -
 
 C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/SFML/src/SFML/Graphics/RenderWindow.cpp
 SFML/Graphics/RenderWindow.hpp
 -
 SFML/Graphics/Texture.hpp
+-
+SFML/Graphics/GLCheck.hpp
+-
+SFML/Graphics/RenderTextureImplFBO.hpp
 -
 
 C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/SFML/src/SFML/Graphics/Shader.cpp
@@ -866,6 +900,24 @@ C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/SFML/s
 SFML/Graphics/VertexArray.hpp
 -
 SFML/Graphics/RenderTarget.hpp
+-
+
+C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/SFML/src/SFML/Graphics/VertexBuffer.cpp
+SFML/Graphics/VertexBuffer.hpp
+-
+SFML/Graphics/RenderTarget.hpp
+-
+SFML/Graphics/Vertex.hpp
+-
+SFML/Graphics/GLCheck.hpp
+-
+SFML/System/Mutex.hpp
+-
+SFML/System/Lock.hpp
+-
+SFML/System/Err.hpp
+-
+cstring
 -
 
 C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/SFML/src/SFML/Graphics/View.cpp

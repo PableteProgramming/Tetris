@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../../lib/libsfml-graphics-s-d.a"
-  "../../../lib/libsfml-graphics-s-d.pdb"
+  "../../../lib/libsfml-graphics.a"
+  "../../../lib/libsfml-graphics.pdb"
   "CMakeFiles/sfml-graphics.dir/BlendMode.cpp.obj"
   "CMakeFiles/sfml-graphics.dir/CircleShape.cpp.obj"
   "CMakeFiles/sfml-graphics.dir/Color.cpp.obj"
@@ -30,6 +30,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/sfml-graphics.dir/Transformable.cpp.obj"
   "CMakeFiles/sfml-graphics.dir/Vertex.cpp.obj"
   "CMakeFiles/sfml-graphics.dir/VertexArray.cpp.obj"
+  "CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.obj"
   "CMakeFiles/sfml-graphics.dir/View.cpp.obj"
 )
 

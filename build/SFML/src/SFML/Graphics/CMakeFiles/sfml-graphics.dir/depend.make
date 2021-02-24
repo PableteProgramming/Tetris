@@ -141,10 +141,6 @@ SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Image.cpp.obj: ../SFML/src/S
 SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Image.cpp.obj: ../SFML/src/SFML/System/Android/ResourceStream.hpp
 SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Image.cpp.obj: ../SFML/src/SFML/Graphics/Image.cpp
 
-SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/ImageLoader.cpp.obj: ../SFML/extlibs/headers/jpeg/jconfig.h
-SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/ImageLoader.cpp.obj: ../SFML/extlibs/headers/jpeg/jerror.h
-SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/ImageLoader.cpp.obj: ../SFML/extlibs/headers/jpeg/jmorecfg.h
-SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/ImageLoader.cpp.obj: ../SFML/extlibs/headers/jpeg/jpeglib.h
 SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/ImageLoader.cpp.obj: ../SFML/extlibs/headers/stb_image/stb_image.h
 SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/ImageLoader.cpp.obj: ../SFML/extlibs/headers/stb_image/stb_image_write.h
 SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/ImageLoader.cpp.obj: ../SFML/include/SFML/Config.hpp
@@ -205,15 +201,20 @@ SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTarget.cpp.obj: ../SFM
 SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTarget.cpp.obj: ../SFML/include/SFML/Graphics/Transform.hpp
 SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTarget.cpp.obj: ../SFML/include/SFML/Graphics/Vertex.hpp
 SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTarget.cpp.obj: ../SFML/include/SFML/Graphics/VertexArray.hpp
+SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTarget.cpp.obj: ../SFML/include/SFML/Graphics/VertexBuffer.hpp
 SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTarget.cpp.obj: ../SFML/include/SFML/Graphics/View.hpp
 SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTarget.cpp.obj: ../SFML/include/SFML/OpenGL.hpp
 SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTarget.cpp.obj: ../SFML/include/SFML/System/Err.hpp
 SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTarget.cpp.obj: ../SFML/include/SFML/System/Export.hpp
+SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTarget.cpp.obj: ../SFML/include/SFML/System/Lock.hpp
+SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTarget.cpp.obj: ../SFML/include/SFML/System/Mutex.hpp
 SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTarget.cpp.obj: ../SFML/include/SFML/System/NonCopyable.hpp
 SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTarget.cpp.obj: ../SFML/include/SFML/System/Vector2.hpp
 SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTarget.cpp.obj: ../SFML/include/SFML/System/Vector2.inl
 SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTarget.cpp.obj: ../SFML/include/SFML/System/Vector3.hpp
 SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTarget.cpp.obj: ../SFML/include/SFML/System/Vector3.inl
+SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTarget.cpp.obj: ../SFML/include/SFML/Window/Context.hpp
+SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTarget.cpp.obj: ../SFML/include/SFML/Window/ContextSettings.hpp
 SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTarget.cpp.obj: ../SFML/include/SFML/Window/Export.hpp
 SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTarget.cpp.obj: ../SFML/include/SFML/Window/GlResource.hpp
 SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTarget.cpp.obj: ../SFML/src/SFML/Graphics/GLCheck.hpp
@@ -283,6 +284,8 @@ SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImplFBO.cpp.obj
 SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImplFBO.cpp.obj: ../SFML/include/SFML/OpenGL.hpp
 SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImplFBO.cpp.obj: ../SFML/include/SFML/System/Err.hpp
 SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImplFBO.cpp.obj: ../SFML/include/SFML/System/Export.hpp
+SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImplFBO.cpp.obj: ../SFML/include/SFML/System/Lock.hpp
+SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImplFBO.cpp.obj: ../SFML/include/SFML/System/Mutex.hpp
 SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImplFBO.cpp.obj: ../SFML/include/SFML/System/NonCopyable.hpp
 SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImplFBO.cpp.obj: ../SFML/include/SFML/System/Vector2.hpp
 SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImplFBO.cpp.obj: ../SFML/include/SFML/System/Vector2.inl
@@ -312,6 +315,7 @@ SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.obj: ../SFM
 SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.obj: ../SFML/include/SFML/Graphics/Transform.hpp
 SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.obj: ../SFML/include/SFML/Graphics/Vertex.hpp
 SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.obj: ../SFML/include/SFML/Graphics/View.hpp
+SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.obj: ../SFML/include/SFML/OpenGL.hpp
 SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.obj: ../SFML/include/SFML/System/Clock.hpp
 SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.obj: ../SFML/include/SFML/System/Export.hpp
 SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.obj: ../SFML/include/SFML/System/NonCopyable.hpp
@@ -322,13 +326,20 @@ SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.obj: ../SFM
 SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.obj: ../SFML/include/SFML/System/Utf.inl
 SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.obj: ../SFML/include/SFML/System/Vector2.hpp
 SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.obj: ../SFML/include/SFML/System/Vector2.inl
+SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.obj: ../SFML/include/SFML/Window/Context.hpp
 SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.obj: ../SFML/include/SFML/Window/ContextSettings.hpp
+SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.obj: ../SFML/include/SFML/Window/Cursor.hpp
 SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.obj: ../SFML/include/SFML/Window/Export.hpp
 SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.obj: ../SFML/include/SFML/Window/GlResource.hpp
 SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.obj: ../SFML/include/SFML/Window/VideoMode.hpp
 SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.obj: ../SFML/include/SFML/Window/Window.hpp
 SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.obj: ../SFML/include/SFML/Window/WindowHandle.hpp
 SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.obj: ../SFML/include/SFML/Window/WindowStyle.hpp
+SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.obj: ../SFML/src/SFML/Graphics/GLCheck.hpp
+SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.obj: ../SFML/src/SFML/Graphics/GLExtensions.hpp
+SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.obj: ../SFML/src/SFML/Graphics/GLLoader.hpp
+SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.obj: ../SFML/src/SFML/Graphics/RenderTextureImpl.hpp
+SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.obj: ../SFML/src/SFML/Graphics/RenderTextureImplFBO.hpp
 SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.obj: ../SFML/src/SFML/Graphics/RenderWindow.cpp
 
 SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Shader.cpp.obj: ../SFML/include/SFML/Config.hpp
@@ -469,6 +480,7 @@ SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Texture.cpp.obj: ../SFML/inc
 SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Texture.cpp.obj: ../SFML/include/SFML/System/Vector2.inl
 SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Texture.cpp.obj: ../SFML/include/SFML/Window/Context.hpp
 SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Texture.cpp.obj: ../SFML/include/SFML/Window/ContextSettings.hpp
+SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Texture.cpp.obj: ../SFML/include/SFML/Window/Cursor.hpp
 SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Texture.cpp.obj: ../SFML/include/SFML/Window/Export.hpp
 SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Texture.cpp.obj: ../SFML/include/SFML/Window/GlResource.hpp
 SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Texture.cpp.obj: ../SFML/include/SFML/Window/VideoMode.hpp
@@ -535,6 +547,35 @@ SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexArray.cpp.obj: ../SFML
 SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexArray.cpp.obj: ../SFML/include/SFML/System/Vector2.hpp
 SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexArray.cpp.obj: ../SFML/include/SFML/System/Vector2.inl
 SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexArray.cpp.obj: ../SFML/src/SFML/Graphics/VertexArray.cpp
+
+SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.obj: ../SFML/include/SFML/Config.hpp
+SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.obj: ../SFML/include/SFML/Graphics/BlendMode.hpp
+SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.obj: ../SFML/include/SFML/Graphics/Color.hpp
+SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.obj: ../SFML/include/SFML/Graphics/Drawable.hpp
+SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.obj: ../SFML/include/SFML/Graphics/Export.hpp
+SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.obj: ../SFML/include/SFML/Graphics/PrimitiveType.hpp
+SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.obj: ../SFML/include/SFML/Graphics/Rect.hpp
+SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.obj: ../SFML/include/SFML/Graphics/Rect.inl
+SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.obj: ../SFML/include/SFML/Graphics/RenderStates.hpp
+SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.obj: ../SFML/include/SFML/Graphics/RenderTarget.hpp
+SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.obj: ../SFML/include/SFML/Graphics/Transform.hpp
+SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.obj: ../SFML/include/SFML/Graphics/Vertex.hpp
+SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.obj: ../SFML/include/SFML/Graphics/VertexBuffer.hpp
+SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.obj: ../SFML/include/SFML/Graphics/View.hpp
+SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.obj: ../SFML/include/SFML/OpenGL.hpp
+SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.obj: ../SFML/include/SFML/System/Err.hpp
+SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.obj: ../SFML/include/SFML/System/Export.hpp
+SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.obj: ../SFML/include/SFML/System/Lock.hpp
+SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.obj: ../SFML/include/SFML/System/Mutex.hpp
+SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.obj: ../SFML/include/SFML/System/NonCopyable.hpp
+SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.obj: ../SFML/include/SFML/System/Vector2.hpp
+SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.obj: ../SFML/include/SFML/System/Vector2.inl
+SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.obj: ../SFML/include/SFML/Window/Export.hpp
+SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.obj: ../SFML/include/SFML/Window/GlResource.hpp
+SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.obj: ../SFML/src/SFML/Graphics/GLCheck.hpp
+SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.obj: ../SFML/src/SFML/Graphics/GLExtensions.hpp
+SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.obj: ../SFML/src/SFML/Graphics/GLLoader.hpp
+SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.obj: ../SFML/src/SFML/Graphics/VertexBuffer.cpp
 
 SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/View.cpp.obj: ../SFML/include/SFML/Config.hpp
 SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/View.cpp.obj: ../SFML/include/SFML/Graphics/Export.hpp

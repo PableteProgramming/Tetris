@@ -101,6 +101,8 @@ SFML/System/Time.hpp
 -
 string
 -
+algorithm
+-
 
 ../SFML/include/SFML/Audio/Listener.hpp
 SFML/Audio/Export.hpp
@@ -316,10 +318,6 @@ SFML/System/Vector3.inl
 
 ../SFML/src/SFML/Audio/ALCheck.hpp
 SFML/Config.hpp
--
-OpenAl/al.h
--
-OpenAl/alc.h
 -
 al.h
 -
@@ -544,6 +542,8 @@ algorithm
 cctype
 -
 cassert
+-
+cstring
 -
 
 C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/SFML/src/SFML/Audio/SoundFileWriterFlac.cpp

@@ -31,6 +31,7 @@ app/CMakeFiles/Tetris.dir/src/Manager.cpp.obj: ../SFML/include/SFML/Graphics/Tra
 app/CMakeFiles/Tetris.dir/src/Manager.cpp.obj: ../SFML/include/SFML/Graphics/Transformable.hpp
 app/CMakeFiles/Tetris.dir/src/Manager.cpp.obj: ../SFML/include/SFML/Graphics/Vertex.hpp
 app/CMakeFiles/Tetris.dir/src/Manager.cpp.obj: ../SFML/include/SFML/Graphics/VertexArray.hpp
+app/CMakeFiles/Tetris.dir/src/Manager.cpp.obj: ../SFML/include/SFML/Graphics/VertexBuffer.hpp
 app/CMakeFiles/Tetris.dir/src/Manager.cpp.obj: ../SFML/include/SFML/Graphics/View.hpp
 app/CMakeFiles/Tetris.dir/src/Manager.cpp.obj: ../SFML/include/SFML/System.hpp
 app/CMakeFiles/Tetris.dir/src/Manager.cpp.obj: ../SFML/include/SFML/System/Clock.hpp
@@ -58,8 +59,10 @@ app/CMakeFiles/Tetris.dir/src/Manager.cpp.obj: ../SFML/include/SFML/System/Vecto
 app/CMakeFiles/Tetris.dir/src/Manager.cpp.obj: ../SFML/include/SFML/System/Vector3.hpp
 app/CMakeFiles/Tetris.dir/src/Manager.cpp.obj: ../SFML/include/SFML/System/Vector3.inl
 app/CMakeFiles/Tetris.dir/src/Manager.cpp.obj: ../SFML/include/SFML/Window.hpp
+app/CMakeFiles/Tetris.dir/src/Manager.cpp.obj: ../SFML/include/SFML/Window/Clipboard.hpp
 app/CMakeFiles/Tetris.dir/src/Manager.cpp.obj: ../SFML/include/SFML/Window/Context.hpp
 app/CMakeFiles/Tetris.dir/src/Manager.cpp.obj: ../SFML/include/SFML/Window/ContextSettings.hpp
+app/CMakeFiles/Tetris.dir/src/Manager.cpp.obj: ../SFML/include/SFML/Window/Cursor.hpp
 app/CMakeFiles/Tetris.dir/src/Manager.cpp.obj: ../SFML/include/SFML/Window/Event.hpp
 app/CMakeFiles/Tetris.dir/src/Manager.cpp.obj: ../SFML/include/SFML/Window/Export.hpp
 app/CMakeFiles/Tetris.dir/src/Manager.cpp.obj: ../SFML/include/SFML/Window/GlResource.hpp
@@ -105,6 +108,7 @@ app/CMakeFiles/Tetris.dir/src/Object.cpp.obj: ../SFML/include/SFML/Graphics/Tran
 app/CMakeFiles/Tetris.dir/src/Object.cpp.obj: ../SFML/include/SFML/Graphics/Transformable.hpp
 app/CMakeFiles/Tetris.dir/src/Object.cpp.obj: ../SFML/include/SFML/Graphics/Vertex.hpp
 app/CMakeFiles/Tetris.dir/src/Object.cpp.obj: ../SFML/include/SFML/Graphics/VertexArray.hpp
+app/CMakeFiles/Tetris.dir/src/Object.cpp.obj: ../SFML/include/SFML/Graphics/VertexBuffer.hpp
 app/CMakeFiles/Tetris.dir/src/Object.cpp.obj: ../SFML/include/SFML/Graphics/View.hpp
 app/CMakeFiles/Tetris.dir/src/Object.cpp.obj: ../SFML/include/SFML/System.hpp
 app/CMakeFiles/Tetris.dir/src/Object.cpp.obj: ../SFML/include/SFML/System/Clock.hpp
@@ -132,8 +136,10 @@ app/CMakeFiles/Tetris.dir/src/Object.cpp.obj: ../SFML/include/SFML/System/Vector
 app/CMakeFiles/Tetris.dir/src/Object.cpp.obj: ../SFML/include/SFML/System/Vector3.hpp
 app/CMakeFiles/Tetris.dir/src/Object.cpp.obj: ../SFML/include/SFML/System/Vector3.inl
 app/CMakeFiles/Tetris.dir/src/Object.cpp.obj: ../SFML/include/SFML/Window.hpp
+app/CMakeFiles/Tetris.dir/src/Object.cpp.obj: ../SFML/include/SFML/Window/Clipboard.hpp
 app/CMakeFiles/Tetris.dir/src/Object.cpp.obj: ../SFML/include/SFML/Window/Context.hpp
 app/CMakeFiles/Tetris.dir/src/Object.cpp.obj: ../SFML/include/SFML/Window/ContextSettings.hpp
+app/CMakeFiles/Tetris.dir/src/Object.cpp.obj: ../SFML/include/SFML/Window/Cursor.hpp
 app/CMakeFiles/Tetris.dir/src/Object.cpp.obj: ../SFML/include/SFML/Window/Event.hpp
 app/CMakeFiles/Tetris.dir/src/Object.cpp.obj: ../SFML/include/SFML/Window/Export.hpp
 app/CMakeFiles/Tetris.dir/src/Object.cpp.obj: ../SFML/include/SFML/Window/GlResource.hpp
@@ -181,6 +187,7 @@ app/CMakeFiles/Tetris.dir/src/Rect.cpp.obj: ../SFML/include/SFML/Graphics/Transf
 app/CMakeFiles/Tetris.dir/src/Rect.cpp.obj: ../SFML/include/SFML/Graphics/Transformable.hpp
 app/CMakeFiles/Tetris.dir/src/Rect.cpp.obj: ../SFML/include/SFML/Graphics/Vertex.hpp
 app/CMakeFiles/Tetris.dir/src/Rect.cpp.obj: ../SFML/include/SFML/Graphics/VertexArray.hpp
+app/CMakeFiles/Tetris.dir/src/Rect.cpp.obj: ../SFML/include/SFML/Graphics/VertexBuffer.hpp
 app/CMakeFiles/Tetris.dir/src/Rect.cpp.obj: ../SFML/include/SFML/Graphics/View.hpp
 app/CMakeFiles/Tetris.dir/src/Rect.cpp.obj: ../SFML/include/SFML/System.hpp
 app/CMakeFiles/Tetris.dir/src/Rect.cpp.obj: ../SFML/include/SFML/System/Clock.hpp
@@ -208,8 +215,10 @@ app/CMakeFiles/Tetris.dir/src/Rect.cpp.obj: ../SFML/include/SFML/System/Vector2.
 app/CMakeFiles/Tetris.dir/src/Rect.cpp.obj: ../SFML/include/SFML/System/Vector3.hpp
 app/CMakeFiles/Tetris.dir/src/Rect.cpp.obj: ../SFML/include/SFML/System/Vector3.inl
 app/CMakeFiles/Tetris.dir/src/Rect.cpp.obj: ../SFML/include/SFML/Window.hpp
+app/CMakeFiles/Tetris.dir/src/Rect.cpp.obj: ../SFML/include/SFML/Window/Clipboard.hpp
 app/CMakeFiles/Tetris.dir/src/Rect.cpp.obj: ../SFML/include/SFML/Window/Context.hpp
 app/CMakeFiles/Tetris.dir/src/Rect.cpp.obj: ../SFML/include/SFML/Window/ContextSettings.hpp
+app/CMakeFiles/Tetris.dir/src/Rect.cpp.obj: ../SFML/include/SFML/Window/Cursor.hpp
 app/CMakeFiles/Tetris.dir/src/Rect.cpp.obj: ../SFML/include/SFML/Window/Event.hpp
 app/CMakeFiles/Tetris.dir/src/Rect.cpp.obj: ../SFML/include/SFML/Window/Export.hpp
 app/CMakeFiles/Tetris.dir/src/Rect.cpp.obj: ../SFML/include/SFML/Window/GlResource.hpp
@@ -255,6 +264,7 @@ app/CMakeFiles/Tetris.dir/src/Tetris.cpp.obj: ../SFML/include/SFML/Graphics/Tran
 app/CMakeFiles/Tetris.dir/src/Tetris.cpp.obj: ../SFML/include/SFML/Graphics/Transformable.hpp
 app/CMakeFiles/Tetris.dir/src/Tetris.cpp.obj: ../SFML/include/SFML/Graphics/Vertex.hpp
 app/CMakeFiles/Tetris.dir/src/Tetris.cpp.obj: ../SFML/include/SFML/Graphics/VertexArray.hpp
+app/CMakeFiles/Tetris.dir/src/Tetris.cpp.obj: ../SFML/include/SFML/Graphics/VertexBuffer.hpp
 app/CMakeFiles/Tetris.dir/src/Tetris.cpp.obj: ../SFML/include/SFML/Graphics/View.hpp
 app/CMakeFiles/Tetris.dir/src/Tetris.cpp.obj: ../SFML/include/SFML/System.hpp
 app/CMakeFiles/Tetris.dir/src/Tetris.cpp.obj: ../SFML/include/SFML/System/Clock.hpp
@@ -282,8 +292,10 @@ app/CMakeFiles/Tetris.dir/src/Tetris.cpp.obj: ../SFML/include/SFML/System/Vector
 app/CMakeFiles/Tetris.dir/src/Tetris.cpp.obj: ../SFML/include/SFML/System/Vector3.hpp
 app/CMakeFiles/Tetris.dir/src/Tetris.cpp.obj: ../SFML/include/SFML/System/Vector3.inl
 app/CMakeFiles/Tetris.dir/src/Tetris.cpp.obj: ../SFML/include/SFML/Window.hpp
+app/CMakeFiles/Tetris.dir/src/Tetris.cpp.obj: ../SFML/include/SFML/Window/Clipboard.hpp
 app/CMakeFiles/Tetris.dir/src/Tetris.cpp.obj: ../SFML/include/SFML/Window/Context.hpp
 app/CMakeFiles/Tetris.dir/src/Tetris.cpp.obj: ../SFML/include/SFML/Window/ContextSettings.hpp
+app/CMakeFiles/Tetris.dir/src/Tetris.cpp.obj: ../SFML/include/SFML/Window/Cursor.hpp
 app/CMakeFiles/Tetris.dir/src/Tetris.cpp.obj: ../SFML/include/SFML/Window/Event.hpp
 app/CMakeFiles/Tetris.dir/src/Tetris.cpp.obj: ../SFML/include/SFML/Window/Export.hpp
 app/CMakeFiles/Tetris.dir/src/Tetris.cpp.obj: ../SFML/include/SFML/Window/GlResource.hpp
@@ -329,6 +341,7 @@ app/CMakeFiles/Tetris.dir/src/main.cpp.obj: ../SFML/include/SFML/Graphics/Transf
 app/CMakeFiles/Tetris.dir/src/main.cpp.obj: ../SFML/include/SFML/Graphics/Transformable.hpp
 app/CMakeFiles/Tetris.dir/src/main.cpp.obj: ../SFML/include/SFML/Graphics/Vertex.hpp
 app/CMakeFiles/Tetris.dir/src/main.cpp.obj: ../SFML/include/SFML/Graphics/VertexArray.hpp
+app/CMakeFiles/Tetris.dir/src/main.cpp.obj: ../SFML/include/SFML/Graphics/VertexBuffer.hpp
 app/CMakeFiles/Tetris.dir/src/main.cpp.obj: ../SFML/include/SFML/Graphics/View.hpp
 app/CMakeFiles/Tetris.dir/src/main.cpp.obj: ../SFML/include/SFML/System.hpp
 app/CMakeFiles/Tetris.dir/src/main.cpp.obj: ../SFML/include/SFML/System/Clock.hpp
@@ -356,8 +369,10 @@ app/CMakeFiles/Tetris.dir/src/main.cpp.obj: ../SFML/include/SFML/System/Vector2.
 app/CMakeFiles/Tetris.dir/src/main.cpp.obj: ../SFML/include/SFML/System/Vector3.hpp
 app/CMakeFiles/Tetris.dir/src/main.cpp.obj: ../SFML/include/SFML/System/Vector3.inl
 app/CMakeFiles/Tetris.dir/src/main.cpp.obj: ../SFML/include/SFML/Window.hpp
+app/CMakeFiles/Tetris.dir/src/main.cpp.obj: ../SFML/include/SFML/Window/Clipboard.hpp
 app/CMakeFiles/Tetris.dir/src/main.cpp.obj: ../SFML/include/SFML/Window/Context.hpp
 app/CMakeFiles/Tetris.dir/src/main.cpp.obj: ../SFML/include/SFML/Window/ContextSettings.hpp
+app/CMakeFiles/Tetris.dir/src/main.cpp.obj: ../SFML/include/SFML/Window/Cursor.hpp
 app/CMakeFiles/Tetris.dir/src/main.cpp.obj: ../SFML/include/SFML/Window/Event.hpp
 app/CMakeFiles/Tetris.dir/src/main.cpp.obj: ../SFML/include/SFML/Window/Export.hpp
 app/CMakeFiles/Tetris.dir/src/main.cpp.obj: ../SFML/include/SFML/Window/GlResource.hpp

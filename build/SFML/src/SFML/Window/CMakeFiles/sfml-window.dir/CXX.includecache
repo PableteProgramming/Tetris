@@ -6,6 +6,14 @@
 
 #IncludeRegexTransform: 
 
+../SFML/extlibs/headers/mingw/_mingw_dxhelper.h
+
+../SFML/extlibs/headers/mingw/dinput.h
+objbase.h
+-
+_mingw_dxhelper.h
+-
+
 ../SFML/include/SFML/Config.hpp
 TargetConditionals.h
 ../SFML/include/SFML/TargetConditionals.h
@@ -32,6 +40,8 @@ OpenGLES/ES1/glext.h
 GLES/gl.h
 -
 GLES/glext.h
+-
+GLES2/gl2platform.h
 -
 GLES2/gl2ext.h
 -
@@ -138,6 +148,12 @@ SFML/System/Vector3.inl
 
 ../SFML/include/SFML/System/Vector3.inl
 
+../SFML/include/SFML/Window/Clipboard.hpp
+SFML/Window/Export.hpp
+-
+SFML/System/String.hpp
+-
+
 ../SFML/include/SFML/Window/Context.hpp
 SFML/Window/Export.hpp
 -
@@ -149,6 +165,16 @@ SFML/System/NonCopyable.hpp
 -
 
 ../SFML/include/SFML/Window/ContextSettings.hpp
+SFML/Config.hpp
+-
+
+../SFML/include/SFML/Window/Cursor.hpp
+SFML/Window/Export.hpp
+-
+SFML/System/NonCopyable.hpp
+-
+SFML/System/Vector2.hpp
+-
 
 ../SFML/include/SFML/Window/Event.hpp
 SFML/Config.hpp
@@ -209,9 +235,13 @@ vector
 -
 
 ../SFML/include/SFML/Window/Window.hpp
+SFML/Window/ContextSettings.hpp
+-
+SFML/Window/Cursor.hpp
+-
 SFML/Window/Export.hpp
 -
-SFML/Window/ContextSettings.hpp
+SFML/Window/GlResource.hpp
 -
 SFML/Window/VideoMode.hpp
 -
@@ -219,15 +249,13 @@ SFML/Window/WindowHandle.hpp
 -
 SFML/Window/WindowStyle.hpp
 -
-SFML/Window/GlResource.hpp
--
 SFML/System/Clock.hpp
--
-SFML/System/Vector2.hpp
 -
 SFML/System/NonCopyable.hpp
 -
 SFML/System/String.hpp
+-
+SFML/System/Vector2.hpp
 -
 
 ../SFML/include/SFML/Window/WindowHandle.hpp
@@ -258,6 +286,18 @@ string
 fstream
 -
 
+../SFML/src/SFML/Window/Android/ClipboardImpl.hpp
+SFML/System/String.hpp
+-
+
+../SFML/src/SFML/Window/Android/CursorImpl.hpp
+SFML/Window/Cursor.hpp
+-
+SFML/System/NonCopyable.hpp
+-
+SFML/System/Vector2.hpp
+-
+
 ../SFML/src/SFML/Window/Android/InputImpl.hpp
 SFML/Window/Keyboard.hpp
 -
@@ -282,6 +322,34 @@ SFML/Window/EglContext.hpp
 SFML/System/Android/Activity.hpp
 -
 android/input.h
+-
+
+../SFML/src/SFML/Window/ClipboardImpl.hpp
+SFML/Config.hpp
+-
+SFML/Window/Win32/ClipboardImpl.hpp
+-
+SFML/Window/Unix/ClipboardImpl.hpp
+-
+SFML/Window/OSX/ClipboardImpl.hpp
+-
+SFML/Window/iOS/ClipboardImpl.hpp
+-
+SFML/Window/Android/ClipboardImpl.hpp
+-
+
+../SFML/src/SFML/Window/CursorImpl.hpp
+SFML/Config.hpp
+-
+SFML/Window/Win32/CursorImpl.hpp
+-
+SFML/Window/Unix/CursorImpl.hpp
+-
+SFML/Window/OSX/CursorImpl.hpp
+-
+SFML/Window/iOS/CursorImpl.hpp
+-
+SFML/Window/Android/CursorImpl.hpp
 -
 
 ../SFML/src/SFML/Window/EGLCheck.hpp
@@ -319,6 +387,8 @@ SFML/Window/Context.hpp
 -
 SFML/Window/ContextSettings.hpp
 -
+SFML/Window/GlResource.hpp
+-
 SFML/System/NonCopyable.hpp
 -
 
@@ -351,6 +421,8 @@ SFML/Window/Unix/JoystickImpl.hpp
 -
 SFML/Window/FreeBSD/JoystickImpl.hpp
 -
+SFML/Window/OpenBSD/JoystickImpl.hpp
+-
 SFML/Window/OSX/JoystickImpl.hpp
 -
 SFML/Window/iOS/JoystickImpl.hpp
@@ -364,6 +436,18 @@ SFML/Window/Joystick.hpp
 SFML/Window/JoystickImpl.hpp
 -
 SFML/System/NonCopyable.hpp
+-
+
+../SFML/src/SFML/Window/OSX/ClipboardImpl.hpp
+SFML/System/String.hpp
+-
+
+../SFML/src/SFML/Window/OSX/CursorImpl.hpp
+SFML/Window/Cursor.hpp
+-
+SFML/System/NonCopyable.hpp
+-
+SFML/System/Vector2.hpp
 -
 
 ../SFML/src/SFML/Window/OSX/InputImpl.hpp
@@ -412,6 +496,8 @@ SFML/Window/WindowHandle.hpp
 AppKit/AppKit.h
 -
 
+../SFML/src/SFML/Window/OpenBSD/JoystickImpl.hpp
+
 ../SFML/src/SFML/Window/SensorImpl.hpp
 SFML/Config.hpp
 -
@@ -434,6 +520,26 @@ SFML/Window/Sensor.hpp
 SFML/Window/SensorImpl.hpp
 -
 SFML/System/NonCopyable.hpp
+-
+
+../SFML/src/SFML/Window/Unix/ClipboardImpl.hpp
+SFML/System/String.hpp
+-
+X11/Xlib.h
+-
+deque
+-
+
+../SFML/src/SFML/Window/Unix/CursorImpl.hpp
+SFML/Window/Cursor.hpp
+-
+SFML/System/NonCopyable.hpp
+-
+SFML/System/Vector2.hpp
+-
+SFML/Window/WindowStyle.hpp
+-
+X11/Xlib.h
 -
 
 ../SFML/src/SFML/Window/Unix/GlxContext.hpp
@@ -485,13 +591,31 @@ SFML/Window/WindowImpl.hpp
 -
 SFML/System/String.hpp
 -
+SFML/Window/WindowStyle.hpp
+-
 X11/Xlib.h
 -
 deque
 -
+X11/extensions/Xrandr.h
+-
 
 ../SFML/src/SFML/Window/VideoModeImpl.hpp
 SFML/Window/VideoMode.hpp
+-
+
+../SFML/src/SFML/Window/Win32/ClipboardImpl.hpp
+SFML/System/String.hpp
+-
+
+../SFML/src/SFML/Window/Win32/CursorImpl.hpp
+SFML/Window/Cursor.hpp
+-
+SFML/System/NonCopyable.hpp
+-
+SFML/System/Vector2.hpp
+-
+windows.h
 -
 
 ../SFML/src/SFML/Window/Win32/InputImpl.hpp
@@ -510,6 +634,8 @@ SFML/System/String.hpp
 windows.h
 -
 mmsystem.h
+-
+dinput.h
 -
 
 ../SFML/src/SFML/Window/Win32/SensorImpl.hpp
@@ -541,6 +667,10 @@ SFML/System/NonCopyable.hpp
 -
 SFML/System/String.hpp
 -
+SFML/Window/ContextSettings.hpp
+-
+SFML/Window/CursorImpl.hpp
+-
 SFML/Window/Event.hpp
 -
 SFML/Window/Joystick.hpp
@@ -555,11 +685,23 @@ SFML/Window/VideoMode.hpp
 -
 SFML/Window/WindowHandle.hpp
 -
-SFML/Window/ContextSettings.hpp
+SFML/Window/Window.hpp
 -
 queue
 -
 set
+-
+
+../SFML/src/SFML/Window/iOS/ClipboardImpl.hpp
+SFML/System/String.hpp
+-
+
+../SFML/src/SFML/Window/iOS/CursorImpl.hpp
+SFML/Window/Cursor.hpp
+-
+SFML/System/NonCopyable.hpp
+-
+SFML/System/Vector2.hpp
 -
 
 ../SFML/src/SFML/Window/iOS/EaglContext.hpp
@@ -598,12 +740,26 @@ SFML/Window/WindowImpl.hpp
 SFML/Window/iOS/ObjCType.hpp
 -
 
+C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/SFML/src/SFML/Window/Clipboard.cpp
+SFML/Window/Clipboard.hpp
+-
+SFML/Window/ClipboardImpl.hpp
+-
+SFML/System/String.hpp
+-
+
 C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/SFML/src/SFML/Window/Context.cpp
 SFML/Window/Context.hpp
 -
 SFML/Window/GlContext.hpp
 -
 SFML/System/ThreadLocalPtr.hpp
+-
+
+C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/SFML/src/SFML/Window/Cursor.cpp
+SFML/Window/Cursor.hpp
+-
+SFML/Window/CursorImpl.hpp
 -
 
 C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/SFML/src/SFML/Window/GlContext.cpp
@@ -629,9 +785,13 @@ string
 -
 set
 -
+utility
+-
 cstdlib
 -
 cstring
+-
+cctype
 -
 cassert
 -
@@ -704,6 +864,24 @@ algorithm
 functional
 -
 
+C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/SFML/src/SFML/Window/Win32/ClipboardImpl.cpp
+SFML/Window/Win32/ClipboardImpl.hpp
+-
+SFML/System/String.hpp
+-
+iostream
+-
+windows.h
+-
+
+C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/SFML/src/SFML/Window/Win32/CursorImpl.cpp
+SFML/Window/Win32/CursorImpl.hpp
+-
+SFML/System/Err.hpp
+-
+cstring
+-
+
 C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/SFML/src/SFML/Window/Win32/InputImpl.cpp
 SFML/Window/Window.hpp
 -
@@ -729,9 +907,13 @@ algorithm
 -
 cmath
 -
+cstring
+-
 sstream
 -
 string
+-
+vector
 -
 
 C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/SFML/src/SFML/Window/Win32/SensorImpl.cpp
@@ -791,7 +973,11 @@ SFML/System/Err.hpp
 -
 SFML/System/Utf.hpp
 -
+dbt.h
+-
 vector
+-
+cstring
 -
 
 C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/SFML/src/SFML/Window/Window.cpp

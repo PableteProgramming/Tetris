@@ -6,5 +6,5 @@ CXX_DEFINES = -DSFML_STATIC
 
 CXX_INCLUDES = @CMakeFiles/Tetris.dir/includes_CXX.rsp
 
-CXX_FLAGS = -g
+CXX_FLAGS = 
 

@@ -162,11 +162,10 @@ app/Tetris.exe: app/CMakeFiles/Tetris.dir/src/Object.cpp.obj
 app/Tetris.exe: app/CMakeFiles/Tetris.dir/src/Tetris.cpp.obj
 app/Tetris.exe: app/CMakeFiles/Tetris.dir/src/main.cpp.obj
 app/Tetris.exe: app/CMakeFiles/Tetris.dir/build.make
-app/Tetris.exe: SFML/lib/libsfml-graphics-s-d.a
-app/Tetris.exe: SFML/lib/libsfml-window-s-d.a
-app/Tetris.exe: SFML/lib/libsfml-system-s-d.a
+app/Tetris.exe: SFML/lib/libsfml-graphics.a
+app/Tetris.exe: SFML/lib/libsfml-window.a
+app/Tetris.exe: SFML/lib/libsfml-system.a
 app/Tetris.exe: ../SFML/extlibs/libs-mingw/x86/libfreetype.a
-app/Tetris.exe: ../SFML/extlibs/libs-mingw/x86/libjpeg.a
 app/Tetris.exe: app/CMakeFiles/Tetris.dir/linklibs.rsp
 app/Tetris.exe: app/CMakeFiles/Tetris.dir/objects1.rsp
 app/Tetris.exe: app/CMakeFiles/Tetris.dir/link.txt

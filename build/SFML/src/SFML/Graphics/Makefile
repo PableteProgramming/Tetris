@@ -972,6 +972,33 @@ VertexArray.cpp.s:
 	cd /d C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\build && $(MAKE) $(MAKESILENT) -f SFML\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\build.make SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexArray.cpp.s
 .PHONY : VertexArray.cpp.s
 
+VertexBuffer.obj: VertexBuffer.cpp.obj
+
+.PHONY : VertexBuffer.obj
+
+# target to build an object file
+VertexBuffer.cpp.obj:
+	cd /d C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\build && $(MAKE) $(MAKESILENT) -f SFML\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\build.make SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.obj
+.PHONY : VertexBuffer.cpp.obj
+
+VertexBuffer.i: VertexBuffer.cpp.i
+
+.PHONY : VertexBuffer.i
+
+# target to preprocess a source file
+VertexBuffer.cpp.i:
+	cd /d C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\build && $(MAKE) $(MAKESILENT) -f SFML\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\build.make SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.i
+.PHONY : VertexBuffer.cpp.i
+
+VertexBuffer.s: VertexBuffer.cpp.s
+
+.PHONY : VertexBuffer.s
+
+# target to generate assembly for a file
+VertexBuffer.cpp.s:
+	cd /d C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\build && $(MAKE) $(MAKESILENT) -f SFML\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\build.make SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.s
+.PHONY : VertexBuffer.cpp.s
+
 View.obj: View.cpp.obj
 
 .PHONY : View.obj
@@ -1099,6 +1126,9 @@ help:
 	@echo ... VertexArray.obj
 	@echo ... VertexArray.i
 	@echo ... VertexArray.s
+	@echo ... VertexBuffer.obj
+	@echo ... VertexBuffer.i
+	@echo ... VertexBuffer.s
 	@echo ... View.obj
 	@echo ... View.i
 	@echo ... View.s

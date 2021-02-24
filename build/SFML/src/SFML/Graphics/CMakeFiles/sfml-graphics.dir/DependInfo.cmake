@@ -33,6 +33,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/SFML/src/SFML/Graphics/Transformable.cpp" "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/build/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Transformable.cpp.obj"
   "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/SFML/src/SFML/Graphics/Vertex.cpp" "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/build/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Vertex.cpp.obj"
   "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/SFML/src/SFML/Graphics/VertexArray.cpp" "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/build/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexArray.cpp.obj"
+  "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/SFML/src/SFML/Graphics/VertexBuffer.cpp" "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/build/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.obj"
   "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/SFML/src/SFML/Graphics/View.cpp" "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/build/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/View.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
@@ -49,7 +50,6 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../SFML/src"
   "../SFML/extlibs/headers/stb_image"
   "../SFML/extlibs/headers/freetype2"
-  "../SFML/extlibs/headers/jpeg"
   )
 
 # Targets to which this target links.

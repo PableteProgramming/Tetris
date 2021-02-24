@@ -189,6 +189,33 @@ sfml-window/fast:
 	cd /d C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\build && $(MAKE) $(MAKESILENT) -f SFML\src\SFML\Window\CMakeFiles\sfml-window.dir\build.make SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/build
 .PHONY : sfml-window/fast
 
+Clipboard.obj: Clipboard.cpp.obj
+
+.PHONY : Clipboard.obj
+
+# target to build an object file
+Clipboard.cpp.obj:
+	cd /d C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\build && $(MAKE) $(MAKESILENT) -f SFML\src\SFML\Window\CMakeFiles\sfml-window.dir\build.make SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Clipboard.cpp.obj
+.PHONY : Clipboard.cpp.obj
+
+Clipboard.i: Clipboard.cpp.i
+
+.PHONY : Clipboard.i
+
+# target to preprocess a source file
+Clipboard.cpp.i:
+	cd /d C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\build && $(MAKE) $(MAKESILENT) -f SFML\src\SFML\Window\CMakeFiles\sfml-window.dir\build.make SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Clipboard.cpp.i
+.PHONY : Clipboard.cpp.i
+
+Clipboard.s: Clipboard.cpp.s
+
+.PHONY : Clipboard.s
+
+# target to generate assembly for a file
+Clipboard.cpp.s:
+	cd /d C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\build && $(MAKE) $(MAKESILENT) -f SFML\src\SFML\Window\CMakeFiles\sfml-window.dir\build.make SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Clipboard.cpp.s
+.PHONY : Clipboard.cpp.s
+
 Context.obj: Context.cpp.obj
 
 .PHONY : Context.obj
@@ -215,6 +242,33 @@ Context.s: Context.cpp.s
 Context.cpp.s:
 	cd /d C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\build && $(MAKE) $(MAKESILENT) -f SFML\src\SFML\Window\CMakeFiles\sfml-window.dir\build.make SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Context.cpp.s
 .PHONY : Context.cpp.s
+
+Cursor.obj: Cursor.cpp.obj
+
+.PHONY : Cursor.obj
+
+# target to build an object file
+Cursor.cpp.obj:
+	cd /d C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\build && $(MAKE) $(MAKESILENT) -f SFML\src\SFML\Window\CMakeFiles\sfml-window.dir\build.make SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Cursor.cpp.obj
+.PHONY : Cursor.cpp.obj
+
+Cursor.i: Cursor.cpp.i
+
+.PHONY : Cursor.i
+
+# target to preprocess a source file
+Cursor.cpp.i:
+	cd /d C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\build && $(MAKE) $(MAKESILENT) -f SFML\src\SFML\Window\CMakeFiles\sfml-window.dir\build.make SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Cursor.cpp.i
+.PHONY : Cursor.cpp.i
+
+Cursor.s: Cursor.cpp.s
+
+.PHONY : Cursor.s
+
+# target to generate assembly for a file
+Cursor.cpp.s:
+	cd /d C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\build && $(MAKE) $(MAKESILENT) -f SFML\src\SFML\Window\CMakeFiles\sfml-window.dir\build.make SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Cursor.cpp.s
+.PHONY : Cursor.cpp.s
 
 GlContext.obj: GlContext.cpp.obj
 
@@ -486,6 +540,60 @@ VideoMode.cpp.s:
 	cd /d C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\build && $(MAKE) $(MAKESILENT) -f SFML\src\SFML\Window\CMakeFiles\sfml-window.dir\build.make SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/VideoMode.cpp.s
 .PHONY : VideoMode.cpp.s
 
+Win32/ClipboardImpl.obj: Win32/ClipboardImpl.cpp.obj
+
+.PHONY : Win32/ClipboardImpl.obj
+
+# target to build an object file
+Win32/ClipboardImpl.cpp.obj:
+	cd /d C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\build && $(MAKE) $(MAKESILENT) -f SFML\src\SFML\Window\CMakeFiles\sfml-window.dir\build.make SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/ClipboardImpl.cpp.obj
+.PHONY : Win32/ClipboardImpl.cpp.obj
+
+Win32/ClipboardImpl.i: Win32/ClipboardImpl.cpp.i
+
+.PHONY : Win32/ClipboardImpl.i
+
+# target to preprocess a source file
+Win32/ClipboardImpl.cpp.i:
+	cd /d C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\build && $(MAKE) $(MAKESILENT) -f SFML\src\SFML\Window\CMakeFiles\sfml-window.dir\build.make SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/ClipboardImpl.cpp.i
+.PHONY : Win32/ClipboardImpl.cpp.i
+
+Win32/ClipboardImpl.s: Win32/ClipboardImpl.cpp.s
+
+.PHONY : Win32/ClipboardImpl.s
+
+# target to generate assembly for a file
+Win32/ClipboardImpl.cpp.s:
+	cd /d C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\build && $(MAKE) $(MAKESILENT) -f SFML\src\SFML\Window\CMakeFiles\sfml-window.dir\build.make SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/ClipboardImpl.cpp.s
+.PHONY : Win32/ClipboardImpl.cpp.s
+
+Win32/CursorImpl.obj: Win32/CursorImpl.cpp.obj
+
+.PHONY : Win32/CursorImpl.obj
+
+# target to build an object file
+Win32/CursorImpl.cpp.obj:
+	cd /d C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\build && $(MAKE) $(MAKESILENT) -f SFML\src\SFML\Window\CMakeFiles\sfml-window.dir\build.make SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/CursorImpl.cpp.obj
+.PHONY : Win32/CursorImpl.cpp.obj
+
+Win32/CursorImpl.i: Win32/CursorImpl.cpp.i
+
+.PHONY : Win32/CursorImpl.i
+
+# target to preprocess a source file
+Win32/CursorImpl.cpp.i:
+	cd /d C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\build && $(MAKE) $(MAKESILENT) -f SFML\src\SFML\Window\CMakeFiles\sfml-window.dir\build.make SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/CursorImpl.cpp.i
+.PHONY : Win32/CursorImpl.cpp.i
+
+Win32/CursorImpl.s: Win32/CursorImpl.cpp.s
+
+.PHONY : Win32/CursorImpl.s
+
+# target to generate assembly for a file
+Win32/CursorImpl.cpp.s:
+	cd /d C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\build && $(MAKE) $(MAKESILENT) -f SFML\src\SFML\Window\CMakeFiles\sfml-window.dir\build.make SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/CursorImpl.cpp.s
+.PHONY : Win32/CursorImpl.cpp.s
+
 Win32/InputImpl.obj: Win32/InputImpl.cpp.obj
 
 .PHONY : Win32/InputImpl.obj
@@ -742,9 +850,15 @@ help:
 	@echo ... list_install_components
 	@echo ... rebuild_cache
 	@echo ... sfml-window
+	@echo ... Clipboard.obj
+	@echo ... Clipboard.i
+	@echo ... Clipboard.s
 	@echo ... Context.obj
 	@echo ... Context.i
 	@echo ... Context.s
+	@echo ... Cursor.obj
+	@echo ... Cursor.i
+	@echo ... Cursor.s
 	@echo ... GlContext.obj
 	@echo ... GlContext.i
 	@echo ... GlContext.s
@@ -775,6 +889,12 @@ help:
 	@echo ... VideoMode.obj
 	@echo ... VideoMode.i
 	@echo ... VideoMode.s
+	@echo ... Win32/ClipboardImpl.obj
+	@echo ... Win32/ClipboardImpl.i
+	@echo ... Win32/ClipboardImpl.s
+	@echo ... Win32/CursorImpl.obj
+	@echo ... Win32/CursorImpl.i
+	@echo ... Win32/CursorImpl.s
 	@echo ... Win32/InputImpl.obj
 	@echo ... Win32/InputImpl.i
 	@echo ... Win32/InputImpl.s

@@ -32,6 +32,7 @@ app/CMakeFiles/Tetris.dir/src/Manager.cpp.obj
  ../SFML/include/SFML/Graphics/Transformable.hpp
  ../SFML/include/SFML/Graphics/Vertex.hpp
  ../SFML/include/SFML/Graphics/VertexArray.hpp
+ ../SFML/include/SFML/Graphics/VertexBuffer.hpp
  ../SFML/include/SFML/Graphics/View.hpp
  ../SFML/include/SFML/System.hpp
  ../SFML/include/SFML/System/Clock.hpp
@@ -59,8 +60,10 @@ app/CMakeFiles/Tetris.dir/src/Manager.cpp.obj
  ../SFML/include/SFML/System/Vector3.hpp
  ../SFML/include/SFML/System/Vector3.inl
  ../SFML/include/SFML/Window.hpp
+ ../SFML/include/SFML/Window/Clipboard.hpp
  ../SFML/include/SFML/Window/Context.hpp
  ../SFML/include/SFML/Window/ContextSettings.hpp
+ ../SFML/include/SFML/Window/Cursor.hpp
  ../SFML/include/SFML/Window/Event.hpp
  ../SFML/include/SFML/Window/Export.hpp
  ../SFML/include/SFML/Window/GlResource.hpp
@@ -106,6 +109,7 @@ app/CMakeFiles/Tetris.dir/src/Object.cpp.obj
  ../SFML/include/SFML/Graphics/Transformable.hpp
  ../SFML/include/SFML/Graphics/Vertex.hpp
  ../SFML/include/SFML/Graphics/VertexArray.hpp
+ ../SFML/include/SFML/Graphics/VertexBuffer.hpp
  ../SFML/include/SFML/Graphics/View.hpp
  ../SFML/include/SFML/System.hpp
  ../SFML/include/SFML/System/Clock.hpp
@@ -133,8 +137,10 @@ app/CMakeFiles/Tetris.dir/src/Object.cpp.obj
  ../SFML/include/SFML/System/Vector3.hpp
  ../SFML/include/SFML/System/Vector3.inl
  ../SFML/include/SFML/Window.hpp
+ ../SFML/include/SFML/Window/Clipboard.hpp
  ../SFML/include/SFML/Window/Context.hpp
  ../SFML/include/SFML/Window/ContextSettings.hpp
+ ../SFML/include/SFML/Window/Cursor.hpp
  ../SFML/include/SFML/Window/Event.hpp
  ../SFML/include/SFML/Window/Export.hpp
  ../SFML/include/SFML/Window/GlResource.hpp
@@ -182,6 +188,7 @@ app/CMakeFiles/Tetris.dir/src/Rect.cpp.obj
  ../SFML/include/SFML/Graphics/Transformable.hpp
  ../SFML/include/SFML/Graphics/Vertex.hpp
  ../SFML/include/SFML/Graphics/VertexArray.hpp
+ ../SFML/include/SFML/Graphics/VertexBuffer.hpp
  ../SFML/include/SFML/Graphics/View.hpp
  ../SFML/include/SFML/System.hpp
  ../SFML/include/SFML/System/Clock.hpp
@@ -209,8 +216,10 @@ app/CMakeFiles/Tetris.dir/src/Rect.cpp.obj
  ../SFML/include/SFML/System/Vector3.hpp
  ../SFML/include/SFML/System/Vector3.inl
  ../SFML/include/SFML/Window.hpp
+ ../SFML/include/SFML/Window/Clipboard.hpp
  ../SFML/include/SFML/Window/Context.hpp
  ../SFML/include/SFML/Window/ContextSettings.hpp
+ ../SFML/include/SFML/Window/Cursor.hpp
  ../SFML/include/SFML/Window/Event.hpp
  ../SFML/include/SFML/Window/Export.hpp
  ../SFML/include/SFML/Window/GlResource.hpp
@@ -256,6 +265,7 @@ app/CMakeFiles/Tetris.dir/src/Tetris.cpp.obj
  ../SFML/include/SFML/Graphics/Transformable.hpp
  ../SFML/include/SFML/Graphics/Vertex.hpp
  ../SFML/include/SFML/Graphics/VertexArray.hpp
+ ../SFML/include/SFML/Graphics/VertexBuffer.hpp
  ../SFML/include/SFML/Graphics/View.hpp
  ../SFML/include/SFML/System.hpp
  ../SFML/include/SFML/System/Clock.hpp
@@ -283,8 +293,10 @@ app/CMakeFiles/Tetris.dir/src/Tetris.cpp.obj
  ../SFML/include/SFML/System/Vector3.hpp
  ../SFML/include/SFML/System/Vector3.inl
  ../SFML/include/SFML/Window.hpp
+ ../SFML/include/SFML/Window/Clipboard.hpp
  ../SFML/include/SFML/Window/Context.hpp
  ../SFML/include/SFML/Window/ContextSettings.hpp
+ ../SFML/include/SFML/Window/Cursor.hpp
  ../SFML/include/SFML/Window/Event.hpp
  ../SFML/include/SFML/Window/Export.hpp
  ../SFML/include/SFML/Window/GlResource.hpp
@@ -330,6 +342,7 @@ app/CMakeFiles/Tetris.dir/src/main.cpp.obj
  ../SFML/include/SFML/Graphics/Transformable.hpp
  ../SFML/include/SFML/Graphics/Vertex.hpp
  ../SFML/include/SFML/Graphics/VertexArray.hpp
+ ../SFML/include/SFML/Graphics/VertexBuffer.hpp
  ../SFML/include/SFML/Graphics/View.hpp
  ../SFML/include/SFML/System.hpp
  ../SFML/include/SFML/System/Clock.hpp
@@ -357,8 +370,10 @@ app/CMakeFiles/Tetris.dir/src/main.cpp.obj
  ../SFML/include/SFML/System/Vector3.hpp
  ../SFML/include/SFML/System/Vector3.inl
  ../SFML/include/SFML/Window.hpp
+ ../SFML/include/SFML/Window/Clipboard.hpp
  ../SFML/include/SFML/Window/Context.hpp
  ../SFML/include/SFML/Window/ContextSettings.hpp
+ ../SFML/include/SFML/Window/Cursor.hpp
  ../SFML/include/SFML/Window/Event.hpp
  ../SFML/include/SFML/Window/Export.hpp
  ../SFML/include/SFML/Window/GlResource.hpp

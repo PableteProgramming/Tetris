@@ -61,6 +61,8 @@ SFML/Graphics/Vertex.hpp
 -
 SFML/Graphics/VertexArray.hpp
 -
+SFML/Graphics/VertexBuffer.hpp
+-
 SFML/Graphics/View.hpp
 -
 
@@ -203,6 +205,8 @@ SFML/Graphics/Texture.hpp
 -
 SFML/Graphics/RenderTarget.hpp
 -
+SFML/Window/ContextSettings.hpp
+-
 
 ../SFML/include/SFML/Graphics/RenderWindow.hpp
 SFML/Graphics/Export.hpp
@@ -320,6 +324,16 @@ SFML/Graphics/Rect.hpp
 SFML/Graphics/Drawable.hpp
 -
 vector
+-
+
+../SFML/include/SFML/Graphics/VertexBuffer.hpp
+SFML/Graphics/Export.hpp
+-
+SFML/Graphics/PrimitiveType.hpp
+-
+SFML/Graphics/Drawable.hpp
+-
+SFML/Window/GlResource.hpp
 -
 
 ../SFML/include/SFML/Graphics/View.hpp
@@ -517,9 +531,13 @@ SFML/System/Vector3.inl
 ../SFML/include/SFML/Window.hpp
 SFML/System.hpp
 -
+SFML/Window/Clipboard.hpp
+-
 SFML/Window/Context.hpp
 -
 SFML/Window/ContextSettings.hpp
+-
+SFML/Window/Cursor.hpp
 -
 SFML/Window/Event.hpp
 -
@@ -542,6 +560,12 @@ SFML/Window/WindowHandle.hpp
 SFML/Window/WindowStyle.hpp
 -
 
+../SFML/include/SFML/Window/Clipboard.hpp
+SFML/Window/Export.hpp
+-
+SFML/System/String.hpp
+-
+
 ../SFML/include/SFML/Window/Context.hpp
 SFML/Window/Export.hpp
 -
@@ -553,6 +577,16 @@ SFML/System/NonCopyable.hpp
 -
 
 ../SFML/include/SFML/Window/ContextSettings.hpp
+SFML/Config.hpp
+-
+
+../SFML/include/SFML/Window/Cursor.hpp
+SFML/Window/Export.hpp
+-
+SFML/System/NonCopyable.hpp
+-
+SFML/System/Vector2.hpp
+-
 
 ../SFML/include/SFML/Window/Event.hpp
 SFML/Config.hpp
@@ -613,9 +647,13 @@ vector
 -
 
 ../SFML/include/SFML/Window/Window.hpp
+SFML/Window/ContextSettings.hpp
+-
+SFML/Window/Cursor.hpp
+-
 SFML/Window/Export.hpp
 -
-SFML/Window/ContextSettings.hpp
+SFML/Window/GlResource.hpp
 -
 SFML/Window/VideoMode.hpp
 -
@@ -623,15 +661,13 @@ SFML/Window/WindowHandle.hpp
 -
 SFML/Window/WindowStyle.hpp
 -
-SFML/Window/GlResource.hpp
--
 SFML/System/Clock.hpp
--
-SFML/System/Vector2.hpp
 -
 SFML/System/NonCopyable.hpp
 -
 SFML/System/String.hpp
+-
+SFML/System/Vector2.hpp
 -
 
 ../SFML/include/SFML/Window/WindowHandle.hpp
@@ -677,6 +713,24 @@ SFML/Graphics.hpp
 -
 Object.h
 ../app/include/Object.h
+
+C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/app/src/Manager.cpp
+Manager.h
+-
+
+C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/app/src/Object.cpp
+Object.h
+-
+iostream
+-
+
+C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/app/src/Rect.cpp
+Rect.h
+-
+
+C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/app/src/Tetris.cpp
+Tetris.h
+-
 
 C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/app/src/main.cpp
 main.h
