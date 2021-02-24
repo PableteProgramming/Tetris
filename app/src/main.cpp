@@ -2,15 +2,40 @@
 
 int main()
 {
+    srand(time(NULL));
+
     sf::RenderWindow window(sf::VideoMode(W_WIDTH, W_HEIGHT), "My window");
 
-    std::vector<std::vector<int>> actmap= Map::line;
+    /*std::cout<<"Width: "<<W_WIDTH/scale<<std::endl;
+    std::cout<<"HEIGHT: "<<W_HEIGHT/scale<<std::endl;*/
 
-    int x=scale;
-    int y=scale;
+    int index= rand()%(allpieces.size());
+    int nextindex= rand()%(allpieces.size());
+
+    std::cout<<"index: "<<index<<std::endl;
+    std::cout<<"nextindex: "<<nextindex<<std::endl;
+
+    std::vector<std::vector<int>> actmap= allpieces[index];
+    std::vector<std::vector<int>> nextmap= allpieces[nextindex];
+
+    std::cout<<"index: "<<index<<std::endl;
+    std::cout<<"nextindex: "<<nextindex<<std::endl;
+
+    //error from here    
+    int startx=scale;
+    int starty=scale;
+    int x= startx;
+    int y= starty;
+
     Manager manager(scale,Map::ColorSet);
 
     Object actpiece(x,y,0,manager,actmap,W_WIDTH,W_HEIGHT);
+    Object nextpiece(x,y,0,manager,nextmap,W_WIDTH,W_HEIGHT);
+
+    //to here
+
+    std::cout<<"index: "<<index<<std::endl;
+    std::cout<<"nextindex: "<<nextindex<<std::endl;
 
     window.clear();
     actpiece.Draw(window);
@@ -87,6 +112,19 @@ int main()
             actpiece.Move(x,W_HEIGHT);
             if(actpiece.IsDead()){
                 //Stop moving this piece and move another
+                std::vector<Rect> rectsToAdd= actpiece.GetRects();
+                for(int i=0; i<rectsToAdd.size();i++){
+                    Rect actrect= rectsToAdd[i];
+                    std::cout<<"ma["<<actrect.GetY()+(actpiece.GetY()/scale)<<"]["<<actrect.GetX()+(actpiece.GetX()/scale)<< "]="<<manager.FindValueOfColor(actrect.GetColor())<<std::endl;
+                    std::cout<<"actrect.GetY(): "<<actrect.GetY()<<std::endl;
+                    map[actrect.GetY()+(actpiece.GetY()/scale)][actrect.GetX()+(actpiece.GetX()/scale)]= manager.FindValueOfColor(actrect.GetColor());
+                }
+                x=startx;
+                y=starty;
+                actpiece= nextpiece;
+                nextindex= rand()%(allpieces.size());
+                nextmap= allpieces[nextindex];
+                nextpiece= Object(x,y,0,manager,nextmap,W_WIDTH,W_HEIGHT);
             }
         }
 

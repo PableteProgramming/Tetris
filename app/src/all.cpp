@@ -29,6 +29,15 @@ sf::Color Manager::FindColorOfValue(int value){
     return sf::Color::Transparent;
 }
 
+int Manager::FindValueOfColor(sf::Color color){
+    for(int i=0; i<sets.size();i++){
+        if(sets[i].second==color){
+            return sets[i].first;
+        }
+    }
+    return 0;
+}
+
 Rect::Rect(int _x, int _y, int _width, int _height,sf::Color _color){
     x=_x;
     y=_y;

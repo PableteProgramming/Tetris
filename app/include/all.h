@@ -3,6 +3,8 @@
 #include <string>
 #include <iostream>
 #include <SFML/Graphics.hpp>
+#include <stdlib.h>
+#include <time.h>
 
 const std::string RES_PATH= "resources";
 const std::string IMG_PATH= RES_PATH+"/img";
@@ -25,6 +27,7 @@ public:
     int GetScale(){return scale;};
     std::vector<std::pair<int,sf::Color>> GetSets(){return sets;};
     sf::Color FindColorOfValue(int);
+    int FindValueOfColor(sf::Color);
 };
 
 class Rect{
@@ -66,7 +69,9 @@ public:
     void SetSpeed(int);
     int GetSpeed(){return speed;};
     int GetX(){return x;};
+    int GetY(){return y;};
     bool IsDead(){return Dead;};
+    std::vector<Rect> GetRects(){return rects;};
 };
 
 class Map{

@@ -687,6 +687,10 @@ iostream
 -
 SFML/Graphics.hpp
 -
+stdlib.h
+-
+time.h
+-
 
 ../app/include/main.h
 all.h
