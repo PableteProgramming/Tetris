@@ -10,10 +10,10 @@ int main()
     int y=scale;
     Manager manager(scale,Map::ColorSet);
 
-    Object piece(x,y,0,manager,actmap,W_WIDTH,W_HEIGHT);
+    Object actpiece(x,y,0,manager,actmap,W_WIDTH,W_HEIGHT);
 
     window.clear();
-    piece.Draw(window);
+    actpiece.Draw(window);
     window.display();
     //window.setFramerateLimit(fps);
 
@@ -53,7 +53,7 @@ int main()
         }
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right)){
             if(!rightpressed){
-                if((x+scale)<=W_WIDTH-piece.GetWidth()){
+                if((x+scale)<=W_WIDTH-actpiece.GetWidth()){
                     rightpressed=true;
                     x+= scale;
                 }
@@ -62,17 +62,17 @@ int main()
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::Up)){
             if(!upkeypressed){
                 upkeypressed=true;
-                piece.Rotate(90);
-                x= piece.GetX();
+                actpiece.Rotate(90);
+                x= actpiece.GetX();
             }
         }
 
 
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down)){
-            piece.SetSpeed(2);
+            actpiece.SetSpeed(2);
         }
         else{
-            piece.SetSpeed(1);
+            actpiece.SetSpeed(1);
         }
 
         double toadd= clock.restart().asSeconds();
@@ -84,7 +84,10 @@ int main()
         if(timepassed>= totaltimetopass) {
 			//Update the last_render variable
             timepassed=0;			
-            piece.Move(x,W_HEIGHT);	
+            actpiece.Move(x,W_HEIGHT);
+            if(actpiece.IsDead()){
+                //Stop moving this piece and move another
+            }
         }
 
         if(moveclicstimepassed >= moveclicstotaltimetopass){
@@ -99,7 +102,8 @@ int main()
         }
 
         window.clear();
-        piece.Draw(window);
+        DrawMap(window,map,manager);
+        actpiece.Draw(window);
         window.display();
     }
 

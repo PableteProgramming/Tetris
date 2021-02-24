@@ -1,14 +1,14 @@
 set(SRC_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src)
 
-add_executable(${PROJECT_NAME} ${SRC_DIR}/Manager.cpp)
+add_executable(${PROJECT_NAME} ${SRC_DIR}/all.cpp)
 
 add_compile_definitions(SFML_STATIC)
 
 target_sources(
     ${PROJECT_NAME} PUBLIC
-    ${SRC_DIR}/Rect.cpp
-    ${SRC_DIR}/Object.cpp
-    ${SRC_DIR}/Tetris.cpp
+    #${SRC_DIR}/Rect.cpp
+    #${SRC_DIR}/Object.cpp
+    #${SRC_DIR}/Tetris.cpp
     ${SRC_DIR}/main.cpp
 )
 

@@ -676,49 +676,21 @@ SFML/Config.hpp
 
 ../SFML/include/SFML/Window/WindowStyle.hpp
 
-../app/include/Manager.h
+../app/include/all.h
 vector
 -
-SFML/Graphics.hpp
--
-
-../app/include/Object.h
 utility
 -
-SFML/Graphics.hpp
--
-Manager.h
-../app/include/Manager.h
-Rect.h
-../app/include/Rect.h
-
-../app/include/Rect.h
-SFML/Graphics.hpp
--
-
-../app/include/Tetris.h
 string
 -
-SFML/Graphics.hpp
--
-vector
--
 iostream
+-
+SFML/Graphics.hpp
 -
 
 ../app/include/main.h
-Tetris.h
-../app/include/Tetris.h
-SFML/Graphics.hpp
--
-Object.h
-../app/include/Object.h
-
-C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/app/src/Object.cpp
-Object.h
--
-iostream
--
+all.h
+../app/include/all.h
 
 C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/app/src/main.cpp
 main.h
