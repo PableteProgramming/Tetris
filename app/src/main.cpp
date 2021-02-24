@@ -3,6 +3,15 @@
 int main()
 {
     srand(time(NULL));
+    std::vector<std::vector<std::vector<int>>> allpieces;
+    allpieces.clear();
+    allpieces.push_back(Map::lright);
+    allpieces.push_back(Map::square);
+    allpieces.push_back(Map::lleft);
+    allpieces.push_back(Map::line);
+    allpieces.push_back(Map::inversedT);
+    allpieces.push_back(Map::z);
+    allpieces.push_back(Map::inversedz);
 
     sf::RenderWindow window(sf::VideoMode(W_WIDTH, W_HEIGHT), "My window");
 
@@ -12,14 +21,12 @@ int main()
     int index= rand()%(allpieces.size());
     int nextindex= rand()%(allpieces.size());
 
-    std::cout<<"index: "<<index<<std::endl;
-    std::cout<<"nextindex: "<<nextindex<<std::endl;
+    std::cout<<"before init..."<<std::endl;
 
     std::vector<std::vector<int>> actmap= allpieces[index];
     std::vector<std::vector<int>> nextmap= allpieces[nextindex];
 
-    std::cout<<"index: "<<index<<std::endl;
-    std::cout<<"nextindex: "<<nextindex<<std::endl;
+    std::cout<<"before init 2..."<<std::endl;
 
     //error from here    
     int startx=scale;
@@ -28,14 +35,17 @@ int main()
     int y= starty;
 
     Manager manager(scale,Map::ColorSet);
+    std::vector<Object> pieces;
 
-    Object actpiece(x,y,0,manager,actmap,W_WIDTH,W_HEIGHT);
-    Object nextpiece(x,y,0,manager,nextmap,W_WIDTH,W_HEIGHT);
+    pieces.clear();
+    pieces.push_back(Object(x,y,0,manager,nextmap,W_WIDTH,W_HEIGHT));
+    pieces.push_back(Object(x,y,0,manager,actmap,W_WIDTH,W_HEIGHT));
+
+    Object actpiece(x,y,0,manager,actmap,W_WIDTH,W_HEIGHT)/*pieces[pieces.size()-1]*/;
 
     //to here
 
-    std::cout<<"index: "<<index<<std::endl;
-    std::cout<<"nextindex: "<<nextindex<<std::endl;
+    std::cout<<"after init..."<<std::endl;
 
     window.clear();
     actpiece.Draw(window);
@@ -121,10 +131,11 @@ int main()
                 }
                 x=startx;
                 y=starty;
-                actpiece= nextpiece;
+                actpiece= pieces[0];
+                pieces[1]= pieces[0];
                 nextindex= rand()%(allpieces.size());
                 nextmap= allpieces[nextindex];
-                nextpiece= Object(x,y,0,manager,nextmap,W_WIDTH,W_HEIGHT);
+                pieces[0]=Object(x,y,0,manager,nextmap,W_WIDTH,W_HEIGHT);
             }
         }
 
