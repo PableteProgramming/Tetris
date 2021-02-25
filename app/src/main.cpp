@@ -80,13 +80,13 @@ int main()
         
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left)){
             if(!leftpressed){
-                actpiece.Move(-1,W_WIDTH,W_HEIGHT);
+                actpiece.Move(-1,W_WIDTH,W_HEIGHT,map);
                 leftpressed=true;
             }
         }
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right)){
             if(!rightpressed){
-                actpiece.Move(1,W_WIDTH,W_HEIGHT);
+                actpiece.Move(1,W_WIDTH,W_HEIGHT,map);
                 rightpressed=true;
             }
         }
@@ -115,7 +115,7 @@ int main()
         if(timepassed>= totaltimetopass) {
 			//Update the last_render variable
             timepassed=0;			
-            actpiece.Move(0,W_WIDTH,W_HEIGHT,true);
+            actpiece.Move(0,W_WIDTH,W_HEIGHT,map,true);
             if(actpiece.IsDead()){
                 //Stop moving this piece and move another
                 std::vector<Rect> rectsToAdd= actpiece.GetRects();

@@ -50,6 +50,8 @@ Object::Object(int _x, int _y, int rotation,Manager _manager,std::vector<std::ve
     Dead=false;
     x=_x;
     y=_y;
+    lastx=x;
+    lasty=y;
     manager.SetScale(_manager.GetScale());
     manager.SetSets(_manager.GetSets());
     //map
@@ -105,27 +107,59 @@ void Object::Configure(){
     rects= FillRects(map,manager);
 }
 
-void Object::Move(int dir, int _width,int _height, bool moveY){
+void Object::Move(int dir, int _width,int _height,int _map[W_HEIGHT/scale][W_WIDTH/scale] ,bool moveY){
     if(dir<0){
         if(x>=(0+manager.GetScale())){
+            lastx=x;
             x-= manager.GetScale();
+            if(Collision(_map,x,y,rects)){
+                lasty=y;
+                Dead=true;
+                return;
+            }
         }
     }
     else if(dir>0){
         if((x+manager.GetScale()<=_width-width)){
+            lastx=x;
             x+= manager.GetScale();
+            if(Collision(_map,x,y,rects)){
+                lasty=y;
+                Dead=true;
+                return;
+            }
         }
     }
     //x=_x;
     if(moveY){
         if(y+(speed*manager.GetScale())<= _height-height){
+            lasty=y;
             y+=speed*manager.GetScale();
+            if(Collision(_map,x,y,rects)){
+                lastx=x;
+                Dead=true;
+                return;
+            }
         }
         else{
+            lasty=y;
             y= _height-height;
+            lasty=y;
+            lastx=x;
             Dead=true;
         }
     }
+    /*if(Collision(_map,x,y,rects)){
+        Dead=true;
+        if(!Collision(_map,x,lasty,rects)){
+            //y is the problem
+            lasty=y;
+        }
+        else if(!Collision(_map,lastx,y,rects)){
+            //x is the problem
+            lastx=x;
+        }
+    }*/
 }
 
 void Object::SetSpeed(int _speed){
@@ -261,7 +295,7 @@ void UpdateMap(int _map[W_HEIGHT/scale][W_WIDTH/scale],std::vector<Rect> rectsTo
         Rect actrect= rectsToAdd[i];
         //std::cout<<"ma["<<actrect.GetY()+(actpiece.GetY()/scale)<<"]["<<actrect.GetX()+(actpiece.GetX()/scale)<< "]="<<manager.FindValueOfColor(actrect.GetColor())<<std::endl;
         //std::cout<<"actrect.GetY(): "<<actrect.GetY()<<std::endl;
-        _map[actrect.GetY()+(actpiece.GetY()/scale)][actrect.GetX()+(actpiece.GetX()/scale)]= actpiece.GetManager().FindValueOfColor(actrect.GetColor());
+        _map[actrect.GetY()+(actpiece.GetLastY()/scale)][actrect.GetX()+(actpiece.GetLastX()/scale)]= actpiece.GetManager().FindValueOfColor(actrect.GetColor());
     }
 }
 
@@ -315,3 +349,15 @@ std::vector<std::pair<int,sf::Color>> Map::ColorSet={
     {6,sf::Color{255,255,255}/*white*/},
     {7,sf::Color{0,0,0}/*black*/}
 };
+
+bool Collision(int _map[W_HEIGHT/scale][W_WIDTH/scale],int _x,int _y,std::vector<Rect> rects){
+    for(int i=0; i<rects.size();i++){
+        Rect actrect= rects[i];
+        //std::cout<<"ma["<<actrect.GetY()+(actpiece.GetY()/scale)<<"]["<<actrect.GetX()+(actpiece.GetX()/scale)<< "]="<<manager.FindValueOfColor(actrect.GetColor())<<std::endl;
+        //std::cout<<"actrect.GetY(): "<<actrect.GetY()<<std::endl;
+        if(_map[actrect.GetY()+(_y/scale)][actrect.GetX()+(_x/scale)]!=0){
+            return true;
+        }
+    }
+    return false;
+}
