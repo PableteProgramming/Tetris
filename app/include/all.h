@@ -8,7 +8,7 @@
 
 const std::string RES_PATH= "resources";
 const std::string IMG_PATH= RES_PATH+"/img";
-const int scale= 15;
+const int scale= 30;
 const double fps= 5;
 const double moveclicsfps=3;
 const double rotateclicsfps=2;
@@ -99,3 +99,4 @@ void DrawMap(sf::RenderWindow&,int[W_HEIGHT/scale][W_WIDTH/scale],Manager);
 std::vector<std::vector<int>> MapToVector(int[W_HEIGHT/scale][W_WIDTH/scale]);
 void UpdateMap(int[W_HEIGHT/scale][W_WIDTH/scale],std::vector<Rect>,Object);
 bool Collision(int[W_HEIGHT/scale][W_WIDTH/scale],int,int,std::vector<Rect>);
+void UpdatePiece(int,int,int&,int&,std::vector<Object>&,Object&,std::vector<std::vector<std::vector<int>>>,int&,std::vector<std::vector<int>>&,Manager,int,int);

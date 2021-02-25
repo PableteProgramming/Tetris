@@ -361,3 +361,13 @@ bool Collision(int _map[W_HEIGHT/scale][W_WIDTH/scale],int _x,int _y,std::vector
     }
     return false;
 }
+
+void UpdatePiece(int _startx,int _starty,int& _x,int& _y,std::vector<Object>& _pieces,Object& _actpiece,std::vector<std::vector<std::vector<int>>> _allpieces,int& _nextindex,std::vector<std::vector<int>>& _nextmap,Manager _manager,int _W_WIDTH,int _W_HEIGHT){
+    _x= _startx;
+    _y= _starty;
+    _actpiece= _pieces[0];
+    _pieces[1]=_pieces[0];
+    _nextindex= rand()%(_allpieces.size());
+    _nextmap=_allpieces[_nextindex];
+    _pieces[0]= Object(_x,_y,0,_manager,_nextmap,_W_WIDTH,_W_HEIGHT);
+}

@@ -82,12 +82,24 @@ int main()
             if(!leftpressed){
                 actpiece.Move(-1,W_WIDTH,W_HEIGHT,map);
                 leftpressed=true;
+                if(actpiece.IsDead()){
+                    //Stop moving this piece and move another
+                    std::vector<Rect> rectsToAdd= actpiece.GetRects();
+                    UpdateMap(map,rectsToAdd,actpiece);
+                    UpdatePiece(startx,starty,x,y,pieces,actpiece,allpieces,nextindex,nextmap,manager,W_WIDTH,W_HEIGHT);
+                }
             }
         }
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right)){
             if(!rightpressed){
                 actpiece.Move(1,W_WIDTH,W_HEIGHT,map);
                 rightpressed=true;
+                if(actpiece.IsDead()){
+                    //Stop moving this piece and move another
+                    std::vector<Rect> rectsToAdd= actpiece.GetRects();
+                    UpdateMap(map,rectsToAdd,actpiece);
+                    UpdatePiece(startx,starty,x,y,pieces,actpiece,allpieces,nextindex,nextmap,manager,W_WIDTH,W_HEIGHT);
+                }
             }
         }
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::Up)){
@@ -120,13 +132,7 @@ int main()
                 //Stop moving this piece and move another
                 std::vector<Rect> rectsToAdd= actpiece.GetRects();
                 UpdateMap(map,rectsToAdd,actpiece);
-                x=startx;
-                y=starty;
-                actpiece= pieces[0];
-                pieces[1]= pieces[0];
-                nextindex= rand()%(allpieces.size());
-                nextmap= allpieces[nextindex];
-                pieces[0]=Object(x,y,0,manager,nextmap,W_WIDTH,W_HEIGHT);
+                UpdatePiece(startx,starty,x,y,pieces,actpiece,allpieces,nextindex,nextmap,manager,W_WIDTH,W_HEIGHT);
             }
         }
 
