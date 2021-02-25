@@ -63,7 +63,7 @@ private:
 public:
     Object(int,int,int,Manager,std::vector<std::vector<int>>,int,int,int=1);
     void Draw(sf::RenderWindow&);
-    void Move(int,int);
+    void Move(int,int,int,bool=false);
     int GetWidth(){return width;};
     void Rotate(int);
     void SetSpeed(int);
@@ -72,6 +72,7 @@ public:
     int GetY(){return y;};
     bool IsDead(){return Dead;};
     std::vector<Rect> GetRects(){return rects;};
+    Manager GetManager(){return manager;};
 };
 
 class Map{
@@ -92,3 +93,4 @@ void fillMap(int[W_HEIGHT/scale][W_WIDTH/scale],int);
 std::vector<Rect> FillRects(std::vector<std::vector<int>>,Manager);
 void DrawMap(sf::RenderWindow&,int[W_HEIGHT/scale][W_WIDTH/scale],Manager);
 std::vector<std::vector<int>> MapToVector(int[W_HEIGHT/scale][W_WIDTH/scale]);
+void UpdateMap(int[W_HEIGHT/scale][W_WIDTH/scale],std::vector<Rect>,Object);

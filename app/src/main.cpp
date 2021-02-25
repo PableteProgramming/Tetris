@@ -21,15 +21,15 @@ int main()
     int index= rand()%(allpieces.size());
     int nextindex= rand()%(allpieces.size());
 
-    std::cout<<"before init..."<<std::endl;
+    //std::cout<<"before init..."<<std::endl;
 
     std::vector<std::vector<int>> actmap= allpieces[index];
     std::vector<std::vector<int>> nextmap= allpieces[nextindex];
 
-    std::cout<<"before init 2..."<<std::endl;
+    //std::cout<<"before init 2..."<<std::endl;
 
     //error from here    
-    int startx=scale;
+    int startx=scale*25;
     int starty=scale;
     int x= startx;
     int y= starty;
@@ -45,7 +45,7 @@ int main()
 
     //to here
 
-    std::cout<<"after init..."<<std::endl;
+    //std::cout<<"after init..."<<std::endl;
 
     window.clear();
     actpiece.Draw(window);
@@ -80,18 +80,14 @@ int main()
         
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left)){
             if(!leftpressed){
-                if(x>=(0+scale)){
-                    leftpressed=true;
-                    x-= scale;
-                }
+                actpiece.Move(-1,W_WIDTH,W_HEIGHT);
+                leftpressed=true;
             }
         }
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right)){
             if(!rightpressed){
-                if((x+scale)<=W_WIDTH-actpiece.GetWidth()){
-                    rightpressed=true;
-                    x+= scale;
-                }
+                actpiece.Move(1,W_WIDTH,W_HEIGHT);
+                rightpressed=true;
             }
         }
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::Up)){
@@ -119,16 +115,11 @@ int main()
         if(timepassed>= totaltimetopass) {
 			//Update the last_render variable
             timepassed=0;			
-            actpiece.Move(x,W_HEIGHT);
+            actpiece.Move(0,W_WIDTH,W_HEIGHT,true);
             if(actpiece.IsDead()){
                 //Stop moving this piece and move another
                 std::vector<Rect> rectsToAdd= actpiece.GetRects();
-                for(int i=0; i<rectsToAdd.size();i++){
-                    Rect actrect= rectsToAdd[i];
-                    std::cout<<"ma["<<actrect.GetY()+(actpiece.GetY()/scale)<<"]["<<actrect.GetX()+(actpiece.GetX()/scale)<< "]="<<manager.FindValueOfColor(actrect.GetColor())<<std::endl;
-                    std::cout<<"actrect.GetY(): "<<actrect.GetY()<<std::endl;
-                    map[actrect.GetY()+(actpiece.GetY()/scale)][actrect.GetX()+(actpiece.GetX()/scale)]= manager.FindValueOfColor(actrect.GetColor());
-                }
+                UpdateMap(map,rectsToAdd,actpiece);
                 x=startx;
                 y=starty;
                 actpiece= pieces[0];

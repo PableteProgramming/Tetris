@@ -105,14 +105,26 @@ void Object::Configure(){
     rects= FillRects(map,manager);
 }
 
-void Object::Move(int _x, int _height){
-    x=_x;
-    if(y+(speed*manager.GetScale())<= _height-height){
-        y+=speed*manager.GetScale();
+void Object::Move(int dir, int _width,int _height, bool moveY){
+    if(dir<0){
+        if(x>=(0+manager.GetScale())){
+            x-= manager.GetScale();
+        }
     }
-    else{
-        y= _height-height;
-        Dead=true;
+    else if(dir>0){
+        if((x+manager.GetScale()<=_width-width)){
+            x+= manager.GetScale();
+        }
+    }
+    //x=_x;
+    if(moveY){
+        if(y+(speed*manager.GetScale())<= _height-height){
+            y+=speed*manager.GetScale();
+        }
+        else{
+            y= _height-height;
+            Dead=true;
+        }
     }
 }
 
@@ -242,6 +254,15 @@ std::vector<std::vector<int>> MapToVector(int _map[W_HEIGHT/scale][W_WIDTH/scale
         r.push_back(r1);
     }
     return r;
+}
+
+void UpdateMap(int _map[W_HEIGHT/scale][W_WIDTH/scale],std::vector<Rect> rectsToAdd, Object actpiece){
+    for(int i=0; i<rectsToAdd.size();i++){
+        Rect actrect= rectsToAdd[i];
+        //std::cout<<"ma["<<actrect.GetY()+(actpiece.GetY()/scale)<<"]["<<actrect.GetX()+(actpiece.GetX()/scale)<< "]="<<manager.FindValueOfColor(actrect.GetColor())<<std::endl;
+        //std::cout<<"actrect.GetY(): "<<actrect.GetY()<<std::endl;
+        _map[actrect.GetY()+(actpiece.GetY()/scale)][actrect.GetX()+(actpiece.GetX()/scale)]= actpiece.GetManager().FindValueOfColor(actrect.GetColor());
+    }
 }
 
 std::vector<std::vector<int>> Map::lright= {
