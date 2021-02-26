@@ -355,7 +355,6 @@ std::vector<std::pair<int,sf::Color>> Map::ColorSet={
     {4,sf::Color{204,0,204}/*purple*/},
     {5,sf::Color{255,0,0}/*red*/},
     {6,sf::Color{255,255,255}/*white*/},
-    {7,sf::Color{0,0,0}/*black*/}
 };
 
 bool Collision(int _map[W_HEIGHT/scale][W_WIDTH/scale],int _x,int _y,std::vector<Rect> rects){
@@ -377,5 +376,18 @@ void UpdatePiece(int _startx,int _starty,int& _x,int& _y,std::vector<Object>& _p
     _pieces[1]=_pieces[0];
     _nextindex= rand()%(_allpieces.size());
     _nextmap=_allpieces[_nextindex];
+    ChangeColor(_nextmap,(rand()%(Map::ColorSet.size())+1));
     _pieces[0]= Object(_x,_y,0,_manager,_nextmap,_W_WIDTH,_W_HEIGHT);
+}
+
+void ChangeColor(std::vector<std::vector<int>>& _map,int colornum){
+    int _width= _map[0].size();
+    int _height= _map.size();
+    for(int _y=0; _y<_height;_y++){
+        for(int _x=0; _x<_width;_x++){
+            if(_map[_y][_x]!=0){
+                _map[_y][_x]=colornum;
+            }
+        }
+    }
 }

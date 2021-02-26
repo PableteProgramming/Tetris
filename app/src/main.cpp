@@ -37,6 +37,9 @@ int main()
     Manager manager(scale,Map::ColorSet);
     std::vector<Object> pieces;
 
+    ChangeColor(actmap,(rand()%(Map::ColorSet.size())+1));
+    ChangeColor(nextmap,(rand()%(Map::ColorSet.size())+1));
+
     pieces.clear();
     pieces.push_back(Object(x,y,0,manager,nextmap,W_WIDTH,W_HEIGHT));
     pieces.push_back(Object(x,y,0,manager,actmap,W_WIDTH,W_HEIGHT));
