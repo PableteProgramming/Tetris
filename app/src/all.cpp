@@ -112,39 +112,37 @@ void Object::Move(int dir, int _width,int _height,int _map[W_HEIGHT/scale][W_WID
         if((x>=(0+manager.GetScale())) && (!Collision(_map,x-manager.GetScale(),y,rects))){
             lastx=x;
             x-= manager.GetScale();
-            /*if(Collision(_map,x,y,rects)){
-                lasty=y;
-                Dead=true;
-                return;
-            }*/
         }
     }
     else if(dir>0){
         if((x+manager.GetScale()<=_width-width) && (!Collision(_map,x+manager.GetScale(),y,rects))){
             lastx=x;
             x+= manager.GetScale();
-            /*if(Collision(_map,x,y,rects)){
-                lasty=y;
-                Dead=true;
-                return;
-            }*/
         }
     }
     //x=_x;
     if(moveY){
         if(y+(speed*manager.GetScale())<= _height-height){
-            lasty=y;
-            y+=speed*manager.GetScale();
-            if(Collision(_map,x,y,rects)){
+            if(Collision(_map,x,(y+speed*manager.GetScale()),rects)){
                 lastx=x;
                 Dead=true;
-                for(int i=y; i>=lasty;i--){
+                lasty=y;
+                y+=speed*manager.GetScale();
+                int i;
+                for(i=y;i>=lasty;i--){
                     if(!Collision(_map,x,i,rects)){
                         lasty=i;
-                        break;
+                        y=lasty;
+                        return;   
                     }
                 }
+                lasty=i;
+                y=lasty;
                 return;
+            }
+            else{
+                lasty=y;
+                y+=speed*manager.GetScale();
             }
         }
         else{
@@ -155,17 +153,6 @@ void Object::Move(int dir, int _width,int _height,int _map[W_HEIGHT/scale][W_WID
             Dead=true;
         }
     }
-    /*if(Collision(_map,x,y,rects)){
-        Dead=true;
-        if(!Collision(_map,x,lasty,rects)){
-            //y is the problem
-            lasty=y;
-        }
-        else if(!Collision(_map,lastx,y,rects)){
-            //x is the problem
-            lastx=x;
-        }
-    }*/
 }
 
 void Object::SetSpeed(int _speed){
