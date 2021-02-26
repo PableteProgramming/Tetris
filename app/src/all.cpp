@@ -109,25 +109,25 @@ void Object::Configure(){
 
 void Object::Move(int dir, int _width,int _height,int _map[W_HEIGHT/scale][W_WIDTH/scale] ,bool moveY){
     if(dir<0){
-        if(x>=(0+manager.GetScale())){
+        if((x>=(0+manager.GetScale())) && (!Collision(_map,x-manager.GetScale(),y,rects))){
             lastx=x;
             x-= manager.GetScale();
-            if(Collision(_map,x,y,rects)){
+            /*if(Collision(_map,x,y,rects)){
                 lasty=y;
                 Dead=true;
                 return;
-            }
+            }*/
         }
     }
     else if(dir>0){
-        if((x+manager.GetScale()<=_width-width)){
+        if((x+manager.GetScale()<=_width-width) && (!Collision(_map,x+manager.GetScale(),y,rects))){
             lastx=x;
             x+= manager.GetScale();
-            if(Collision(_map,x,y,rects)){
+            /*if(Collision(_map,x,y,rects)){
                 lasty=y;
                 Dead=true;
                 return;
-            }
+            }*/
         }
     }
     //x=_x;
