@@ -282,9 +282,18 @@ std::vector<std::vector<int>> MapToVector(int _map[W_HEIGHT/scale][W_WIDTH/scale
 void UpdateMap(int _map[W_HEIGHT/scale][W_WIDTH/scale],std::vector<Rect> rectsToAdd, Object actpiece){
     for(int i=0; i<rectsToAdd.size();i++){
         Rect actrect= rectsToAdd[i];
-        //std::cout<<"ma["<<actrect.GetY()+(actpiece.GetY()/scale)<<"]["<<actrect.GetX()+(actpiece.GetX()/scale)<< "]="<<manager.FindValueOfColor(actrect.GetColor())<<std::endl;
-        //std::cout<<"actrect.GetY(): "<<actrect.GetY()<<std::endl;
         _map[actrect.GetY()+(actpiece.GetLastY()/scale)][actrect.GetX()+(actpiece.GetLastX()/scale)]= actpiece.GetManager().FindValueOfColor(actrect.GetColor());
+    }
+    //Check if line Completed
+    std::pair<bool,std::vector<int>> result= IsLineCompleted(_map);
+    if(result.first){
+        //at least one line completed
+        if(result.second.size()>0){
+            //check for avoiding outOfRange errors
+            for(int i=0; i<result.second.size();i++){
+                RemoveLineFromMap(_map,result.second[i]);
+            }
+        }
     }
 }
 
@@ -368,6 +377,53 @@ void ChangeColor(std::vector<std::vector<int>>& _map,int colornum){
         for(int _x=0; _x<_width;_x++){
             if(_map[_y][_x]!=0){
                 _map[_y][_x]=colornum;
+            }
+        }
+    }
+}
+
+std::pair<bool,std::vector<int>> IsLineCompleted(int _map[W_HEIGHT/scale][W_WIDTH/scale]){
+    bool r1=false;
+    std::vector<int> r2;
+    r2.clear();
+    bool isZero;
+    for(int _y=0; _y<(W_HEIGHT/scale);_y++){
+        isZero=false;
+        for(int _x=0; _x<(W_WIDTH/scale);_x++){
+            if(_map[_y][_x]==0){
+                isZero=false;
+                break;
+            }
+            else{
+                isZero=true;
+            }
+        }
+        if(isZero){
+            r1=true;
+            r2.push_back(_y);
+        }
+    }
+    return std::make_pair(r1,r2);
+}
+
+void RemoveLineFromMap(int _map[W_HEIGHT/scale][W_WIDTH/scale], int line){
+    if(line<=0){
+        //delete the first line;
+        for(int _x=0;_x<(W_WIDTH/scale);_x++){
+            _map[0][_x]=0;
+        }
+    }
+    else if(line<(W_HEIGHT/scale)){
+        //moving down all the lines
+        for(int _y=line;_y>=0;_y--){
+            for(int _x=0;_x<(W_WIDTH/scale);_x++){
+                if(_y>0){
+                    _map[_y][_x]= _map[_y-1][_x];
+                }
+                else{
+                    //the first line
+                    _map[_y][_x]=0;
+                }
             }
         }
     }

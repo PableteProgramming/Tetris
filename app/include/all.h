@@ -8,11 +8,11 @@
 
 const std::string RES_PATH= "resources";
 const std::string IMG_PATH= RES_PATH+"/img";
-const int scale= 15;
+const int scale= 30;
 const double fps= 5;
 const double moveclicsfps=3;
 const double rotateclicsfps=2;
-const int W_WIDTH= 600;
+const int W_WIDTH= 300;
 const int W_HEIGHT=600;
 
 class Manager{
@@ -101,3 +101,5 @@ void UpdateMap(int[W_HEIGHT/scale][W_WIDTH/scale],std::vector<Rect>,Object);
 bool Collision(int[W_HEIGHT/scale][W_WIDTH/scale],int,int,std::vector<Rect>);
 void UpdatePiece(int,int,int&,int&,std::vector<Object>&,Object&,std::vector<std::vector<std::vector<int>>>,int&,std::vector<std::vector<int>>&,Manager,int,int,int[W_HEIGHT/scale][W_WIDTH/scale]);
 void ChangeColor(std::vector<std::vector<int>>&,int);
+std::pair<bool,std::vector<int>> IsLineCompleted(int[W_HEIGHT/scale][W_WIDTH/scale]);
+void RemoveLineFromMap(int[W_HEIGHT/scale][W_WIDTH/scale],int);

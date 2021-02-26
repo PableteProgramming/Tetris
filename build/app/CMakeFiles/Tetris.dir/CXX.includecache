@@ -692,7 +692,15 @@ stdlib.h
 time.h
 -
 
+../app/include/main.h
+all.h
+../app/include/all.h
+
 C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/app/src/all.cpp
 all.h
+-
+
+C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/app/src/main.cpp
+main.h
 -
 
