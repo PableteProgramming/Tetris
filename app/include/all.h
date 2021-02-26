@@ -8,7 +8,7 @@
 
 const std::string RES_PATH= "resources";
 const std::string IMG_PATH= RES_PATH+"/img";
-const int scale= 30;
+const int scale= 15;
 const double fps= 5;
 const double moveclicsfps=3;
 const double rotateclicsfps=2;

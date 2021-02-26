@@ -138,6 +138,14 @@ void Object::Move(int dir, int _width,int _height,int _map[W_HEIGHT/scale][W_WID
             if(Collision(_map,x,y,rects)){
                 lastx=x;
                 Dead=true;
+                for(int i=lasty; i<=y;i++){
+                    if(!Collision(_map,x,i,rects)){
+                        lasty=i;
+                    }
+                    else{
+                        break;
+                    }
+                }
                 return;
             }
         }
