@@ -41,10 +41,11 @@ int main()
     ChangeColor(nextmap,(rand()%(Map::ColorSet.size())+1));
 
     pieces.clear();
-    pieces.push_back(Object(x,y,0,manager,nextmap,W_WIDTH,W_HEIGHT));
-    pieces.push_back(Object(x,y,0,manager,actmap,W_WIDTH,W_HEIGHT));
+    pieces.push_back(Object(x,y,0,manager,nextmap,W_WIDTH,W_HEIGHT,map));
 
-    Object actpiece(x,y,0,manager,actmap,W_WIDTH,W_HEIGHT)/*pieces[pieces.size()-1]*/;
+    Object actpiece(x,y,0,manager,actmap,W_WIDTH,W_HEIGHT,map)/*pieces[pieces.size()-1]*/;
+
+    pieces.push_back(actpiece);
 
     //to here
 
@@ -108,7 +109,7 @@ int main()
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::Up)){
             if(!upkeypressed){
                 upkeypressed=true;
-                actpiece.Rotate(90);
+                actpiece.Rotate(map,90);
                 x= actpiece.GetX();
             }
         }
@@ -135,7 +136,7 @@ int main()
                 //Stop moving this piece and move another
                 std::vector<Rect> rectsToAdd= actpiece.GetRects();
                 UpdateMap(map,rectsToAdd,actpiece);
-                UpdatePiece(startx,starty,x,y,pieces,actpiece,allpieces,nextindex,nextmap,manager,W_WIDTH,W_HEIGHT);
+                UpdatePiece(startx,starty,x,y,pieces,actpiece,allpieces,nextindex,nextmap,manager,W_WIDTH,W_HEIGHT,map);
             }
         }
 

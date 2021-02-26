@@ -63,11 +63,11 @@ private:
     std::vector<Rect> rects;
     void Configure();
 public:
-    Object(int,int,int,Manager,std::vector<std::vector<int>>,int,int,int=1);
+    Object(int,int,int,Manager,std::vector<std::vector<int>>,int,int,int[W_HEIGHT/scale][W_WIDTH/scale],int=1);
     void Draw(sf::RenderWindow&);
     void Move(int,int,int,int[W_HEIGHT/scale][W_WIDTH/scale],bool=false);
     int GetWidth(){return width;};
-    void Rotate(int);
+    void Rotate(int[W_HEIGHT/scale][W_WIDTH/scale],int);
     void SetSpeed(int);
     int GetSpeed(){return speed;};
     int GetX(){return x;};
@@ -99,5 +99,5 @@ void DrawMap(sf::RenderWindow&,int[W_HEIGHT/scale][W_WIDTH/scale],Manager);
 std::vector<std::vector<int>> MapToVector(int[W_HEIGHT/scale][W_WIDTH/scale]);
 void UpdateMap(int[W_HEIGHT/scale][W_WIDTH/scale],std::vector<Rect>,Object);
 bool Collision(int[W_HEIGHT/scale][W_WIDTH/scale],int,int,std::vector<Rect>);
-void UpdatePiece(int,int,int&,int&,std::vector<Object>&,Object&,std::vector<std::vector<std::vector<int>>>,int&,std::vector<std::vector<int>>&,Manager,int,int);
+void UpdatePiece(int,int,int&,int&,std::vector<Object>&,Object&,std::vector<std::vector<std::vector<int>>>,int&,std::vector<std::vector<int>>&,Manager,int,int,int[W_HEIGHT/scale][W_WIDTH/scale]);
 void ChangeColor(std::vector<std::vector<int>>&,int);

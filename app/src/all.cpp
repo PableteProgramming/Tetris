@@ -46,7 +46,7 @@ Rect::Rect(int _x, int _y, int _width, int _height,sf::Color _color){
     color=_color;
 }
 
-Object::Object(int _x, int _y, int rotation,Manager _manager,std::vector<std::vector<int>> _map,int _W_width, int _W_height,int _speed){
+Object::Object(int _x, int _y, int rotation,Manager _manager,std::vector<std::vector<int>> _map,int _W_width, int _W_height,int _mmap[W_HEIGHT/scale][W_WIDTH/scale],int _speed){
     Dead=false;
     x=_x;
     y=_y;
@@ -59,7 +59,7 @@ Object::Object(int _x, int _y, int rotation,Manager _manager,std::vector<std::ve
     map=_map;
     W_width=_W_width;
     W_height= _W_height;
-    Rotate(rotation);
+    Rotate(_mmap,rotation);
     Configure();
 }
 
@@ -74,30 +74,36 @@ void Object::Draw(sf::RenderWindow &window){
     }
 }
 
-void Object::Rotate(int rotation){
+void Object::Rotate(int _map[W_HEIGHT/scale][W_WIDTH/scale],int rotation){
     map= RotateMap(rotation,map);
     Configure();
-    //check if rotation is not out of the screen or something similar
-    //x
-    if(x<0){
-        x=0;
-        //Configure();
-    }
-    else if(x>(W_width-width)){
-        x= W_width-width;
-        //Configure();
-    }
 
-    //y
-    if(y<0){
-        y=0;
-        //Configure();
-    }
-    else if(y>(W_height-height)){
-        y= W_height-height;
-        //Configure();
-    }
+    if(!Collision(_map,x,y,rects)){
+        //check if rotation is not out of the screen or something similar
+        //x
+        if(x<0){
+            x=0;
+            //Configure();
+        }
+        else if(x>(W_width-width)){
+            x= W_width-width;
+            //Configure();
+        }
 
+        //y
+        if(y<0){
+            y=0;
+            //Configure();
+        }
+        else if(y>(W_height-height)){
+            y= W_height-height;
+            //Configure();
+        }
+    }
+    else{
+        map=RotateMap((360-rotation),map);
+        Configure();
+    }
 }
 
 void Object::Configure(){
@@ -120,10 +126,8 @@ void Object::Move(int dir, int _width,int _height,int _map[W_HEIGHT/scale][W_WID
             x+= manager.GetScale();
         }
     }
-    //x=_x;
     if(moveY){
         if(y+(speed*manager.GetScale())<= _height-height){
-
             for(int i=1; i<=speed;i++){
                 if(Collision(_map,x,y+(i*manager.GetScale()),rects)){
                     lastx=x;
@@ -135,28 +139,6 @@ void Object::Move(int dir, int _width,int _height,int _map[W_HEIGHT/scale][W_WID
             }
             lasty=y;
             y+=speed*manager.GetScale();
-
-            /*if(Collision(_map,x,(y+speed*manager.GetScale()),rects)){
-                lastx=x;
-                Dead=true;
-                lasty=y;
-                y+=speed*manager.GetScale();
-                int i;
-                for(i=y;i>=lasty;i--){
-                    if(!Collision(_map,x,i,rects)){
-                        lasty=i;
-                        y=lasty;
-                        return;   
-                    }
-                }
-                lasty=i;
-                y=lasty;
-                return;
-            }
-            else{
-                lasty=y;
-                y+=speed*manager.GetScale();
-            }*/
         }
         else{
             lasty=y;
@@ -211,6 +193,7 @@ std::vector<std::vector<int>> RotateMap(int angle,std::vector<std::vector<int>> 
     }
     else if(angle==270 || (angle>=225 && angle<=270) || (angle>=270 && angle<315)){
         //270º = -90º
+        //std::cout<<"Rotating 270!"<<std::endl;
         int height= map.size();
         int width= map[0].size();
         std::vector<int> r1;
@@ -367,7 +350,7 @@ bool Collision(int _map[W_HEIGHT/scale][W_WIDTH/scale],int _x,int _y,std::vector
     return false;
 }
 
-void UpdatePiece(int _startx,int _starty,int& _x,int& _y,std::vector<Object>& _pieces,Object& _actpiece,std::vector<std::vector<std::vector<int>>> _allpieces,int& _nextindex,std::vector<std::vector<int>>& _nextmap,Manager _manager,int _W_WIDTH,int _W_HEIGHT){
+void UpdatePiece(int _startx,int _starty,int& _x,int& _y,std::vector<Object>& _pieces,Object& _actpiece,std::vector<std::vector<std::vector<int>>> _allpieces,int& _nextindex,std::vector<std::vector<int>>& _nextmap,Manager _manager,int _W_WIDTH,int _W_HEIGHT,int _map[W_HEIGHT/scale][W_WIDTH/scale]){
     _x= _startx;
     _y= _starty;
     _actpiece= _pieces[0];
@@ -375,7 +358,7 @@ void UpdatePiece(int _startx,int _starty,int& _x,int& _y,std::vector<Object>& _p
     _nextindex= rand()%(_allpieces.size());
     _nextmap=_allpieces[_nextindex];
     ChangeColor(_nextmap,(rand()%(Map::ColorSet.size())+1));
-    _pieces[0]= Object(_x,_y,0,_manager,_nextmap,_W_WIDTH,_W_HEIGHT);
+    _pieces[0]= Object(_x,_y,0,_manager,_nextmap,_W_WIDTH,_W_HEIGHT,_map);
 }
 
 void ChangeColor(std::vector<std::vector<int>>& _map,int colornum){
