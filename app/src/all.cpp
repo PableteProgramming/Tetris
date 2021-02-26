@@ -123,7 +123,20 @@ void Object::Move(int dir, int _width,int _height,int _map[W_HEIGHT/scale][W_WID
     //x=_x;
     if(moveY){
         if(y+(speed*manager.GetScale())<= _height-height){
-            if(Collision(_map,x,(y+speed*manager.GetScale()),rects)){
+
+            for(int i=1; i<=speed;i++){
+                if(Collision(_map,x,y+(i*manager.GetScale()),rects)){
+                    lastx=x;
+                    Dead=true;
+                    lasty=y+((i-1)*manager.GetScale());
+                    y=lasty;
+                    return;
+                }
+            }
+            lasty=y;
+            y+=speed*manager.GetScale();
+
+            /*if(Collision(_map,x,(y+speed*manager.GetScale()),rects)){
                 lastx=x;
                 Dead=true;
                 lasty=y;
@@ -143,7 +156,7 @@ void Object::Move(int dir, int _width,int _height,int _map[W_HEIGHT/scale][W_WID
             else{
                 lasty=y;
                 y+=speed*manager.GetScale();
-            }
+            }*/
         }
         else{
             lasty=y;
