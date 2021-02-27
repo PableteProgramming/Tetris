@@ -54,7 +54,6 @@ private:
     int lasty;
     Manager manager;
     int width;
-    int speed;
     int height;
     int W_width;
     int W_height;
@@ -63,13 +62,12 @@ private:
     std::vector<Rect> rects;
     void Configure();
 public:
-    Object(int,int,int,Manager,std::vector<std::vector<int>>,int,int,int[W_HEIGHT/scale][W_WIDTH/scale],int=1);
+    Object(int,int,int,Manager,std::vector<std::vector<int>>,int,int,int[W_HEIGHT/scale][W_WIDTH/scale]);
     void Draw(sf::RenderWindow&);
     void Move(int,int,int,int[W_HEIGHT/scale][W_WIDTH/scale],bool=false);
     int GetWidth(){return width;};
     void Rotate(int[W_HEIGHT/scale][W_WIDTH/scale],int);
     void SetSpeed(int);
-    int GetSpeed(){return speed;};
     int GetX(){return x;};
     int GetY(){return y;};
     bool IsDead(){return Dead;};

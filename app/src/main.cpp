@@ -2,6 +2,7 @@
 
 int main()
 {
+    double actualfps=fps;
     srand(time(NULL));
     std::vector<std::vector<std::vector<int>>> allpieces;
     allpieces.clear();
@@ -58,7 +59,7 @@ int main()
 
     sf::Clock clock;
     double timepassed;
-    double totaltimetopass= 1/fps;
+    double totaltimetopass= 1/actualfps;
     double moveclicstimepassed;
     double moveclicstotaltimetopass= 1/moveclicsfps;
     double rotateclicstimepassed;
@@ -86,24 +87,12 @@ int main()
             if(!leftpressed){
                 actpiece.Move(-1,W_WIDTH,W_HEIGHT,map);
                 leftpressed=true;
-                /*if(actpiece.IsDead()){
-                    //Stop moving this piece and move another
-                    std::vector<Rect> rectsToAdd= actpiece.GetRects();
-                    UpdateMap(map,rectsToAdd,actpiece);
-                    UpdatePiece(startx,starty,x,y,pieces,actpiece,allpieces,nextindex,nextmap,manager,W_WIDTH,W_HEIGHT);
-                }*/
             }
         }
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right)){
             if(!rightpressed){
                 actpiece.Move(1,W_WIDTH,W_HEIGHT,map);
                 rightpressed=true;
-                /*if(actpiece.IsDead()){
-                    //Stop moving this piece and move another
-                    std::vector<Rect> rectsToAdd= actpiece.GetRects();
-                    UpdateMap(map,rectsToAdd,actpiece);
-                    UpdatePiece(startx,starty,x,y,pieces,actpiece,allpieces,nextindex,nextmap,manager,W_WIDTH,W_HEIGHT);
-                }*/
             }
         }
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::Up)){
@@ -116,10 +105,12 @@ int main()
 
 
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down)){
-            actpiece.SetSpeed(2);
+            actualfps=fps*2;
+            totaltimetopass=1/actualfps;
         }
         else{
-            actpiece.SetSpeed(1);
+            actualfps=fps;
+            totaltimetopass=1/actualfps;
         }
 
         double toadd= clock.restart().asSeconds();

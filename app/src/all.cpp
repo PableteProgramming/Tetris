@@ -46,7 +46,7 @@ Rect::Rect(int _x, int _y, int _width, int _height,sf::Color _color){
     color=_color;
 }
 
-Object::Object(int _x, int _y, int rotation,Manager _manager,std::vector<std::vector<int>> _map,int _W_width, int _W_height,int _mmap[W_HEIGHT/scale][W_WIDTH/scale],int _speed){
+Object::Object(int _x, int _y, int rotation,Manager _manager,std::vector<std::vector<int>> _map,int _W_width, int _W_height,int _mmap[W_HEIGHT/scale][W_WIDTH/scale]){
     Dead=false;
     x=_x;
     y=_y;
@@ -55,7 +55,6 @@ Object::Object(int _x, int _y, int rotation,Manager _manager,std::vector<std::ve
     manager.SetScale(_manager.GetScale());
     manager.SetSets(_manager.GetSets());
     //map
-    speed=_speed;
     map=_map;
     W_width=_W_width;
     W_height= _W_height;
@@ -127,18 +126,15 @@ void Object::Move(int dir, int _width,int _height,int _map[W_HEIGHT/scale][W_WID
         }
     }
     if(moveY){
-        if(y+(speed*manager.GetScale())<= _height-height){
-            for(int i=1; i<=speed;i++){
-                if(Collision(_map,x,y+(i*manager.GetScale()),rects)){
-                    lastx=x;
-                    Dead=true;
-                    lasty=y+((i-1)*manager.GetScale());
-                    y=lasty;
-                    return;
-                }
-            }
+        if(y+manager.GetScale()<= _height-height){
             lasty=y;
-            y+=speed*manager.GetScale();
+            y+=manager.GetScale();
+            if(Collision(_map,x,y,rects)){
+                lastx=x;
+                y=lasty;
+                Dead=true;
+                return;
+            }
         }
         else{
             lasty=y;
@@ -148,10 +144,6 @@ void Object::Move(int dir, int _width,int _height,int _map[W_HEIGHT/scale][W_WID
             Dead=true;
         }
     }
-}
-
-void Object::SetSpeed(int _speed){
-    speed=_speed;
 }
 
 std::vector<std::vector<int>> RotateMap(int angle,std::vector<std::vector<int>> map){
