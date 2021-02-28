@@ -3,7 +3,7 @@
 int main()
 {
     //Creating the main manager object
-    Manager manager(scale,Map::ColorSet,sf::Color::White);
+    Manager manager(scale,Map::ColorSet,sf::Color{126,129,130});
     std::vector<Object> pieces;
 
 

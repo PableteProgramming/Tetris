@@ -6,9 +6,6 @@ add_compile_definitions(SFML_STATIC)
 
 target_sources(
     ${PROJECT_NAME} PUBLIC
-    #${SRC_DIR}/Rect.cpp
-    #${SRC_DIR}/Object.cpp
-    #${SRC_DIR}/Tetris.cpp
     ${SRC_DIR}/main.cpp
 )
 
@@ -22,11 +19,6 @@ target_link_libraries(
     ${PROJECT_NAME} PUBLIC
     ${LIBS}
 )
-
-#target_link_options(
-#    ${PROJECT_NAME} PUBLIC
-#    -mwindows
-#)
 
 add_custom_command(TARGET ${PROJECT_NAME} PRE_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy_directory

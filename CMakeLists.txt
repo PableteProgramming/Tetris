@@ -13,7 +13,12 @@ set(SFML_INCLUDE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/${SFML_DIRECTORY}/include)
 
 add_subdirectory(${SFML_DIRECTORY})
 
+if(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
+    set(TETRIS_PLATLIBS freetype jpeg)
+elseif(${CMAKE_SYSTEM_NAME} MATCHES "Windows")
+    set(TETRIS_PLATLIBS winmm gdi32)
+endif()
 
-set(LIBS sfml-graphics sfml-window sfml-system ${OPENGL_LIBRARY} winmm gdi32 ${SFML_LIBRARIES})
+set(LIBS sfml-graphics sfml-window sfml-system ${OPENGL_LIBRARY} ${TETRIS_PLATLIBS} ${SFML_LIBRARIES})
 
 add_subdirectory(app)
