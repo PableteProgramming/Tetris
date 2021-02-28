@@ -2,8 +2,29 @@
 
 int main()
 {
+    //Creating the main manager object
+    Manager manager(scale,Map::ColorSet,sf::Color::White);
+    std::vector<Object> pieces;
+
+
+    //creating game screen limits to draw
+    std::vector<std::pair<Manager,std::pair<Coord,Coord>>> offsetsToDraw;
+    offsetsToDraw.clear();
+    offsetsToDraw.push_back(std::make_pair(manager,std::make_pair(Coord(0,0),Coord(scale,W_HEIGHT))));
+    offsetsToDraw.push_back(std::make_pair(manager,std::make_pair(Coord(0,0),Coord(W_WIDTH,scale))));
+    offsetsToDraw.push_back(std::make_pair(manager,std::make_pair(Coord(0,W_HEIGHT-scale),Coord(W_WIDTH,W_HEIGHT))));
+    offsetsToDraw.push_back(std::make_pair(manager,std::make_pair(Coord(W_WIDTH-scale,0),Coord(W_WIDTH,W_HEIGHT))));
+
+
+    //creating actualfps variable for double speed
     double actualfps=fps;
+
+
+    //init random numbers
     srand(time(NULL));
+
+
+    //creating vector with all possible pieces
     std::vector<std::vector<std::vector<int>>> allpieces;
     allpieces.clear();
     allpieces.push_back(Map::lright);
@@ -14,49 +35,47 @@ int main()
     allpieces.push_back(Map::z);
     allpieces.push_back(Map::inversedz);
 
+
+    //creating window
     sf::RenderWindow window(sf::VideoMode(W_WIDTH, W_HEIGHT), "My window");
 
-    /*std::cout<<"Width: "<<W_WIDTH/scale<<std::endl;
-    std::cout<<"HEIGHT: "<<W_HEIGHT/scale<<std::endl;*/
 
+    //getting random indexes
     int index= rand()%(allpieces.size());
     int nextindex= rand()%(allpieces.size());
 
-    //std::cout<<"before init..."<<std::endl;
 
+    //getting random pieces
     std::vector<std::vector<int>> actmap= allpieces[index];
     std::vector<std::vector<int>> nextmap= allpieces[nextindex];
+   
 
-    //std::cout<<"before init 2..."<<std::endl;
-
-    //error from here    
-    int startx=scale*25;
-    int starty=scale;
+    //defining startx pos and stary pos
+    int startx=(((int)(COLS/2))*scale)+(LEFT_OFFSET*scale);
+    int starty=0;
     int x= startx;
     int y= starty;
 
-    Manager manager(scale,Map::ColorSet);
-    std::vector<Object> pieces;
 
+    //Changing pieces color by getting random color
     ChangeColor(actmap,(rand()%(Map::ColorSet.size())+1));
     ChangeColor(nextmap,(rand()%(Map::ColorSet.size())+1));
 
+
+    //adding actual piece and nextpiece to the vector
     pieces.clear();
     pieces.push_back(Object(x,y,0,manager,nextmap,GAME_SCREEN_WIDTH,GAME_SCREEN_HEIGHT,map));
-
-    Object actpiece(x,y,0,manager,actmap,GAME_SCREEN_WIDTH,GAME_SCREEN_HEIGHT,map)/*pieces[pieces.size()-1]*/;
-
+    Object actpiece(x,y,0,manager,actmap,GAME_SCREEN_WIDTH,GAME_SCREEN_HEIGHT,map);
     pieces.push_back(actpiece);
 
-    //to here
 
-    //std::cout<<"after init..."<<std::endl;
-
+    //Drawing initial display
     window.clear();
     actpiece.Draw(window);
     window.display();
-    //window.setFramerateLimit(fps);
 
+
+    //creating all fps needed variables
     sf::Clock clock;
     double timepassed;
     double totaltimetopass= 1/actualfps;
@@ -69,20 +88,25 @@ int main()
     bool upkeypressed=false;
 
 
+    //init map with 0
     fillMap(map,0);
 
-    // run the program as long as the window is open
+
+    //main while loop
     while (window.isOpen())
     {
-        // check all the window's events that were triggered since the last iteration of the loop
+        //check window events
         sf::Event event;
         while (window.pollEvent(event))
         {
-            // "close requested" event: we close the window
-            if (event.type == sf::Event::Closed)
+            //close the window if wanted
+            if (event.type == sf::Event::Closed){
                 window.close();
+            }
         }
         
+
+        //Detecting left, right and up keys
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left)){
             if(!leftpressed){
                 actpiece.Move(-1,GAME_SCREEN_WIDTH,GAME_SCREEN_HEIGHT,map);
@@ -104,6 +128,7 @@ int main()
         }
 
 
+        //Getting key down and changing fps
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down)){
             actualfps=fps*2;
             totaltimetopass=1/actualfps;
@@ -113,40 +138,47 @@ int main()
             totaltimetopass=1/actualfps;
         }
 
+
+        //adding the time passed to the fps variables
         double toadd= clock.restart().asSeconds();
         timepassed+= toadd;
         moveclicstimepassed+=toadd;
         rotateclicstimepassed+=toadd;
         
 
+        //Checking if time passed and need to update
         if(timepassed>= totaltimetopass) {
-			//Update the last_render variable
             timepassed=0;			
             actpiece.Move(0,GAME_SCREEN_WIDTH,GAME_SCREEN_HEIGHT,map,true);
             if(actpiece.IsDead()){
+
                 //Stop moving this piece and move another
                 std::vector<Rect> rectsToAdd= actpiece.GetRects();
                 UpdateMap(map,rectsToAdd,actpiece);
                 UpdatePiece(startx,starty,x,y,pieces,actpiece,allpieces,nextindex,nextmap,manager,GAME_SCREEN_WIDTH,GAME_SCREEN_HEIGHT,map);
             }
         }
-
         if(moveclicstimepassed >= moveclicstotaltimetopass){
             moveclicstimepassed=0;
             rightpressed=false;
             leftpressed=false;
         }
-
         if(rotateclicstimepassed>= rotateclicstotaltimetopass){
             rotateclicstimepassed=0;
             upkeypressed=false;
         }
 
+
+        //clearing window and drawing all again
         window.clear();
+        DrawOffset(offsetsToDraw,window);
         DrawMap(window,map,manager);
         actpiece.Draw(window);
         window.display();
     }
+    //end of main while loop
 
+
+    //end of the program
     return 0;
 }

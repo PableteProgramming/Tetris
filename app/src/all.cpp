@@ -1,8 +1,9 @@
 #include <all.h>
 
-Manager::Manager(int _scale, std::vector<std::pair<int,sf::Color>> _sets){
+Manager::Manager(int _scale, std::vector<std::pair<int,sf::Color>> _sets, sf::Color _offsetcolor){
     scale=_scale;
     sets=_sets;
+    offsetColor= _offsetcolor;
 }
 
 Manager::Manager(){
@@ -36,6 +37,10 @@ int Manager::FindValueOfColor(sf::Color color){
         }
     }
     return 0;
+}
+
+void Manager::SetOffsetColor(sf::Color _offsetcolor){
+    offsetColor=_offsetcolor;
 }
 
 Rect::Rect(int _x, int _y, int _width, int _height,sf::Color _color){
@@ -418,5 +423,19 @@ void RemoveLineFromMap(int _map[GAME_SCREEN_HEIGHT/scale][GAME_SCREEN_WIDTH/scal
                 }
             }
         }
+    }
+}
+
+void DrawOffset(std::vector<std::pair<Manager,std::pair<Coord,Coord>>> coordvector, sf::RenderWindow& window){
+    for(int i=0; i<coordvector.size();i++){
+        std::pair<Manager,std::pair<Coord,Coord>> elem= coordvector[i];
+        std::pair<Coord,Coord> actualcoords= elem.second;
+        Coord from= actualcoords.first;
+        Coord to= actualcoords.second;
+        sf::RectangleShape recttodraw;
+        recttodraw.setPosition(from.GetX(),from.GetY());
+        recttodraw.setSize(sf::Vector2f(to.GetX()-from.GetX(),to.GetY()-from.GetY()));
+        recttodraw.setFillColor(elem.first.GetOffsetColor());
+        window.draw(recttodraw);
     }
 }

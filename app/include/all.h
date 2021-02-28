@@ -12,8 +12,8 @@ const int scale= 30;
 const double fps= 5;
 const double moveclicsfps=3;
 const double rotateclicsfps=2;
-const int COLS= 20;
-const int LINES= 20;
+const int COLS= 15;
+const int LINES= 15;
 const int DOWN_OFFSET=1;
 const int UP_OFFSET=1;
 const int RIGHT_OFFSET=1;
@@ -27,11 +27,14 @@ class Manager{
 private:
     int scale;
     std::vector<std::pair<int,sf::Color>> sets;
+    sf::Color offsetColor;
 public:
     Manager();
-    Manager(int,std::vector<std::pair<int,sf::Color>>);
+    Manager(int,std::vector<std::pair<int,sf::Color>>,sf::Color);
     void SetScale(int);
     void SetSets(std::vector<std::pair<int,sf::Color>>);
+    void SetOffsetColor(sf::Color);
+    sf::Color GetOffsetColor(){return offsetColor;};
     int GetScale(){return scale;};
     std::vector<std::pair<int,sf::Color>> GetSets(){return sets;};
     sf::Color FindColorOfValue(int);
@@ -97,6 +100,17 @@ public:
     static std::vector<std::pair<int,sf::Color>> ColorSet;
 };
 
+class Coord{
+private:
+    int x;
+    int y;
+public:
+    Coord();
+    Coord(int _x,int _y) : x(_x), y(_y){};
+    int GetX(){return x;};
+    int GetY(){return y;};
+};
+
 std::vector<std::vector<int>> RotateMap(int,std::vector<std::vector<int>>);
 void PrintMap(std::vector<std::vector<int>>);
 void fillMap(int[GAME_SCREEN_HEIGHT/scale][GAME_SCREEN_WIDTH/scale],int);
@@ -109,3 +123,4 @@ void UpdatePiece(int,int,int&,int&,std::vector<Object>&,Object&,std::vector<std:
 void ChangeColor(std::vector<std::vector<int>>&,int);
 std::pair<bool,std::vector<int>> IsLineCompleted(int[GAME_SCREEN_HEIGHT/scale][GAME_SCREEN_WIDTH/scale]);
 void RemoveLineFromMap(int[GAME_SCREEN_HEIGHT/scale][GAME_SCREEN_WIDTH/scale],int);
+void DrawOffset(std::vector<std::pair<Manager,std::pair<Coord,Coord>>>,sf::RenderWindow&);
