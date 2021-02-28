@@ -46,7 +46,7 @@ Rect::Rect(int _x, int _y, int _width, int _height,sf::Color _color){
     color=_color;
 }
 
-Object::Object(int _x, int _y, int rotation,Manager _manager,std::vector<std::vector<int>> _map,int _W_width, int _W_height,int _mmap[W_HEIGHT/scale][W_WIDTH/scale]){
+Object::Object(int _x, int _y, int rotation,Manager _manager,std::vector<std::vector<int>> _map,int _W_width, int _W_height,int _mmap[GAME_SCREEN_HEIGHT/scale][GAME_SCREEN_WIDTH/scale]){
     Dead=false;
     x=_x;
     y=_y;
@@ -66,14 +66,14 @@ void Object::Draw(sf::RenderWindow &window){
     for(int i=0; i<rects.size();i++){
         Rect act= rects[i];
         sf::RectangleShape recttodraw;
-        recttodraw.setPosition(act.GetX()*manager.GetScale()+x,act.GetY()*manager.GetScale()+y);
+        recttodraw.setPosition(act.GetX()*manager.GetScale()+x+(LEFT_OFFSET*scale),act.GetY()*manager.GetScale()+y+(UP_OFFSET*scale));
         recttodraw.setSize(sf::Vector2f(act.GetWidth()*manager.GetScale(),act.GetHeight()*manager.GetScale()));
         recttodraw.setFillColor(act.GetColor());
         window.draw(recttodraw);
     }
 }
 
-void Object::Rotate(int _map[W_HEIGHT/scale][W_WIDTH/scale],int rotation){
+void Object::Rotate(int _map[GAME_SCREEN_HEIGHT/scale][GAME_SCREEN_WIDTH/scale],int rotation){
     map= RotateMap(rotation,map);
     Configure();
 
@@ -112,7 +112,7 @@ void Object::Configure(){
     rects= FillRects(map,manager);
 }
 
-void Object::Move(int dir, int _width,int _height,int _map[W_HEIGHT/scale][W_WIDTH/scale] ,bool moveY){
+void Object::Move(int dir, int _width,int _height,int _map[GAME_SCREEN_HEIGHT/scale][GAME_SCREEN_WIDTH/scale] ,bool moveY){
     if(dir<0){
         if((x>=(0+manager.GetScale())) && (!Collision(_map,x-manager.GetScale(),y,rects))){
             lastx=x;
@@ -220,20 +220,20 @@ void PrintMap(std::vector<std::vector<int>> map){
     }
 }
 
-void fillMap(int _map[W_HEIGHT/scale][W_WIDTH/scale], int v){
-    for(int y=0; y<(W_HEIGHT/scale);y++){
-        for(int x=0; x<(W_WIDTH/scale); x++){
+void fillMap(int _map[GAME_SCREEN_HEIGHT/scale][GAME_SCREEN_WIDTH/scale], int v){
+    for(int y=0; y<(GAME_SCREEN_HEIGHT/scale);y++){
+        for(int x=0; x<(GAME_SCREEN_WIDTH/scale); x++){
             _map[y][x]=v;
         }
     }
 }
 
-void DrawMap(sf::RenderWindow& window,int _map[W_HEIGHT/scale][W_WIDTH/scale],Manager manager){
+void DrawMap(sf::RenderWindow& window,int _map[GAME_SCREEN_HEIGHT/scale][GAME_SCREEN_WIDTH/scale],Manager manager){
     std::vector<Rect> rects= FillRects(MapToVector(_map),manager);
     for(int i=0; i<rects.size();i++){
         Rect act= rects[i];
         sf::RectangleShape recttodraw;
-        recttodraw.setPosition(act.GetX()*manager.GetScale(),act.GetY()*manager.GetScale());
+        recttodraw.setPosition(act.GetX()*manager.GetScale()+(LEFT_OFFSET*scale),act.GetY()*manager.GetScale()+(UP_OFFSET*scale));
         recttodraw.setSize(sf::Vector2f(act.GetWidth()*manager.GetScale(),act.GetHeight()*manager.GetScale()));
         recttodraw.setFillColor(act.GetColor());
         window.draw(recttodraw);
@@ -257,13 +257,13 @@ std::vector<Rect> FillRects(std::vector<std::vector<int>> _map,Manager manager){
     return rects;
 }
 
-std::vector<std::vector<int>> MapToVector(int _map[W_HEIGHT/scale][W_WIDTH/scale]){
+std::vector<std::vector<int>> MapToVector(int _map[GAME_SCREEN_HEIGHT/scale][GAME_SCREEN_WIDTH/scale]){
     std::vector<std::vector<int>> r;
     r.clear();
     std::vector<int> r1;
-    for(int y=0; y<(W_HEIGHT/scale);y++){
+    for(int y=0; y<(GAME_SCREEN_HEIGHT/scale);y++){
         r1.clear();
-        for(int x=0; x<(W_WIDTH/scale); x++){
+        for(int x=0; x<(GAME_SCREEN_WIDTH/scale); x++){
             r1.push_back(_map[y][x]);
         }
         r.push_back(r1);
@@ -271,7 +271,7 @@ std::vector<std::vector<int>> MapToVector(int _map[W_HEIGHT/scale][W_WIDTH/scale
     return r;
 }
 
-void UpdateMap(int _map[W_HEIGHT/scale][W_WIDTH/scale],std::vector<Rect> rectsToAdd, Object actpiece){
+void UpdateMap(int _map[GAME_SCREEN_HEIGHT/scale][GAME_SCREEN_WIDTH/scale],std::vector<Rect> rectsToAdd, Object actpiece){
     for(int i=0; i<rectsToAdd.size();i++){
         Rect actrect= rectsToAdd[i];
         _map[actrect.GetY()+(actpiece.GetLastY()/scale)][actrect.GetX()+(actpiece.GetLastX()/scale)]= actpiece.GetManager().FindValueOfColor(actrect.GetColor());
@@ -339,7 +339,7 @@ std::vector<std::pair<int,sf::Color>> Map::ColorSet={
     {6,sf::Color{255,255,255}/*white*/},
 };
 
-bool Collision(int _map[W_HEIGHT/scale][W_WIDTH/scale],int _x,int _y,std::vector<Rect> rects){
+bool Collision(int _map[GAME_SCREEN_HEIGHT/scale][GAME_SCREEN_WIDTH/scale],int _x,int _y,std::vector<Rect> rects){
     for(int i=0; i<rects.size();i++){
         Rect actrect= rects[i];
         //std::cout<<"ma["<<actrect.GetY()+(actpiece.GetY()/scale)<<"]["<<actrect.GetX()+(actpiece.GetX()/scale)<< "]="<<manager.FindValueOfColor(actrect.GetColor())<<std::endl;
@@ -351,7 +351,7 @@ bool Collision(int _map[W_HEIGHT/scale][W_WIDTH/scale],int _x,int _y,std::vector
     return false;
 }
 
-void UpdatePiece(int _startx,int _starty,int& _x,int& _y,std::vector<Object>& _pieces,Object& _actpiece,std::vector<std::vector<std::vector<int>>> _allpieces,int& _nextindex,std::vector<std::vector<int>>& _nextmap,Manager _manager,int _W_WIDTH,int _W_HEIGHT,int _map[W_HEIGHT/scale][W_WIDTH/scale]){
+void UpdatePiece(int _startx,int _starty,int& _x,int& _y,std::vector<Object>& _pieces,Object& _actpiece,std::vector<std::vector<std::vector<int>>> _allpieces,int& _nextindex,std::vector<std::vector<int>>& _nextmap,Manager _manager,int _W_WIDTH,int _W_HEIGHT,int _map[GAME_SCREEN_HEIGHT/scale][GAME_SCREEN_WIDTH/scale]){
     _x= _startx;
     _y= _starty;
     _actpiece= _pieces[0];
@@ -374,14 +374,14 @@ void ChangeColor(std::vector<std::vector<int>>& _map,int colornum){
     }
 }
 
-std::pair<bool,std::vector<int>> IsLineCompleted(int _map[W_HEIGHT/scale][W_WIDTH/scale]){
+std::pair<bool,std::vector<int>> IsLineCompleted(int _map[GAME_SCREEN_HEIGHT/scale][GAME_SCREEN_WIDTH/scale]){
     bool r1=false;
     std::vector<int> r2;
     r2.clear();
     bool isZero;
-    for(int _y=0; _y<(W_HEIGHT/scale);_y++){
+    for(int _y=0; _y<(GAME_SCREEN_HEIGHT/scale);_y++){
         isZero=false;
-        for(int _x=0; _x<(W_WIDTH/scale);_x++){
+        for(int _x=0; _x<(GAME_SCREEN_WIDTH/scale);_x++){
             if(_map[_y][_x]==0){
                 isZero=false;
                 break;
@@ -398,17 +398,17 @@ std::pair<bool,std::vector<int>> IsLineCompleted(int _map[W_HEIGHT/scale][W_WIDT
     return std::make_pair(r1,r2);
 }
 
-void RemoveLineFromMap(int _map[W_HEIGHT/scale][W_WIDTH/scale], int line){
+void RemoveLineFromMap(int _map[GAME_SCREEN_HEIGHT/scale][GAME_SCREEN_WIDTH/scale], int line){
     if(line<=0){
         //delete the first line;
-        for(int _x=0;_x<(W_WIDTH/scale);_x++){
+        for(int _x=0;_x<(GAME_SCREEN_WIDTH/scale);_x++){
             _map[0][_x]=0;
         }
     }
-    else if(line<(W_HEIGHT/scale)){
+    else if(line<(GAME_SCREEN_HEIGHT/scale)){
         //moving down all the lines
         for(int _y=line;_y>=0;_y--){
-            for(int _x=0;_x<(W_WIDTH/scale);_x++){
+            for(int _x=0;_x<(GAME_SCREEN_WIDTH/scale);_x++){
                 if(_y>0){
                     _map[_y][_x]= _map[_y-1][_x];
                 }

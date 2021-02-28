@@ -12,8 +12,16 @@ const int scale= 30;
 const double fps= 5;
 const double moveclicsfps=3;
 const double rotateclicsfps=2;
-const int W_WIDTH= 300;
-const int W_HEIGHT=600;
+const int COLS= 20;
+const int LINES= 20;
+const int DOWN_OFFSET=1;
+const int UP_OFFSET=1;
+const int RIGHT_OFFSET=1;
+const int LEFT_OFFSET=1;
+const int GAME_SCREEN_WIDTH= COLS*scale;
+const int GAME_SCREEN_HEIGHT=LINES*scale;
+const int W_WIDTH= GAME_SCREEN_WIDTH+(RIGHT_OFFSET*scale)+(LEFT_OFFSET*scale);
+const int W_HEIGHT= GAME_SCREEN_HEIGHT+(UP_OFFSET*scale)+(DOWN_OFFSET*scale);
 
 class Manager{
 private:
@@ -62,11 +70,11 @@ private:
     std::vector<Rect> rects;
     void Configure();
 public:
-    Object(int,int,int,Manager,std::vector<std::vector<int>>,int,int,int[W_HEIGHT/scale][W_WIDTH/scale]);
+    Object(int,int,int,Manager,std::vector<std::vector<int>>,int,int,int[GAME_SCREEN_HEIGHT/scale][GAME_SCREEN_WIDTH/scale]);
     void Draw(sf::RenderWindow&);
-    void Move(int,int,int,int[W_HEIGHT/scale][W_WIDTH/scale],bool=false);
+    void Move(int,int,int,int[GAME_SCREEN_HEIGHT/scale][GAME_SCREEN_WIDTH/scale],bool=false);
     int GetWidth(){return width;};
-    void Rotate(int[W_HEIGHT/scale][W_WIDTH/scale],int);
+    void Rotate(int[GAME_SCREEN_HEIGHT/scale][GAME_SCREEN_WIDTH/scale],int);
     void SetSpeed(int);
     int GetX(){return x;};
     int GetY(){return y;};
@@ -91,13 +99,13 @@ public:
 
 std::vector<std::vector<int>> RotateMap(int,std::vector<std::vector<int>>);
 void PrintMap(std::vector<std::vector<int>>);
-void fillMap(int[W_HEIGHT/scale][W_WIDTH/scale],int);
+void fillMap(int[GAME_SCREEN_HEIGHT/scale][GAME_SCREEN_WIDTH/scale],int);
 std::vector<Rect> FillRects(std::vector<std::vector<int>>,Manager);
-void DrawMap(sf::RenderWindow&,int[W_HEIGHT/scale][W_WIDTH/scale],Manager);
-std::vector<std::vector<int>> MapToVector(int[W_HEIGHT/scale][W_WIDTH/scale]);
-void UpdateMap(int[W_HEIGHT/scale][W_WIDTH/scale],std::vector<Rect>,Object);
-bool Collision(int[W_HEIGHT/scale][W_WIDTH/scale],int,int,std::vector<Rect>);
-void UpdatePiece(int,int,int&,int&,std::vector<Object>&,Object&,std::vector<std::vector<std::vector<int>>>,int&,std::vector<std::vector<int>>&,Manager,int,int,int[W_HEIGHT/scale][W_WIDTH/scale]);
+void DrawMap(sf::RenderWindow&,int[GAME_SCREEN_HEIGHT/scale][GAME_SCREEN_WIDTH/scale],Manager);
+std::vector<std::vector<int>> MapToVector(int[GAME_SCREEN_HEIGHT/scale][GAME_SCREEN_WIDTH/scale]);
+void UpdateMap(int[GAME_SCREEN_HEIGHT/scale][GAME_SCREEN_WIDTH/scale],std::vector<Rect>,Object);
+bool Collision(int[GAME_SCREEN_HEIGHT/scale][GAME_SCREEN_WIDTH/scale],int,int,std::vector<Rect>);
+void UpdatePiece(int,int,int&,int&,std::vector<Object>&,Object&,std::vector<std::vector<std::vector<int>>>,int&,std::vector<std::vector<int>>&,Manager,int,int,int[GAME_SCREEN_HEIGHT/scale][GAME_SCREEN_WIDTH/scale]);
 void ChangeColor(std::vector<std::vector<int>>&,int);
-std::pair<bool,std::vector<int>> IsLineCompleted(int[W_HEIGHT/scale][W_WIDTH/scale]);
-void RemoveLineFromMap(int[W_HEIGHT/scale][W_WIDTH/scale],int);
+std::pair<bool,std::vector<int>> IsLineCompleted(int[GAME_SCREEN_HEIGHT/scale][GAME_SCREEN_WIDTH/scale]);
+void RemoveLineFromMap(int[GAME_SCREEN_HEIGHT/scale][GAME_SCREEN_WIDTH/scale],int);

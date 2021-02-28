@@ -42,9 +42,9 @@ int main()
     ChangeColor(nextmap,(rand()%(Map::ColorSet.size())+1));
 
     pieces.clear();
-    pieces.push_back(Object(x,y,0,manager,nextmap,W_WIDTH,W_HEIGHT,map));
+    pieces.push_back(Object(x,y,0,manager,nextmap,GAME_SCREEN_WIDTH,GAME_SCREEN_HEIGHT,map));
 
-    Object actpiece(x,y,0,manager,actmap,W_WIDTH,W_HEIGHT,map)/*pieces[pieces.size()-1]*/;
+    Object actpiece(x,y,0,manager,actmap,GAME_SCREEN_WIDTH,GAME_SCREEN_HEIGHT,map)/*pieces[pieces.size()-1]*/;
 
     pieces.push_back(actpiece);
 
@@ -85,13 +85,13 @@ int main()
         
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left)){
             if(!leftpressed){
-                actpiece.Move(-1,W_WIDTH,W_HEIGHT,map);
+                actpiece.Move(-1,GAME_SCREEN_WIDTH,GAME_SCREEN_HEIGHT,map);
                 leftpressed=true;
             }
         }
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right)){
             if(!rightpressed){
-                actpiece.Move(1,W_WIDTH,W_HEIGHT,map);
+                actpiece.Move(1,GAME_SCREEN_WIDTH,GAME_SCREEN_HEIGHT,map);
                 rightpressed=true;
             }
         }
@@ -122,12 +122,12 @@ int main()
         if(timepassed>= totaltimetopass) {
 			//Update the last_render variable
             timepassed=0;			
-            actpiece.Move(0,W_WIDTH,W_HEIGHT,map,true);
+            actpiece.Move(0,GAME_SCREEN_WIDTH,GAME_SCREEN_HEIGHT,map,true);
             if(actpiece.IsDead()){
                 //Stop moving this piece and move another
                 std::vector<Rect> rectsToAdd= actpiece.GetRects();
                 UpdateMap(map,rectsToAdd,actpiece);
-                UpdatePiece(startx,starty,x,y,pieces,actpiece,allpieces,nextindex,nextmap,manager,W_WIDTH,W_HEIGHT,map);
+                UpdatePiece(startx,starty,x,y,pieces,actpiece,allpieces,nextindex,nextmap,manager,GAME_SCREEN_WIDTH,GAME_SCREEN_HEIGHT,map);
             }
         }
 
