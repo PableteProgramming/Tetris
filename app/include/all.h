@@ -8,6 +8,7 @@
 
 const std::string RES_PATH= "resources";
 const std::string IMG_PATH= RES_PATH+"/img";
+const std::string FONT_PATH= RES_PATH+"/font";
 const int scale= 30;
 const double fps= 5;
 const double moveclicsfps=3;
@@ -16,7 +17,7 @@ const int COLS= 15;
 const int LINES= 15;
 const int DOWN_OFFSET=1;
 const int UP_OFFSET=1;
-const int RIGHT_OFFSET=1;
+const int RIGHT_OFFSET=8;
 const int LEFT_OFFSET=1;
 const int GAME_SCREEN_WIDTH= COLS*scale;
 const int GAME_SCREEN_HEIGHT=LINES*scale;
@@ -124,3 +125,4 @@ void ChangeColor(std::vector<std::vector<int>>&,int);
 std::pair<bool,std::vector<int>> IsLineCompleted(int[GAME_SCREEN_HEIGHT/scale][GAME_SCREEN_WIDTH/scale]);
 void RemoveLineFromMap(int[GAME_SCREEN_HEIGHT/scale][GAME_SCREEN_WIDTH/scale],int);
 void DrawOffset(std::vector<std::pair<Manager,std::pair<Coord,Coord>>>,sf::RenderWindow&);
+void DrawNextPiece(int,int,int,std::string,sf::Font,int,int,std::vector<std::vector<int>>,sf::RenderWindow&,Manager);

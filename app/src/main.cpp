@@ -2,6 +2,11 @@
 
 int main()
 {
+    sf::Font font;
+    if(!font.loadFromFile(FONT_PATH+"/arial.ttf")){
+        return EXIT_FAILURE;
+    }
+
     //Creating the main manager object
     Manager manager(scale,Map::ColorSet,sf::Color{126,129,130});
     std::vector<Object> pieces;
@@ -13,6 +18,7 @@ int main()
     offsetsToDraw.push_back(std::make_pair(manager,std::make_pair(Coord(0,0),Coord(scale,W_HEIGHT))));
     offsetsToDraw.push_back(std::make_pair(manager,std::make_pair(Coord(0,0),Coord(W_WIDTH,scale))));
     offsetsToDraw.push_back(std::make_pair(manager,std::make_pair(Coord(0,W_HEIGHT-scale),Coord(W_WIDTH,W_HEIGHT))));
+    offsetsToDraw.push_back(std::make_pair(manager,std::make_pair(Coord(GAME_SCREEN_WIDTH+(LEFT_OFFSET*scale),0),Coord(GAME_SCREEN_WIDTH+(LEFT_OFFSET*scale)+scale,W_HEIGHT))));
     offsetsToDraw.push_back(std::make_pair(manager,std::make_pair(Coord(W_WIDTH-scale,0),Coord(W_WIDTH,W_HEIGHT))));
 
 
@@ -171,6 +177,7 @@ int main()
 
         //clearing window and drawing all again
         window.clear();
+        DrawNextPiece(GAME_SCREEN_WIDTH+LEFT_OFFSET+2,2,14,"Next Piece:",font,GAME_SCREEN_WIDTH+LEFT_OFFSET+2,5,nextmap,window,manager);
         DrawOffset(offsetsToDraw,window);
         DrawMap(window,map,manager);
         actpiece.Draw(window);

@@ -439,3 +439,26 @@ void DrawOffset(std::vector<std::pair<Manager,std::pair<Coord,Coord>>> coordvect
         window.draw(recttodraw);
     }
 }
+
+void DrawNextPiece(int textx,int texty,int fontsize,std::string text,sf::Font font,int px,int py,std::vector<std::vector<int>> p,sf::RenderWindow& window,Manager manager){
+    sf::Text textToDraw;
+    textToDraw.setFont(font);
+    textToDraw.setString(text);
+    textToDraw.setCharacterSize(fontsize);
+    textToDraw.setFillColor(sf::Color::White);
+    textToDraw.setPosition(textx*manager.GetScale(),texty*manager.GetScale());
+    window.draw(textToDraw);
+    int _width= p[0].size();
+    int _height= p.size();
+    for(int _y=0; _y<_height;_y++){
+        for(int _x=0; _x<_width;_x++){
+            if(p[_y][_x]!=0){
+                sf::RectangleShape recttodraw;
+                recttodraw.setPosition((_x+px)*manager.GetScale(),(_y+py)*manager.GetScale());
+                recttodraw.setSize(sf::Vector2f(manager.GetScale(),manager.GetScale()));
+                recttodraw.setFillColor(manager.FindColorOfValue(p[_y][_x]));
+                window.draw(recttodraw);
+            }
+        }
+    }
+}
