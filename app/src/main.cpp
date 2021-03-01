@@ -160,7 +160,7 @@ int main()
 
                 //Stop moving this piece and move another
                 std::vector<Rect> rectsToAdd= actpiece.GetRects();
-                UpdateMap(map,rectsToAdd,actpiece);
+                UpdateMap(map,rectsToAdd,actpiece,window);
                 UpdatePiece(startx,starty,x,y,pieces,actpiece,allpieces,nextindex,nextmap,manager,GAME_SCREEN_WIDTH,GAME_SCREEN_HEIGHT,map);
             }
         }

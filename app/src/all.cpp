@@ -276,7 +276,7 @@ std::vector<std::vector<int>> MapToVector(int _map[GAME_SCREEN_HEIGHT/scale][GAM
     return r;
 }
 
-void UpdateMap(int _map[GAME_SCREEN_HEIGHT/scale][GAME_SCREEN_WIDTH/scale],std::vector<Rect> rectsToAdd, Object actpiece){
+void UpdateMap(int _map[GAME_SCREEN_HEIGHT/scale][GAME_SCREEN_WIDTH/scale],std::vector<Rect> rectsToAdd, Object actpiece,sf::RenderWindow& window){
     for(int i=0; i<rectsToAdd.size();i++){
         Rect actrect= rectsToAdd[i];
         _map[actrect.GetY()+(actpiece.GetLastY()/scale)][actrect.GetX()+(actpiece.GetLastX()/scale)]= actpiece.GetManager().FindValueOfColor(actrect.GetColor());
@@ -290,6 +290,13 @@ void UpdateMap(int _map[GAME_SCREEN_HEIGHT/scale][GAME_SCREEN_WIDTH/scale],std::
             for(int i=0; i<result.second.size();i++){
                 RemoveLineFromMap(_map,result.second[i]);
             }
+        }
+    }
+
+    //check if user looses
+    for(int _x=0; _x<GAME_SCREEN_WIDTH/scale;_x++){
+        if(_map[0][_x]!=0){
+            window.close();
         }
     }
 }
