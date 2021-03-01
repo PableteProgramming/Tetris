@@ -23,6 +23,9 @@ const int GAME_SCREEN_WIDTH= COLS*scale;
 const int GAME_SCREEN_HEIGHT=LINES*scale;
 const int W_WIDTH= GAME_SCREEN_WIDTH+(RIGHT_OFFSET*scale)+(LEFT_OFFSET*scale);
 const int W_HEIGHT= GAME_SCREEN_HEIGHT+(UP_OFFSET*scale)+(DOWN_OFFSET*scale);
+const int INFO_SCREEN_WIDTH= W_WIDTH-GAME_SCREEN_WIDTH-LEFT_OFFSET;
+const int INFO_SCREEN_HEIGHT= W_HEIGHT-GAME_SCREEN_HEIGHT-UP_OFFSET;
+const std::string Text= "Next Piece:";
 
 class Manager{
 private:

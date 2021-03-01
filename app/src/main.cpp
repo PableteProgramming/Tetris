@@ -177,10 +177,14 @@ int main()
 
         //clearing window and drawing all again
         window.clear();
-        DrawNextPiece(GAME_SCREEN_WIDTH+LEFT_OFFSET+2,2,14,"Next Piece:",font,GAME_SCREEN_WIDTH+LEFT_OFFSET+2,5,nextmap,window,manager);
         DrawOffset(offsetsToDraw,window);
         DrawMap(window,map,manager);
         actpiece.Draw(window);
+        DrawNextPiece(
+            GAME_SCREEN_WIDTH/scale+LEFT_OFFSET+((INFO_SCREEN_WIDTH/scale)/2)-2,
+            2,25,Text,font,
+            GAME_SCREEN_WIDTH/scale+LEFT_OFFSET+((INFO_SCREEN_WIDTH/scale)/2)-1,
+            7,nextmap,window,manager);
         window.display();
     }
     //end of main while loop
