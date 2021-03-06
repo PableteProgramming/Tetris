@@ -35,12 +35,15 @@ private:
     int scale;
     std::vector<std::pair<int,sf::Color>> sets;
     sf::Color offsetColor;
+    sf::Color previewColor;
 public:
     Manager();
-    Manager(int,std::vector<std::pair<int,sf::Color>>,sf::Color);
+    Manager(int,std::vector<std::pair<int,sf::Color>>,sf::Color,sf::Color);
     void SetScale(int);
     void SetSets(std::vector<std::pair<int,sf::Color>>);
     void SetOffsetColor(sf::Color);
+    void SetPreviewColor(sf::Color);
+    sf::Color GetPreviewColor(){return previewColor;};
     sf::Color GetOffsetColor(){return offsetColor;};
     int GetScale(){return scale;};
     std::vector<std::pair<int,sf::Color>> GetSets(){return sets;};
@@ -93,6 +96,7 @@ public:
     Manager GetManager(){return manager;};
     int GetLastX(){return lastx;};
     int GetLastY(){return lasty;};
+    std::vector<std::vector<int>> GetMap(){return map;};
 };
 
 class Map{
@@ -132,3 +136,4 @@ std::pair<bool,std::vector<int>> IsLineCompleted(int[GAME_SCREEN_HEIGHT/scale][G
 void RemoveLineFromMap(int[GAME_SCREEN_HEIGHT/scale][GAME_SCREEN_WIDTH/scale],int);
 void DrawOffset(std::vector<std::pair<Manager,std::pair<Coord,Coord>>>,sf::RenderWindow&);
 void DrawNextPiece(int,int,int,std::string,sf::Font,int,int,std::vector<std::vector<int>>,sf::RenderWindow&,Manager);
+void DrawPreview(Object,int[GAME_SCREEN_HEIGHT/scale][GAME_SCREEN_WIDTH/scale],Manager,sf::RenderWindow&);

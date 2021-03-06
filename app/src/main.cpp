@@ -16,7 +16,7 @@ int main()
     }
 
     //Creating the main manager object
-    Manager manager(scale,Map::ColorSet,sf::Color{126,129,130});
+    Manager manager(scale,Map::ColorSet,sf::Color{126,129,130},sf::Color::Red);
     std::vector<Object> pieces;
 
 
@@ -193,6 +193,7 @@ int main()
             2,fontsize,Text,font,
             GAME_SCREEN_WIDTH/scale+LEFT_OFFSET+((INFO_SCREEN_WIDTH/scale)/2)-1,
             7,nextmap,window,manager);
+        //DrawPreview(actpiece,map,manager,window);
         window.display();
     }
     //end of main while loop

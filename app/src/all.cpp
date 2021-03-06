@@ -1,9 +1,10 @@
 #include <all.h>
 
-Manager::Manager(int _scale, std::vector<std::pair<int,sf::Color>> _sets, sf::Color _offsetcolor){
+Manager::Manager(int _scale, std::vector<std::pair<int,sf::Color>> _sets, sf::Color _offsetcolor, sf::Color _previewColor){
     scale=_scale;
     sets=_sets;
     offsetColor= _offsetcolor;
+    previewColor=_previewColor;
 }
 
 Manager::Manager(){
@@ -11,6 +12,10 @@ Manager::Manager(){
     std::vector<std::pair<int,sf::Color>> empty;
     empty.clear();
     sets= empty;
+}
+
+void Manager::SetPreviewColor(sf::Color _color){
+    previewColor=_color;
 }
 
 void Manager::SetScale(int _scale){
@@ -467,5 +472,28 @@ void DrawNextPiece(int textx,int texty,int fontsize,std::string text,sf::Font fo
                 window.draw(recttodraw);
             }
         }
+    }
+}
+
+void DrawPreview(Object _piece,int _map[GAME_SCREEN_HEIGHT/scale][GAME_SCREEN_WIDTH/scale],Manager _manager, sf::RenderWindow& window){
+    int _y= _piece.GetY();
+    int _lasty=_y;
+    int ry=_y;
+    for(int i=_y; i<GAME_SCREEN_HEIGHT;i++){
+        if(Collision(_map,_piece.GetX(),i*_manager.GetScale(),_piece.GetRects())){
+            ry=_lasty;
+            break;
+        }
+        _lasty=i;
+    }
+
+    for(int i=0; i<_piece.GetRects().size();i++){
+        Rect act= _piece.GetRects()[i];
+        sf::RectangleShape recttodraw;
+        recttodraw.setPosition(act.GetX()*_manager.GetScale()+_piece.GetX()+(LEFT_OFFSET*scale),act.GetY()*_manager.GetScale()+ry+(UP_OFFSET*scale));
+        recttodraw.setSize(sf::Vector2f(act.GetWidth()*_manager.GetScale(),act.GetHeight()*_manager.GetScale()));
+        //recttodraw.setFillColor(act.GetColor());
+        recttodraw.setOutlineColor(_manager.GetPreviewColor());
+        window.draw(recttodraw);
     }
 }
