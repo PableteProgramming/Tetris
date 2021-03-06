@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\build\CMakeFiles\bde91afc062e0dc1cb8a3b380c95c2a6\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{F07A4472-DFDE-39F0-8377-A946483FBCD6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

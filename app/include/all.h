@@ -3,18 +3,21 @@
 #include <string>
 #include <iostream>
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 #include <stdlib.h>
 #include <time.h>
 
 const std::string RES_PATH= "resources";
-const std::string IMG_PATH= RES_PATH+"/img";
 const std::string FONT_PATH= RES_PATH+"/font";
-const int scale= 30;
-const double fps= 4;
+const std::string MUSIC_PATH= RES_PATH+"/music";
+const int fontsize=20;
+const int scale= 20;
+const double fps= 3;
+const int speedfactor=8;
 const double moveclicsfps=4;
 const double rotateclicsfps=2;
-const int COLS= 20;
-const int LINES= 15;
+const int COLS= 10*2;
+const int LINES= 12*2;
 const int DOWN_OFFSET=1;
 const int UP_OFFSET=1;
 const int RIGHT_OFFSET=8;

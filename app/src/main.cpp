@@ -2,6 +2,14 @@
 
 int main()
 {
+    sf::Music music;
+
+    if(!music.openFromFile(MUSIC_PATH+"/bg.wav")){
+        return EXIT_FAILURE;
+    }
+
+    music.play();
+
     sf::Font font;
     if(!font.loadFromFile(FONT_PATH+"/arial.ttf")){
         return EXIT_FAILURE;
@@ -83,11 +91,11 @@ int main()
 
     //creating all fps needed variables
     sf::Clock clock;
-    double timepassed;
+    double timepassed=0;
     double totaltimetopass= 1/actualfps;
-    double moveclicstimepassed;
+    double moveclicstimepassed=0;
     double moveclicstotaltimetopass= 1/moveclicsfps;
-    double rotateclicstimepassed;
+    double rotateclicstimepassed=0;
     double rotateclicstotaltimetopass= 1/rotateclicsfps;
     bool rightpressed=false;
     bool leftpressed=false;
@@ -136,7 +144,7 @@ int main()
 
         //Getting key down and changing fps
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down)){
-            actualfps=fps*2;
+            actualfps=fps*speedfactor;
             totaltimetopass=1/actualfps;
         }
         else{
@@ -181,8 +189,8 @@ int main()
         DrawMap(window,map,manager);
         actpiece.Draw(window);
         DrawNextPiece(
-            GAME_SCREEN_WIDTH/scale+LEFT_OFFSET+((INFO_SCREEN_WIDTH/scale)/2)-2,
-            2,25,Text,font,
+            GAME_SCREEN_WIDTH/scale+LEFT_OFFSET+((INFO_SCREEN_WIDTH/scale)/2)-((Text.size()*fontsize/4))/scale-1,
+            2,fontsize,Text,font,
             GAME_SCREEN_WIDTH/scale+LEFT_OFFSET+((INFO_SCREEN_WIDTH/scale)/2)-1,
             7,nextmap,window,manager);
         window.display();
