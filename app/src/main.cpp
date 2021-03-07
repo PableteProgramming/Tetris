@@ -2,6 +2,7 @@
 
 int main()
 {
+
     sf::Music music;
 
     if(!music.openFromFile(MUSIC_PATH+"/bg.wav")){
@@ -105,6 +106,7 @@ int main()
     //init map with 0
     fillMap(map,0);
 
+    Preview preview(actpiece.GetMap(),actpiece.GetRects(),actpiece.GetX(),actpiece.GetY(),map,GAME_SCREEN_HEIGHT);
 
     //main while loop
     while (window.isOpen())
@@ -124,12 +126,14 @@ int main()
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left)){
             if(!leftpressed){
                 actpiece.Move(-1,GAME_SCREEN_WIDTH,GAME_SCREEN_HEIGHT,map);
+                preview.Update(actpiece.GetMap(),actpiece.GetRects(),actpiece.GetX(),actpiece.GetY(),map);
                 leftpressed=true;
             }
         }
         if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right)){
             if(!rightpressed){
                 actpiece.Move(1,GAME_SCREEN_WIDTH,GAME_SCREEN_HEIGHT,map);
+                preview.Update(actpiece.GetMap(),actpiece.GetRects(),actpiece.GetX(),actpiece.GetY(),map);
                 rightpressed=true;
             }
         }
@@ -138,6 +142,7 @@ int main()
                 upkeypressed=true;
                 actpiece.Rotate(map,90);
                 x= actpiece.GetX();
+                preview.Update(actpiece.GetMap(),actpiece.GetRects(),actpiece.GetX(),actpiece.GetY(),map);
             }
         }
 
@@ -170,6 +175,7 @@ int main()
                 std::vector<Rect> rectsToAdd= actpiece.GetRects();
                 UpdateMap(map,rectsToAdd,actpiece,window);
                 UpdatePiece(startx,starty,x,y,pieces,actpiece,allpieces,nextindex,nextmap,manager,GAME_SCREEN_WIDTH,GAME_SCREEN_HEIGHT,map);
+                preview.Update(actpiece.GetMap(),actpiece.GetRects(),actpiece.GetX(),actpiece.GetY(),map);
             }
         }
         if(moveclicstimepassed >= moveclicstotaltimetopass){
@@ -187,6 +193,7 @@ int main()
         window.clear();
         DrawOffset(offsetsToDraw,window);
         DrawMap(window,map,manager);
+        preview.Draw(manager,window);
         actpiece.Draw(window);
         DrawNextPiece(
             GAME_SCREEN_WIDTH/scale+LEFT_OFFSET+((INFO_SCREEN_WIDTH/scale)/2)-((Text.size()*fontsize/4))/scale-1,

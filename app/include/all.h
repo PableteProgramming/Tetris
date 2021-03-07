@@ -137,3 +137,16 @@ void RemoveLineFromMap(int[GAME_SCREEN_HEIGHT/scale][GAME_SCREEN_WIDTH/scale],in
 void DrawOffset(std::vector<std::pair<Manager,std::pair<Coord,Coord>>>,sf::RenderWindow&);
 void DrawNextPiece(int,int,int,std::string,sf::Font,int,int,std::vector<std::vector<int>>,sf::RenderWindow&,Manager);
 void DrawPreview(Object,int[GAME_SCREEN_HEIGHT/scale][GAME_SCREEN_WIDTH/scale],Manager,sf::RenderWindow&);
+
+class Preview{
+private:
+    std::vector<std::vector<int>> piecemap;
+    std::vector<Rect> rects;
+    int x;
+    int y;
+    int W_height;
+public:
+    Preview(std::vector<std::vector<int>>,std::vector<Rect>,int,int,int[GAME_SCREEN_HEIGHT/scale][GAME_SCREEN_WIDTH/scale],int);
+    void Draw(Manager,sf::RenderWindow&);
+    void Update(std::vector<std::vector<int>>,std::vector<Rect>,int,int,int[GAME_SCREEN_HEIGHT/scale][GAME_SCREEN_WIDTH/scale]);
+};

@@ -359,8 +359,6 @@ std::vector<std::pair<int,sf::Color>> Map::ColorSet={
 bool Collision(int _map[GAME_SCREEN_HEIGHT/scale][GAME_SCREEN_WIDTH/scale],int _x,int _y,std::vector<Rect> rects){
     for(int i=0; i<rects.size();i++){
         Rect actrect= rects[i];
-        //std::cout<<"ma["<<actrect.GetY()+(actpiece.GetY()/scale)<<"]["<<actrect.GetX()+(actpiece.GetX()/scale)<< "]="<<manager.FindValueOfColor(actrect.GetColor())<<std::endl;
-        //std::cout<<"actrect.GetY(): "<<actrect.GetY()<<std::endl;
         if(_map[actrect.GetY()+(_y/scale)][actrect.GetX()+(_x/scale)]!=0){
             return true;
         }
@@ -492,8 +490,46 @@ void DrawPreview(Object _piece,int _map[GAME_SCREEN_HEIGHT/scale][GAME_SCREEN_WI
         sf::RectangleShape recttodraw;
         recttodraw.setPosition(act.GetX()*_manager.GetScale()+_piece.GetX()+(LEFT_OFFSET*scale),act.GetY()*_manager.GetScale()+ry+(UP_OFFSET*scale));
         recttodraw.setSize(sf::Vector2f(act.GetWidth()*_manager.GetScale(),act.GetHeight()*_manager.GetScale()));
-        //recttodraw.setFillColor(act.GetColor());
         recttodraw.setOutlineColor(_manager.GetPreviewColor());
         window.draw(recttodraw);
     }
+}
+
+Preview::Preview(std::vector<std::vector<int>> _piece,std::vector<Rect> _rects,int px, int py,int _map[GAME_SCREEN_HEIGHT/scale][GAME_SCREEN_WIDTH/scale],int _height){
+    W_height=_height;
+    Update(_piece,_rects,px,py,_map);
+}
+
+void Preview::Draw(Manager manager,sf::RenderWindow& window){
+    for(int i=0; i<rects.size();i++){
+        Rect act= rects[i];
+        sf::RectangleShape recttodraw;
+        recttodraw.setPosition(act.GetX()*manager.GetScale()+x+(LEFT_OFFSET*scale),act.GetY()*manager.GetScale()+y+(UP_OFFSET*scale));
+        recttodraw.setSize(sf::Vector2f(act.GetWidth()*manager.GetScale(),act.GetHeight()*manager.GetScale()));
+        recttodraw.setFillColor(sf::Color::Transparent);
+        recttodraw.setOutlineColor(manager.GetPreviewColor());
+        recttodraw.setOutlineThickness(-1);
+        window.draw(recttodraw);
+    }
+}
+
+void Preview::Update(std::vector<std::vector<int>> _piece,std::vector<Rect> _rects,int px,int py,int _map[GAME_SCREEN_HEIGHT/scale][GAME_SCREEN_WIDTH/scale]){
+    piecemap=_piece;
+    rects=_rects;
+    x=px;
+    y=0;
+
+    int starty= py;
+    int endy=W_height-(piecemap.size()*scale);
+    int lasty=starty;
+    y= endy;
+
+    for(int _y=starty;_y<endy;_y+=scale){
+        if(Collision(_map,x,_y,rects)){
+            y=lasty;
+            break;
+        }
+        lasty=_y;
+    }
+
 }
