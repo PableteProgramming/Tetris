@@ -524,7 +524,7 @@ void Preview::Update(std::vector<std::vector<int>> _piece,std::vector<Rect> _rec
     int lasty=starty;
     y= endy;
 
-    for(int _y=starty;_y<endy;_y+=scale){
+    for(int _y=starty;_y<endy+(1*scale);_y+=scale){
         if(Collision(_map,x,_y,rects)){
             y=lasty;
             break;
