@@ -58,10 +58,10 @@ C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/build/
 C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/build/SFML/src/SFML/Audio/CMakeFiles/rebuild_cache.dir
 C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/build/SFML/src/SFML/Audio/CMakeFiles/list_install_components.dir
 C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/build/SFML/src/SFML/Audio/CMakeFiles/install/strip.dir
-C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/build/app/CMakeFiles/install/local.dir
-C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/build/app/CMakeFiles/install.dir
-C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/build/app/CMakeFiles/edit_cache.dir
-C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/build/app/CMakeFiles/Tetris.dir
-C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/build/app/CMakeFiles/rebuild_cache.dir
-C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/build/app/CMakeFiles/list_install_components.dir
-C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/build/app/CMakeFiles/install/strip.dir
+C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/build/Tetris/CMakeFiles/install/local.dir
+C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/build/Tetris/CMakeFiles/install.dir
+C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/build/Tetris/CMakeFiles/edit_cache.dir
+C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/build/Tetris/CMakeFiles/Tetris.dir
+C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/build/Tetris/CMakeFiles/rebuild_cache.dir
+C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/build/Tetris/CMakeFiles/list_install_components.dir
+C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/build/Tetris/CMakeFiles/install/strip.dir

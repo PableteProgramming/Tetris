@@ -55,7 +55,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../SFML/src/SFML/Network/CMakeLists.txt"
   "../SFML/src/SFML/System/CMakeLists.txt"
   "../SFML/src/SFML/Window/CMakeLists.txt"
-  "../app/CMakeLists.txt"
+  "../Tetris/CMakeLists.txt"
   "CMakeFiles/3.19.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.19.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.19.3/CMakeRCCompiler.cmake"
@@ -82,7 +82,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "SFML/src/SFML/Network/CMakeFiles/CMakeDirectoryInformation.cmake"
   "SFML/src/SFML/Graphics/CMakeFiles/CMakeDirectoryInformation.cmake"
   "SFML/src/SFML/Audio/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "app/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "Tetris/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -93,5 +93,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "SFML/src/SFML/Network/CMakeFiles/sfml-network.dir/DependInfo.cmake"
   "SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/DependInfo.cmake"
   "SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/DependInfo.cmake"
-  "app/CMakeFiles/Tetris.dir/DependInfo.cmake"
+  "Tetris/CMakeFiles/Tetris.dir/DependInfo.cmake"
   )

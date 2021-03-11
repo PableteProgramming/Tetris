@@ -510,13 +510,13 @@
   "file": "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/SFML/src/SFML/Audio/SoundFileWriterWav.cpp"
 },
 {
-  "directory": "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/build/app",
-  "command": "C:\\MinGW\\bin\\g++.exe -DSFML_STATIC @CMakeFiles/Tetris.dir/includes_CXX.rsp -g -o CMakeFiles\\Tetris.dir\\src\\all.cpp.obj -c C:\\Users\\curro.LAPTOP-DUBBS74R\\OneDrive\\Documentos\\Programming\\C++\\Tetris\\app\\src\\all.cpp",
-  "file": "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/app/src/all.cpp"
+  "directory": "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/build/Tetris",
+  "command": "C:\\MinGW\\bin\\g++.exe -DSFML_STATIC @CMakeFiles/Tetris.dir/includes_CXX.rsp -g -o CMakeFiles\\Tetris.dir\\src\\all.cpp.obj -c C:\\Users\\curro.LAPTOP-DUBBS74R\\OneDrive\\Documentos\\Programming\\C++\\Tetris\\Tetris\\src\\all.cpp",
+  "file": "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/Tetris/src/all.cpp"
 },
 {
-  "directory": "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/build/app",
-  "command": "C:\\MinGW\\bin\\g++.exe -DSFML_STATIC @CMakeFiles/Tetris.dir/includes_CXX.rsp -g -o CMakeFiles\\Tetris.dir\\src\\main.cpp.obj -c C:\\Users\\curro.LAPTOP-DUBBS74R\\OneDrive\\Documentos\\Programming\\C++\\Tetris\\app\\src\\main.cpp",
-  "file": "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/app/src/main.cpp"
+  "directory": "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/build/Tetris",
+  "command": "C:\\MinGW\\bin\\g++.exe -DSFML_STATIC @CMakeFiles/Tetris.dir/includes_CXX.rsp -g -o CMakeFiles\\Tetris.dir\\src\\main.cpp.obj -c C:\\Users\\curro.LAPTOP-DUBBS74R\\OneDrive\\Documentos\\Programming\\C++\\Tetris\\Tetris\\src\\main.cpp",
+  "file": "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/Tetris/src/main.cpp"
 }
 ]

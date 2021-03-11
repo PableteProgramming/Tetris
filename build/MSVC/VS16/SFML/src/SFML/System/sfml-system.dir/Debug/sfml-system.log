@@ -1,0 +1,20 @@
+﻿  Building Custom Rule C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/SFML/src/SFML/System/CMakeLists.txt
+  Clock.cpp
+  Err.cpp
+  Lock.cpp
+  Mutex.cpp
+  Sleep.cpp
+  String.cpp
+  Thread.cpp
+  ThreadLocal.cpp
+  Time.cpp
+  FileInputStream.cpp
+  MemoryInputStream.cpp
+  ClockImpl.cpp
+C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\SFML\src\SFML\System\Win32\ClockImpl.cpp(46,35): warning C4996: 'GetVersion': se declaró desusado
+  MutexImpl.cpp
+  SleepImpl.cpp
+  ThreadImpl.cpp
+  ThreadLocalImpl.cpp
+  Generando código...
+  sfml-system.vcxproj -> C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\build\MSVC\VS16\SFML\lib\Debug\sfml-system-s-d.lib

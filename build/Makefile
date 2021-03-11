@@ -262,7 +262,7 @@ Tetris: cmake_check_build_system
 
 # fast build rule for target.
 Tetris/fast:
-	$(MAKE) $(MAKESILENT) -f app\CMakeFiles\Tetris.dir\build.make app/CMakeFiles/Tetris.dir/build
+	$(MAKE) $(MAKESILENT) -f Tetris\CMakeFiles\Tetris.dir\build.make Tetris/CMakeFiles/Tetris.dir/build
 .PHONY : Tetris/fast
 
 # Help Target

@@ -72,19 +72,19 @@ CMAKE_BINARY_DIR = C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programmin
 
 # The main recursive "all" target.
 all: SFML/all
-all: app/all
+all: Tetris/all
 
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: SFML/preinstall
-preinstall: app/preinstall
+preinstall: Tetris/preinstall
 
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: SFML/clean
-clean: app/clean
+clean: Tetris/clean
 
 .PHONY : clean
 
@@ -248,22 +248,22 @@ SFML/src/SFML/Window/clean: SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/clea
 .PHONY : SFML/src/SFML/Window/clean
 
 #=============================================================================
-# Directory level rules for directory app
+# Directory level rules for directory Tetris
 
 # Recursive "all" directory target.
-app/all: app/CMakeFiles/Tetris.dir/all
+Tetris/all: Tetris/CMakeFiles/Tetris.dir/all
 
-.PHONY : app/all
+.PHONY : Tetris/all
 
 # Recursive "preinstall" directory target.
-app/preinstall:
+Tetris/preinstall:
 
-.PHONY : app/preinstall
+.PHONY : Tetris/preinstall
 
 # Recursive "clean" directory target.
-app/clean: app/CMakeFiles/Tetris.dir/clean
+Tetris/clean: Tetris/CMakeFiles/Tetris.dir/clean
 
-.PHONY : app/clean
+.PHONY : Tetris/clean
 
 #=============================================================================
 # Target rules for target SFML/src/SFML/System/CMakeFiles/sfml-system.dir
@@ -429,34 +429,34 @@ SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/clean:
 .PHONY : SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/clean
 
 #=============================================================================
-# Target rules for target app/CMakeFiles/Tetris.dir
+# Target rules for target Tetris/CMakeFiles/Tetris.dir
 
 # All Build rule for target.
-app/CMakeFiles/Tetris.dir/all: SFML/src/SFML/System/CMakeFiles/sfml-system.dir/all
-app/CMakeFiles/Tetris.dir/all: SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/all
-app/CMakeFiles/Tetris.dir/all: SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/all
-app/CMakeFiles/Tetris.dir/all: SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/all
-	$(MAKE) $(MAKESILENT) -f app\CMakeFiles\Tetris.dir\build.make app/CMakeFiles/Tetris.dir/depend
-	$(MAKE) $(MAKESILENT) -f app\CMakeFiles\Tetris.dir\build.make app/CMakeFiles/Tetris.dir/build
+Tetris/CMakeFiles/Tetris.dir/all: SFML/src/SFML/System/CMakeFiles/sfml-system.dir/all
+Tetris/CMakeFiles/Tetris.dir/all: SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/all
+Tetris/CMakeFiles/Tetris.dir/all: SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/all
+Tetris/CMakeFiles/Tetris.dir/all: SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/all
+	$(MAKE) $(MAKESILENT) -f Tetris\CMakeFiles\Tetris.dir\build.make Tetris/CMakeFiles/Tetris.dir/depend
+	$(MAKE) $(MAKESILENT) -f Tetris\CMakeFiles\Tetris.dir\build.make Tetris/CMakeFiles/Tetris.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\build\CMakeFiles --progress-num=1,2 "Built target Tetris"
-.PHONY : app/CMakeFiles/Tetris.dir/all
+.PHONY : Tetris/CMakeFiles/Tetris.dir/all
 
 # Build rule for subdir invocation for target.
-app/CMakeFiles/Tetris.dir/rule: cmake_check_build_system
+Tetris/CMakeFiles/Tetris.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\build\CMakeFiles 88
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 app/CMakeFiles/Tetris.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Tetris/CMakeFiles/Tetris.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\build\CMakeFiles 0
-.PHONY : app/CMakeFiles/Tetris.dir/rule
+.PHONY : Tetris/CMakeFiles/Tetris.dir/rule
 
 # Convenience name for target.
-Tetris: app/CMakeFiles/Tetris.dir/rule
+Tetris: Tetris/CMakeFiles/Tetris.dir/rule
 
 .PHONY : Tetris
 
 # clean rule for target.
-app/CMakeFiles/Tetris.dir/clean:
-	$(MAKE) $(MAKESILENT) -f app\CMakeFiles\Tetris.dir\build.make app/CMakeFiles/Tetris.dir/clean
-.PHONY : app/CMakeFiles/Tetris.dir/clean
+Tetris/CMakeFiles/Tetris.dir/clean:
+	$(MAKE) $(MAKESILENT) -f Tetris\CMakeFiles\Tetris.dir\build.make Tetris/CMakeFiles/Tetris.dir/clean
+.PHONY : Tetris/CMakeFiles/Tetris.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
