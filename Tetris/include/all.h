@@ -153,3 +153,20 @@ public:
     void Draw(Manager,sf::RenderWindow&);
     void Update(std::vector<std::vector<int>>,std::vector<Rect>,int,int,int[GAME_SCREEN_HEIGHT/scale][GAME_SCREEN_WIDTH/scale]);
 };
+
+class Button{
+private:
+    bool over;
+    bool clicked;
+    int x;
+    int y;
+    int width;
+    int height;
+public:
+    Button(int,int,int,int);
+    void Update();
+    void Show();
+    void Enable();
+    void Disable();
+    void Hide();
+};

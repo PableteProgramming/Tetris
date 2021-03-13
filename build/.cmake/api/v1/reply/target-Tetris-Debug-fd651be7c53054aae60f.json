@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/output/GNU/Tetris.exe"
+			"path" : "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/output/Tetris.exe"
 		},
 		{
-			"path" : "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/output/GNU/Tetris.pdb"
+			"path" : "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/output/Tetris.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -103,11 +103,11 @@
 		},
 		{
 			"backtrace" : 2,
-			"id" : "sfml-graphics::@b5d161fc85c1c0dd9373"
+			"id" : "sfml-window::@0daf25d7b5dd386fd904"
 		},
 		{
 			"backtrace" : 2,
-			"id" : "sfml-window::@0daf25d7b5dd386fd904"
+			"id" : "sfml-graphics::@b5d161fc85c1c0dd9373"
 		},
 		{
 			"backtrace" : 2,
