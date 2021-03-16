@@ -433,8 +433,8 @@ SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/clean:
 
 # All Build rule for target.
 Tetris/CMakeFiles/Tetris.dir/all: SFML/src/SFML/System/CMakeFiles/sfml-system.dir/all
-Tetris/CMakeFiles/Tetris.dir/all: SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/all
 Tetris/CMakeFiles/Tetris.dir/all: SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/all
+Tetris/CMakeFiles/Tetris.dir/all: SFML/src/SFML/Window/CMakeFiles/sfml-window.dir/all
 Tetris/CMakeFiles/Tetris.dir/all: SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/all
 	$(MAKE) $(MAKESILENT) -f Tetris\CMakeFiles\Tetris.dir\build.make Tetris/CMakeFiles/Tetris.dir/depend
 	$(MAKE) $(MAKESILENT) -f Tetris\CMakeFiles\Tetris.dir\build.make Tetris/CMakeFiles/Tetris.dir/build

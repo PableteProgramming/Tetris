@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\SFML\src\SFML\Main\MainWin32.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\SFML\src\SFML\Main\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{AC2386E1-0D38-3F67-BF8B-347B96251B91}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

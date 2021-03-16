@@ -8,7 +8,7 @@ int main()
     if(!music.openFromFile(MUSIC_PATH+"/bg.wav")){
         return EXIT_FAILURE;
     }
-
+    music.setLoop(true);
     music.play();
 
     sf::Font font;

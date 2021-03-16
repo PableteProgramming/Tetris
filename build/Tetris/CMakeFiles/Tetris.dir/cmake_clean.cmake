@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "../../output/Tetris.exe"
-  "../../output/Tetris.exe.manifest"
-  "../../output/Tetris.pdb"
+  "../../output/GNU/Tetris.exe"
+  "../../output/GNU/Tetris.exe.manifest"
+  "../../output/GNU/Tetris.pdb"
   "CMakeFiles/Tetris.dir/src/all.cpp.obj"
   "CMakeFiles/Tetris.dir/src/main.cpp.obj"
   "libTetris.dll.a"

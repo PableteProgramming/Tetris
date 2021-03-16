@@ -1,0 +1,10 @@
+^C:\USERS\CURRO.LAPTOP-DUBBS74R\ONEDRIVE\DOCUMENTOS\PROGRAMMING\C++\TETRIS\PRJ\VS\CMAKEFILES\20D07BA647C6CA29FD2BF8DAF3B956A9\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris -BC:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/prj/VS --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/prj/VS/Tetris.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
