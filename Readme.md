@@ -9,9 +9,9 @@ got to the project root directory
 $ cd **Path to project root dir**
 
 
-Run configure.bat file with x86 for Win32 config
+Run configure.bat file
 
-$ configure VS *x86*
+$ configure VS
 
 
 When it has finished, run build.bat file

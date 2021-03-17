@@ -11,7 +11,7 @@ if "%1"=="MinGW" goto mingw
 echo configuring for Visual Studio Solution
 set dir=%CD%\%prjdir%\VS
 cd "%dir%"
-if "%2"=="x86" (cmake -G "Visual Studio 16 2019" -A Win32 ../..) else (cmake -G "Visual Studio 16 2019" ../..)
+cmake -G "Visual Studio 16 2019" -A Win32 ../..
 goto ex
 
 :mingw

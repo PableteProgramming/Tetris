@@ -101,7 +101,7 @@ add_library(Freetype INTERFACE IMPORTED)
 
 set_target_properties(Freetype PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/SFML/extlibs/headers/freetype2"
-  INTERFACE_LINK_LIBRARIES "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/SFML/extlibs/libs-msvc-universal/x64/freetype.lib"
+  INTERFACE_LINK_LIBRARIES "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/SFML/extlibs/libs-msvc-universal/x86/freetype.lib"
 )
 
 # Create imported target OpenAL
@@ -109,7 +109,7 @@ add_library(OpenAL INTERFACE IMPORTED)
 
 set_target_properties(OpenAL PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/SFML/extlibs/headers/AL"
-  INTERFACE_LINK_LIBRARIES "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/SFML/extlibs/libs-msvc-universal/x64/openal32.lib"
+  INTERFACE_LINK_LIBRARIES "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/SFML/extlibs/libs-msvc-universal/x86/openal32.lib"
 )
 
 # Create imported target Vorbis
@@ -118,7 +118,7 @@ add_library(Vorbis INTERFACE IMPORTED)
 set_target_properties(Vorbis PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "OV_EXCLUDE_STATIC_CALLBACKS"
   INTERFACE_INCLUDE_DIRECTORIES "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/SFML/extlibs/headers;C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/SFML/extlibs/headers"
-  INTERFACE_LINK_LIBRARIES "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/SFML/extlibs/libs-msvc-universal/x64/vorbisenc.lib;C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/SFML/extlibs/libs-msvc-universal/x64/vorbisfile.lib;C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/SFML/extlibs/libs-msvc-universal/x64/vorbis.lib;C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/SFML/extlibs/libs-msvc-universal/x64/ogg.lib"
+  INTERFACE_LINK_LIBRARIES "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/SFML/extlibs/libs-msvc-universal/x86/vorbisenc.lib;C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/SFML/extlibs/libs-msvc-universal/x86/vorbisfile.lib;C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/SFML/extlibs/libs-msvc-universal/x86/vorbis.lib;C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/SFML/extlibs/libs-msvc-universal/x86/ogg.lib"
 )
 
 # Create imported target FLAC
@@ -127,7 +127,7 @@ add_library(FLAC INTERFACE IMPORTED)
 set_target_properties(FLAC PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "FLAC__NO_DLL"
   INTERFACE_INCLUDE_DIRECTORIES "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/SFML/extlibs/headers"
-  INTERFACE_LINK_LIBRARIES "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/SFML/extlibs/libs-msvc-universal/x64/flac.lib"
+  INTERFACE_LINK_LIBRARIES "C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/SFML/extlibs/libs-msvc-universal/x86/flac.lib"
 )
 
 # Create imported target sfml-audio
