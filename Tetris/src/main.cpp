@@ -1,6 +1,11 @@
 #include <main.h>
 
-int main()
+#ifdef _MSC_VER
+#include <windows.h>
+int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PWSTR pCmdLine, int nCmdShow)
+#else
+int main(int argc, char** argv)
+#endif
 {
 
     sf::Music music;

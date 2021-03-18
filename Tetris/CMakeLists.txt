@@ -7,6 +7,15 @@ if(CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
         ${PROJECT_NAME} PUBLIC
         "/MTd"
     )
+    target_link_options(
+        ${PROJECT_NAME} PUBLIC
+        /SUBSYSTEM:WINDOWS
+    )
+elseif(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+    target_link_options(
+        ${PROJECT_NAME} PUBLIC
+        -mwindows
+    )
 endif()
 
 
