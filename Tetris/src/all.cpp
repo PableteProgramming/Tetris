@@ -548,32 +548,3 @@ void Preview::Update(std::vector<std::vector<int>> _piece,std::vector<Rect> _rec
     }
 
 }
-
-Button::Button(int _x, int _y, int _width, int _height){
-    clicked=false;
-    over=false;
-    x=_x;
-    y=_y;
-    width=_width;
-    height=_height;
-}
-
-void Button::Update(){
-    
-}
-
-void Button::Show(){
-
-}
-
-void Button::Enable(){
-
-}
-
-void Button::Disable(){
-
-}
-
-void Button::Hide(){
-
-}

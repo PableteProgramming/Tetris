@@ -1,19 +1,19 @@
 Determining if the include file dinput.h exists failed with the following output:
 Change Dir: C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/prj/MinGW/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/MinGW/bin/mingw32-make.exe cmTC_67cb8/fast && C:/MinGW/bin/mingw32-make.exe  -f CMakeFiles\cmTC_67cb8.dir\build.make CMakeFiles/cmTC_67cb8.dir/build
+Run Build Command(s):C:/MinGW/bin/mingw32-make.exe cmTC_b60f6/fast && C:/MinGW/bin/mingw32-make.exe  -f CMakeFiles\cmTC_b60f6.dir\build.make CMakeFiles/cmTC_b60f6.dir/build
 mingw32-make.exe[1]: Entering directory 'C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/prj/MinGW/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_67cb8.dir/CheckIncludeFile.c.obj
-C:\MinGW\bin\gcc.exe    -o CMakeFiles\cmTC_67cb8.dir\CheckIncludeFile.c.obj -c C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\prj\MinGW\CMakeFiles\CMakeTmp\CheckIncludeFile.c
+Building C object CMakeFiles/cmTC_b60f6.dir/CheckIncludeFile.c.obj
+C:\MinGW\bin\gcc.exe    -o CMakeFiles\cmTC_b60f6.dir\CheckIncludeFile.c.obj -c C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\prj\MinGW\CMakeFiles\CMakeTmp\CheckIncludeFile.c
 C:\Users\curro.LAPTOP-DUBBS74R\OneDrive\Documentos\Programming\C++\Tetris\prj\MinGW\CMakeFiles\CMakeTmp\CheckIncludeFile.c:1:20: fatal error: dinput.h: No such file or directory
  #include <dinput.h>
                     ^
 compilation terminated.
-CMakeFiles\cmTC_67cb8.dir\build.make:83: recipe for target 'CMakeFiles/cmTC_67cb8.dir/CheckIncludeFile.c.obj' failed
-mingw32-make.exe[1]: *** [CMakeFiles/cmTC_67cb8.dir/CheckIncludeFile.c.obj] Error 1
+CMakeFiles\cmTC_b60f6.dir\build.make:83: recipe for target 'CMakeFiles/cmTC_b60f6.dir/CheckIncludeFile.c.obj' failed
+mingw32-make.exe[1]: *** [CMakeFiles/cmTC_b60f6.dir/CheckIncludeFile.c.obj] Error 1
 mingw32-make.exe[1]: Leaving directory 'C:/Users/curro.LAPTOP-DUBBS74R/OneDrive/Documentos/Programming/C++/Tetris/prj/MinGW/CMakeFiles/CMakeTmp'
-Makefile:139: recipe for target 'cmTC_67cb8/fast' failed
-mingw32-make.exe: *** [cmTC_67cb8/fast] Error 2
+Makefile:139: recipe for target 'cmTC_b60f6/fast' failed
+mingw32-make.exe: *** [cmTC_b60f6/fast] Error 2
 
 
 
