@@ -60,7 +60,7 @@ int main(int argc, char** argv)
 
 
     //creating window
-    sf::RenderWindow window(sf::VideoMode(W_WIDTH, W_HEIGHT), "My window");
+    sf::RenderWindow window(sf::VideoMode(W_WIDTH, W_HEIGHT), "My window",sf::Style::Titlebar | sf::Style::Close);
 
 
     //getting random indexes
